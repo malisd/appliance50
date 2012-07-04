@@ -1,3 +1,7 @@
 *.swp
 boxgrinder/build
 boxgrinder/log
+rpmbuild/BUILD
+rpmbuild/BUILDROOT
+rpmbuild/RPMS
+rpmbuild/SRPMS
