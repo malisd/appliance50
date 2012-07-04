@@ -15,20 +15,6 @@ if ARGV.first =~ /^_(.*)_$/ and Gem::Version.correct? $1 then
   ARGV.shift
 end
 
-# rhel-plugin.rb
-print "Monkey-patching plugins/os/rhel/rhel-plugin.rb...\n"
-require 'boxgrinder-build/plugins/os/rhel/rhel-plugin'
-module BoxGrinder
-  class RHELPlugin < RPMBasedOSPlugin
-    plugin :type => :os, :name => :rhel, :full_name => "Red Hat Enterprise Linux", :versions => ['5', '6'], :require_root => true
-
-    ## don't add any packages
-    #def normalize_packages(packages)
-    #end
-
-  end
-end
-
 # rpm-based/rpm-based-os-plugin.rb
 print "Monkey-patching plugins/os/rpm-based/rpm-based-os-plugin.rb...\n"
 require 'boxgrinder-build/plugins/os/rpm-based/rpm-based-os-plugin'
