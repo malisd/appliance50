@@ -1,2 +1,0 @@
-Defaults:jharvard secure_path=/sbin:/bin:/usr/local/sbin:/usr/sbin:/usr/local/bin:/usr/bin
-Defaults:jharvard timestamp_timeout=-1

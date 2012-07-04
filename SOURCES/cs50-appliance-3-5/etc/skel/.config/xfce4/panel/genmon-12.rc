@@ -1,6 +1,0 @@
-Command=/usr/bin/ip50 -v
-UseLabel=0
-Text=IP address
-UpdatePeriod=5000
-Font=Sans 8
-

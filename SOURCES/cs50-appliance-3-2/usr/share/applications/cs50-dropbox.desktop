@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Encoding=UTF-8
-Name=Dropbox
-Comment=Sync your files across computers and to the web
-Exec=nautilus Dropbox
-Icon=dropbox
-Type=Application
-Categories=X-Xfce-Toplevel;

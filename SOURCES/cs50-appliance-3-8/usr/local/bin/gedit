@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# hide gedit's Gtk errors
-/usr/bin/gedit -b "$@" 2> /dev/null

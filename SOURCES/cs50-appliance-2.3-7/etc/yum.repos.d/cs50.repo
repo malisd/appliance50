@@ -1,8 +1,0 @@
-[cs50]
-name=CS50 Appliance 2.3
-baseurl=http://mirror.cs50.net/appliance/2.3/RPMS/
-enabled=1
-metadata_expire=5m
-gpgcheck=0
-priority=1
-protect=1

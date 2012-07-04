@@ -1,6 +1,0 @@
-Command=/bin/echo
-UseLabel=0
-Text=version
-UpdatePeriod=86400000
-Font=Sans 10
-

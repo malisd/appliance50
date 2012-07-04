@@ -1,9 +1,0 @@
-questions.txt
-
-Computer Science 50
-Problem Set 3
-
-i.   TODO
-ii.  TODO
-iii. TODO
-iv.  TODO
