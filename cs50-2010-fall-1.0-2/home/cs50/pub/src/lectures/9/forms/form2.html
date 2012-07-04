@@ -1,0 +1,61 @@
+<!--
+
+form2.html
+
+A form with client-side validation.
+
+Computer Science 50
+David J. Malan
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script type="text/javascript">
+    // <![CDATA[
+
+        function validate()
+        {
+            if (document.forms.registration.email.value == "")
+            {
+                alert("You must provide an email adddress.");
+                return false;
+            }
+            else if (document.forms.registration.password1.value == "")
+            {
+                alert("You must provide a password.");
+                return false;
+            }
+            else if (document.forms.registration.password1.value != document.forms.registration.password2.value)
+            {
+                alert("You must provide the same password twice.");
+                return false;
+            }
+            else if (!document.forms.registration.agreement.checked)
+            {
+                alert("You must agree to our terms and conditions.");
+                return false;
+            }
+            return true;
+        }
+
+    // ]]>
+    </script>
+    <title>form2</title>
+  </head>
+  <body>
+    <form action="dump.php" method="get" name="registration" onsubmit="return validate();">
+      Email: <input name="email" type="text">
+      <br>
+      Password: <input name="password1" type="password">
+      <br>
+      Password (again): <input name="password2" type="password">
+      <br>
+      I agree to the terms and conditions: <input name="agreement" type="checkbox">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

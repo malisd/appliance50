@@ -1,0 +1,61 @@
+<!--
+
+form3.html
+
+A form with client-side validation demonstrating "this" keyword.
+
+Computer Science 50
+David J. Malan
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script type="text/javascript">
+    // <![CDATA[
+
+        function validate(f)
+        {
+            if (f.email.value == "")
+            {
+                alert("You must provide an email adddress.");
+                return false;
+            }
+            else if (f.password1.value == "")
+            {
+                alert("You must provide a password.");
+                return false;
+            }
+            else if (f.password1.value != f.password2.value)
+            {
+                alert("You must provide the same password twice.");
+                return false;
+            }
+            else if (!f.agreement.checked)
+            {
+                alert("You must agree to our terms and conditions.");
+                return false;
+            }
+            return true;
+        }
+
+    // ]]>
+    </script>
+    <title>form3</title>
+  </head>
+  <body>
+    <form action="dump.php" method="get" onsubmit="return validate(this);">
+      Email: <input name="email" type="text">
+      <br>
+      Password: <input name="password1" type="password">
+      <br>
+      Password (again): <input name="password2" type="password">
+      <br>
+      I agree to the terms and conditions: <input name="agreement" type="checkbox">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
