@@ -1,0 +1,7 @@
+#!/bin/bash
+
+declare rpmquery=$(/usr/bin/rpmquery cs50-appliance)
+declare version=$(/usr/bin/expr "$rpmquery" : 'cs50-appliance-\(.*\)\.i386')
+if [ "$version" != "" ]; then
+    echo $version
+fi

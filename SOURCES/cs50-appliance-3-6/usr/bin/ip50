@@ -1,0 +1,8 @@
+#!/bin/bash
+
+declare addr=$(/sbin/ifconfig eth1 | /bin/grep 'inet addr:' | /bin/cut -d: -f2 | /bin/awk '{print $1}')
+if [ "$addr" != "" ]; then
+    echo $addr
+else
+    echo "no IP address"
+fi

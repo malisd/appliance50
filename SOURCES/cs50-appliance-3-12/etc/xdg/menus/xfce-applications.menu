@@ -1,0 +1,261 @@
+
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+    <Name>Xfce</Name>
+
+    <DefaultAppDirs/>
+    <DefaultDirectoryDirs/>
+    <DefaultMergeDirs/>
+
+    <Include>
+        <Category>X-Xfce-Toplevel</Category>
+    </Include>
+
+    <Layout>
+        <Filename>xfrun4.desktop</Filename>
+        <Separator/>
+        <Menuname>CS50</Menuname>
+        <Separator/>
+        <Filename>cs50-dropbox.desktop</Filename>
+        <Separator/>
+        <Filename>cs50-teamviewer.desktop</Filename>
+        <Separator/>
+        <Menuname>Administration</Menuname>        
+        <Menuname>Preferences</Menuname>
+        <Separator/>
+        <Merge type="all"/>
+        <Separator/>
+        <Filename>xfce4-session-logout.desktop</Filename>
+    </Layout>
+
+    <Exclude>
+        <Or>
+            <Filename>exo-terminal-emulator.desktop</Filename>
+            <Filename>exo-file-manager.desktop</Filename>
+            <Filename>exo-mail-reader.desktop</Filename>
+            <Filename>exo-web-browser.desktop</Filename>
+        </Or>
+    </Exclude>
+    
+    <Menu>
+        <Name>CS50</Name>
+        <Directory>CS50.directory</Directory>
+        <Include>
+            <Category>CS50</Category>
+        </Include>
+        <Layout>
+            <Filename>cs50-appliance.desktop</Filename>
+            <Separator/>
+            <Merge type="all"/>
+        </Layout>
+    </Menu>
+
+    <Menu>
+        <Name>Preferences</Name>
+        <Directory>xfce-settings.directory</Directory>
+        <Include>
+            <And>
+                <Category>Settings</Category>
+                <Not><Category>System</Category></Not>
+                <Not><Category>Screensaver</Category></Not>
+                <Not><Filename>fedora-im-chooser.desktop</Filename></Not>
+                <Not><Filename>gnome-default-applications.desktop</Filename></Not>
+            </And>
+        </Include>
+        <Layout>
+            <Filename>xfce-settings-manager.desktop</Filename>
+            <Separator/>
+            <Merge type="all"/>
+        </Layout>
+    </Menu>
+
+    <Menu>
+        <Name>Administration</Name>
+        <Directory>SystemConfig.directory</Directory>
+        <Include>
+            <And>
+                <Category>Settings</Category>
+                <Category>System</Category>
+                <Not><Category>Screensaver</Category></Not>
+            </And>
+            <Filename>gpk-application.desktop</Filename>
+            <Filename>gpk-update-viewer.desktop</Filename>
+        </Include>
+        <Exclude>
+            <Filename>authconfig.desktop</Filename>
+            <Filename>redhat-system-control-network.desktop</Filename>
+            <Filename>system-config-users.desktop</Filename>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Accessories</Name>
+        <Directory>Utility.directory</Directory>
+        <Include>
+            <Or>
+                <And>
+                    <Category>Utility</Category>
+                    <Not><Category>System</Category></Not>
+                </And>
+                <Filename>fedora-xterm.desktop</Filename>
+                <Filename>Terminal.desktop</Filename>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>emacsclient.desktop</Filename>
+                <Filename>exo-file-manager.desktop</Filename>
+                <Filename>exo-terminal-emulator.desktop</Filename>
+                <Filename>gnome-gucharmap.desktop</Filename>
+                <Filename>xfce4-about.desktop</Filename>
+                <Filename>xfhelp4.desktop</Filename>
+                <Filename>xfrun4.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Development</Name>
+        <Directory>Development.directory</Directory>
+        <Include>
+            <Or>
+                <Category>Development</Category>
+                <Filename>gedit.desktop</Filename>
+                <Filename>Terminal.desktop</Filename>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
+                <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Education</Name>
+        <Directory>Education.directory</Directory>
+        <Include>
+            <Or>
+            <Category>Education</Category>
+            <Category>Science</Category>
+        </Or>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Games</Name>
+        <Directory>Game.directory</Directory>
+        <Include>
+            <Category>Game</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Graphics</Name>
+        <Directory>Graphics.directory</Directory>
+        <Include>
+            <Category>Graphics</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Multimedia</Name>
+        <Directory>AudioVideo.directory</Directory>
+        <Include>
+            <Category>Audio</Category>
+            <Category>Video</Category>
+            <Category>AudioVideo</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Network</Name>
+        <Directory>Network.directory</Directory>
+        <Include>
+            <Or>
+                <Category>Network</Category>
+                <Filename>Terminal.desktop</Filename>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>dropbox.desktop</Filename>
+                <Filename>exo-mail-reader.desktop</Filename>
+                <Filename>exo-web-browser.desktop</Filename>
+                <Filename>redhat-system-control-network.desktop</Filename>
+                <Filename>teamviewer-teamviewer6.desktop</Filename>
+                <Filename>Terminal.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Office</Name>
+        <Directory>Office.directory</Directory>
+        <Include>
+            <Category>Office</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>System</Name>
+        <Directory>System.directory</Directory>
+        <Include>
+            <And>
+                <Or>
+                    <Category>Emulator</Category>
+                    <Category>System</Category>
+                </Or>
+                <Not><Category>Settings</Category></Not>
+                <Not><Category>Screensaver</Category></Not>
+                <Not><Filename>gpk-application.desktop</Filename></Not>
+                <Not><Filename>gpk-update-viewer.desktop</Filename></Not>
+            </And>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>dconf-editor.desktop</Filename>
+                <Filename>fedora-Thunar-bulk-rename.desktop</Filename>
+                <Filename>fedora-xterm.desktop</Filename>
+                <Filename>redhat-usermount.desktop</Filename>
+                <Filename>Terminal.desktop</Filename>
+                <Filename>xfce4-session-logout.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Other</Name>
+        <Directory>xfce-other.directory</Directory>
+        <OnlyUnallocated/>
+        <Include>
+            <And>
+                <Not><Category>Core</Category></Not>
+                <Not><Category>Settings</Category></Not>
+                <Not><Category>SystemSetup</Category></Not>
+                <Not><Category>X-Red-Hat-ServerConfig</Category></Not>
+                <Not><Category>Screensaver</Category></Not>
+            </And>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>dropbox.desktop</Filename>
+                <Filename>emacsclient.desktop</Filename>
+                <Filename>exo-terminal-emulator.desktop</Filename>
+                <Filename>exo-file-manager.desktop</Filename>
+                <Filename>exo-mail-reader.desktop</Filename>
+                <Filename>exo-web-browser.desktop</Filename>
+                <Filename>gnome-gucharmap.desktop</Filename>
+                <Filename>redhat-usermount.desktop</Filename>
+                <Filename>teamviewer-teamviewer6.desktop</Filename>
+                <Filename>xfce4-about.desktop</Filename>
+                <Filename>xfce4-tips.desktop</Filename>
+                <Filename>xfhelp4.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+</Menu>

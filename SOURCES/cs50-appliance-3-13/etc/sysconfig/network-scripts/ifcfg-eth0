@@ -1,0 +1,5 @@
+BOOTPROTO=dhcp
+DEVICE=eth0
+NETWORKING_IPV6=no
+ONBOOT=yes
+TYPE=Ethernet

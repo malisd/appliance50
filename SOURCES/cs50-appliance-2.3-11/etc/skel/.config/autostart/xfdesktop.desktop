@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=xfdesktop
+Comment=
+
+# http://inspirated.com/2009/07/02/workaround-for-autostarting-applications-in-a-particular-order-on-xfcegnomekde
+Exec=/bin/bash -c "/bin/sleep 3 && /usr/bin/xfdesktop --reload"
+
+StartupNotify=false
+Terminal=false
+Hidden=false

@@ -1,0 +1,2693 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="apps">
+		<dir name="metacity">
+			<dir name="window_keybindings">
+				<entry name="move_to_center" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_center"/>
+				<entry name="move_to_side_w" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_side_w"/>
+				<entry name="move_to_side_e" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_side_e"/>
+				<entry name="move_to_side_s" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_side_s"/>
+				<entry name="move_to_side_n" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_side_n"/>
+				<entry name="move_to_corner_se" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_corner_se"/>
+				<entry name="move_to_corner_sw" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_corner_sw"/>
+				<entry name="move_to_corner_ne" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_corner_ne"/>
+				<entry name="move_to_corner_nw" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_corner_nw"/>
+				<entry name="maximize_horizontally" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/maximize_horizontally"/>
+				<entry name="maximize_vertically" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/maximize_vertically"/>
+				<entry name="lower" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/lower"/>
+				<entry name="raise" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/raise"/>
+				<entry name="raise_or_lower" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/raise_or_lower"/>
+				<entry name="move_to_workspace_down" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_down"/>
+				<entry name="move_to_workspace_up" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_up"/>
+				<entry name="move_to_workspace_right" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_right"/>
+				<entry name="move_to_workspace_left" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_left"/>
+				<entry name="move_to_workspace_12" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_12"/>
+				<entry name="move_to_workspace_11" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_11"/>
+				<entry name="move_to_workspace_10" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_10"/>
+				<entry name="move_to_workspace_9" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_9"/>
+				<entry name="move_to_workspace_8" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_8"/>
+				<entry name="move_to_workspace_7" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_7"/>
+				<entry name="move_to_workspace_6" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_6"/>
+				<entry name="move_to_workspace_5" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_5"/>
+				<entry name="move_to_workspace_4" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_4"/>
+				<entry name="move_to_workspace_3" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_3"/>
+				<entry name="move_to_workspace_2" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_2"/>
+				<entry name="move_to_workspace_1" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/move_to_workspace_1"/>
+				<entry name="toggle_on_all_workspaces" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/toggle_on_all_workspaces"/>
+				<entry name="begin_resize" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/begin_resize"/>
+				<entry name="begin_move" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/begin_move"/>
+				<entry name="close" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/close"/>
+				<entry name="minimize" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/minimize"/>
+				<entry name="toggle_shaded" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/toggle_shaded"/>
+				<entry name="unmaximize" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/unmaximize"/>
+				<entry name="maximize" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/maximize"/>
+				<entry name="toggle_above" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/toggle_above"/>
+				<entry name="toggle_maximized" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/toggle_maximized"/>
+				<entry name="toggle_fullscreen" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/toggle_fullscreen"/>
+				<entry name="activate_window_menu" mtime="1311481638" schema="/schemas/apps/metacity/window_keybindings/activate_window_menu"/>
+			</dir>
+			<dir name="keybinding_commands">
+				<entry name="command_window_screenshot" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command_window_screenshot"/>
+				<entry name="command_screenshot" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command_screenshot"/>
+				<entry name="command_1" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_2" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_3" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_4" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_5" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_6" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_7" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_8" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_9" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_10" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_11" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+				<entry name="command_12" mtime="1311481638" schema="/schemas/apps/metacity/keybinding_commands/command"/>
+			</dir>
+			<dir name="global_keybindings">
+				<entry name="run_command_terminal" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command_terminal"/>
+				<entry name="run_command_window_screenshot" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command_window_screenshot"/>
+				<entry name="run_command_screenshot" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command_screenshot"/>
+				<entry name="panel_run_dialog" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/panel_run_dialog"/>
+				<entry name="panel_main_menu" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/panel_main_menu"/>
+				<entry name="show_desktop" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/show_desktop"/>
+				<entry name="cycle_panels_backward" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/cycle_panels_backward"/>
+				<entry name="cycle_panels" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/cycle_panels"/>
+				<entry name="cycle_windows_backward" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/cycle_windows_backward"/>
+				<entry name="cycle_windows" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/cycle_windows"/>
+				<entry name="cycle_group_backward" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/cycle_group_backward"/>
+				<entry name="cycle_group" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/cycle_group"/>
+				<entry name="switch_panels_backward" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_panels_backward"/>
+				<entry name="switch_panels" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_panels"/>
+				<entry name="switch_windows_backward" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_windows_backward"/>
+				<entry name="switch_windows" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_windows"/>
+				<entry name="switch_group_backward" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_group_backward"/>
+				<entry name="switch_group" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_group"/>
+				<entry name="switch_to_workspace_down" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_down"/>
+				<entry name="switch_to_workspace_up" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_up"/>
+				<entry name="switch_to_workspace_right" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_right"/>
+				<entry name="switch_to_workspace_left" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_left"/>
+				<entry name="switch_to_workspace_12" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_12"/>
+				<entry name="switch_to_workspace_11" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_11"/>
+				<entry name="switch_to_workspace_10" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_10"/>
+				<entry name="switch_to_workspace_9" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_9"/>
+				<entry name="switch_to_workspace_8" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_8"/>
+				<entry name="switch_to_workspace_7" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_7"/>
+				<entry name="switch_to_workspace_6" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_6"/>
+				<entry name="switch_to_workspace_5" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_5"/>
+				<entry name="switch_to_workspace_4" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_4"/>
+				<entry name="switch_to_workspace_3" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_3"/>
+				<entry name="switch_to_workspace_2" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_2"/>
+				<entry name="switch_to_workspace_1" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/switch_to_workspace_1"/>
+				<entry name="run_command_1" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_2" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_3" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_4" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_5" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_6" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_7" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_8" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_9" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_10" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_11" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+				<entry name="run_command_12" mtime="1311481638" schema="/schemas/apps/metacity/global_keybindings/run_command"/>
+			</dir>
+			<dir name="workspace_names">
+				<entry name="name_1" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_2" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_3" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_4" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_5" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_6" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_7" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_8" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_9" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_10" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_11" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_12" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_13" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_14" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_15" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_16" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_17" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_18" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_19" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_20" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_21" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_22" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_23" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_24" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_25" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_26" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_27" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_28" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_29" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_30" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_31" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_32" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_33" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_34" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_35" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+				<entry name="name_36" mtime="1311481638" schema="/schemas/apps/metacity/workspace_names/name"/>
+			</dir>
+			<dir name="general">
+				<entry name="disable_workarounds" mtime="1311481638" schema="/schemas/apps/metacity/general/disable_workarounds"/>
+				<entry name="application_based" mtime="1311481638" schema="/schemas/apps/metacity/general/application_based"/>
+				<entry name="reduced_resources" mtime="1311481638" schema="/schemas/apps/metacity/general/reduced_resources"/>
+				<entry name="compositing_manager" mtime="1311481638" schema="/schemas/apps/metacity/general/compositing_manager"/>
+				<entry name="visual_bell_type" mtime="1311481638" schema="/schemas/apps/metacity/general/visual_bell_type"/>
+				<entry name="audible_bell" mtime="1311481638" schema="/schemas/apps/metacity/general/audible_bell"/>
+				<entry name="visual_bell" mtime="1311481638" schema="/schemas/apps/metacity/general/visual_bell"/>
+				<entry name="num_workspaces" mtime="1311481638" schema="/schemas/apps/metacity/general/num_workspaces"/>
+				<entry name="titlebar_font" mtime="1311481638" schema="/schemas/apps/metacity/general/titlebar_font"/>
+				<entry name="titlebar_uses_system_font" mtime="1311481638" schema="/schemas/apps/metacity/general/titlebar_uses_system_font"/>
+				<entry name="theme" mtime="1311481638" schema="/schemas/apps/metacity/general/theme"/>
+				<entry name="auto_raise_delay" mtime="1311481638" schema="/schemas/apps/metacity/general/auto_raise_delay"/>
+				<entry name="auto_raise" mtime="1311481638" schema="/schemas/apps/metacity/general/auto_raise"/>
+				<entry name="action_right_click_titlebar" mtime="1311481638" schema="/schemas/apps/metacity/general/action_right_click_titlebar"/>
+				<entry name="action_middle_click_titlebar" mtime="1311481638" schema="/schemas/apps/metacity/general/action_middle_click_titlebar"/>
+				<entry name="action_double_click_titlebar" mtime="1311481638" schema="/schemas/apps/metacity/general/action_double_click_titlebar"/>
+				<entry name="new_windows_always_on_top" mtime="1311481638" schema="/schemas/apps/metacity/general/new_windows_always_on_top"/>
+				<entry name="raise_on_click" mtime="1311481638" schema="/schemas/apps/metacity/general/raise_on_click"/>
+				<entry name="no_focus_windows" mtime="1311481638" schema="/schemas/apps/metacity/general/no_focus_windows"/>
+				<entry name="focus_new_windows" mtime="1311481638" schema="/schemas/apps/metacity/general/focus_new_windows"/>
+				<entry name="focus_mode" mtime="1311481638" schema="/schemas/apps/metacity/general/focus_mode"/>
+				<entry name="button_layout" mtime="1311481638" schema="/schemas/apps/metacity/general/button_layout"/>
+				<entry name="resize_with_right_button" mtime="1311481638" schema="/schemas/apps/metacity/general/resize_with_right_button"/>
+				<entry name="mouse_button_modifier" mtime="1311481638" schema="/schemas/apps/metacity/general/mouse_button_modifier"/>
+			</dir>
+		</dir>
+		<dir name="gnome_settings_daemon">
+			<dir name="gtk-modules">
+				<entry name="canberra-gtk-module" mtime="1311481636" schema="/schemas/apps/gnome_settings_daemon/gtk-modules/canberra-gtk-module"/>
+			</dir>
+		</dir>
+		<dir name="gconf-editor">
+			<entry name="bookmarks" mtime="1311481365" schema="/schemas/apps/gconf-editor/bookmarks"/>
+		</dir>
+		<dir name="nm-applet">
+		</dir>
+		<dir name="gdm">
+			<dir name="simple-greeter">
+				<entry name="wm_use_compiz" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/wm_use_compiz"/>
+				<entry name="recent-languages" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/recent-languages"/>
+				<entry name="disable_user_list" mtime="1311482236" schema="/schemas/apps/gdm/simple-greeter/disable_user_list" type="bool" value="true"/>
+				<entry name="disable_restart_buttons" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/disable_restart_buttons"/>
+				<entry name="logo_icon_name" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/logo_icon_name"/>
+				<entry name="banner_message_text_nochooser" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/banner_message_text_nochooser"/>
+				<entry name="banner_message_text" mtime="1311482236" schema="/schemas/apps/gdm/simple-greeter/banner_message_text" type="string">
+					<stringvalue>This is CS50. In a box.</stringvalue>
+				</entry>
+				<entry name="banner_message_enable" mtime="1311482236" schema="/schemas/apps/gdm/simple-greeter/banner_message_enable" type="bool" value="true"/>
+				<dir name="settings-manager-plugins">
+					<dir name="xsettings">
+						<entry name="priority" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/xsettings/priority"/>
+						<entry name="active" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/xsettings/active"/>
+					</dir>
+					<dir name="xrandr">
+						<entry name="priority" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/xrandr/priority"/>
+						<entry name="active" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/xrandr/active"/>
+					</dir>
+					<dir name="sound">
+						<entry name="priority" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/sound/priority"/>
+						<entry name="active" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/sound/active"/>
+					</dir>
+					<dir name="media-keys">
+						<entry name="priority" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/media-keys/priority"/>
+						<entry name="active" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/media-keys/active"/>
+					</dir>
+					<dir name="background">
+						<entry name="priority" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/background/priority"/>
+						<entry name="active" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/background/active"/>
+					</dir>
+					<dir name="a11y-keyboard">
+						<entry name="priority" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/a11y-keyboard/priority"/>
+						<entry name="active" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/settings-manager-plugins/a11y-keyboard/active"/>
+					</dir>
+				</dir>
+				<dir name="accessibility">
+					<entry name="screen_magnifier_enabled" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/accessibility/screen_magnifier_enabled"/>
+					<entry name="screen_reader_enabled" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/accessibility/screen_reader_enabled"/>
+					<entry name="screen_keyboard_enabled" mtime="1311481214" schema="/schemas/apps/gdm/simple-greeter/accessibility/screen_keyboard_enabled"/>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+	<dir name="desktop">
+		<dir name="gnome">
+			<dir name="typing_break">
+				<entry name="enabled" mtime="1311481132" schema="/schemas/desktop/gnome/typing_break/enabled"/>
+				<entry name="allow_postpone" mtime="1311481132" schema="/schemas/desktop/gnome/typing_break/allow_postpone"/>
+				<entry name="break_time" mtime="1311481132" schema="/schemas/desktop/gnome/typing_break/break_time"/>
+				<entry name="type_time" mtime="1311481132" schema="/schemas/desktop/gnome/typing_break/type_time"/>
+			</dir>
+			<dir name="thumbnailers">
+				<entry name="disable_all" mtime="1311481132" schema="/schemas/desktop/gnome/thumbnailers/disable_all"/>
+			</dir>
+			<dir name="thumbnail_cache">
+				<entry name="maximum_size" mtime="1311481132" schema="/schemas/desktop/gnome/thumbnail_cache/maximum_size"/>
+				<entry name="maximum_age" mtime="1311481132" schema="/schemas/desktop/gnome/thumbnail_cache/maximum_age"/>
+			</dir>
+			<dir name="sound">
+				<entry name="input_feedback_sounds" mtime="1311481132" schema="/schemas/desktop/gnome/sound/input_feedback_sounds"/>
+				<entry name="theme_name" mtime="1311481132" schema="/schemas/desktop/gnome/sound/theme_name"/>
+				<entry name="event_sounds" mtime="1311481132" schema="/schemas/desktop/gnome/sound/event_sounds"/>
+				<entry name="enable_esd" mtime="1311481132" schema="/schemas/desktop/gnome/sound/enable_esd"/>
+				<entry name="default_mixer_tracks" mtime="1311481132" schema="/schemas/desktop/gnome/sound/default_mixer_tracks"/>
+				<entry name="default_mixer_device" mtime="1311481132" schema="/schemas/desktop/gnome/sound/default_mixer_device"/>
+			</dir>
+			<dir name="peripherals">
+				<dir name="mouse">
+					<entry name="cursor_size" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/cursor_size"/>
+					<entry name="cursor_theme" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/cursor_theme"/>
+					<entry name="cursor_font" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/cursor_font"/>
+					<entry name="locate_pointer" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/locate_pointer"/>
+					<entry name="double_click" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/double_click"/>
+					<entry name="drag_threshold" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/drag_threshold"/>
+					<entry name="motion_threshold" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/motion_threshold"/>
+					<entry name="motion_acceleration" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/motion_acceleration"/>
+					<entry name="single_click" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/single_click"/>
+					<entry name="left_handed" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/mouse/left_handed"/>
+				</dir>
+				<dir name="monitor">
+					<entry name="resolution_size" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/monitor/resolution_size"/>
+				</dir>
+				<dir name="keyboard">
+					<entry name="remember_numlock_state" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/remember_numlock_state"/>
+					<entry name="bell_custom_file" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_custom_file"/>
+					<entry name="bell_duration" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_duration"/>
+					<entry name="bell_pitch" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_pitch"/>
+					<entry name="bell_mode" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_mode"/>
+					<entry name="click_volume" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/click_volume"/>
+					<entry name="delay" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/delay"/>
+					<entry name="rate" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/rate"/>
+					<entry name="click" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/click"/>
+					<entry name="repeat" mtime="1311481132" schema="/schemas/desktop/gnome/peripherals/keyboard/repeat"/>
+				</dir>
+			</dir>
+			<dir name="lockdown">
+				<entry name="disable_application_handlers" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_application_handlers"/>
+				<entry name="disable_lock_screen" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_lock_screen"/>
+				<entry name="disable_user_switching" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_user_switching"/>
+				<entry name="disable_print_setup" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_print_setup"/>
+				<entry name="disable_printing" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_printing"/>
+				<entry name="disable_save_to_disk" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_save_to_disk"/>
+				<entry name="disable_command_line" mtime="1311481132" schema="/schemas/desktop/gnome/lockdown/disable_command_line"/>
+			</dir>
+			<dir name="interface">
+				<entry name="show_unicode_menu" mtime="1311481131" schema="/schemas/desktop/gnome/interface/show_unicode_menu"/>
+				<entry name="show_input_method_menu" mtime="1311481131" schema="/schemas/desktop/gnome/interface/show_input_method_menu"/>
+				<entry name="menubar_accel" mtime="1311481131" schema="/schemas/desktop/gnome/interface/menubar_accel"/>
+				<entry name="file_chooser_backend" mtime="1311481131" schema="/schemas/desktop/gnome/interface/file_chooser_backend"/>
+				<entry name="status_bar_meter_on_right" mtime="1311481131" schema="/schemas/desktop/gnome/interface/status_bar_meter_on_right"/>
+				<entry name="use_custom_font" mtime="1311481131" schema="/schemas/desktop/gnome/interface/use_custom_font"/>
+				<entry name="monospace_font_name" mtime="1311481131" schema="/schemas/desktop/gnome/interface/monospace_font_name"/>
+				<entry name="document_font_name" mtime="1311481131" schema="/schemas/desktop/gnome/interface/document_font_name"/>
+				<entry name="gtk-im-module" mtime="1311481131" schema="/schemas/desktop/gnome/interface/gtk-im-module"/>
+				<entry name="gtk-im-status-style" mtime="1311481131" schema="/schemas/desktop/gnome/interface/gtk-im-status-style"/>
+				<entry name="gtk-im-preedit-style" mtime="1311481131" schema="/schemas/desktop/gnome/interface/gtk-im-preedit-style"/>
+				<entry name="font_name" mtime="1311481131" schema="/schemas/desktop/gnome/interface/font_name"/>
+				<entry name="gtk_key_theme" mtime="1311481131" schema="/schemas/desktop/gnome/interface/gtk_key_theme"/>
+				<entry name="gtk_theme" mtime="1311481131" schema="/schemas/desktop/gnome/interface/gtk_theme"/>
+				<entry name="icon_theme" mtime="1311481131" schema="/schemas/desktop/gnome/interface/icon_theme"/>
+				<entry name="cursor_blink_time" mtime="1311481131" schema="/schemas/desktop/gnome/interface/cursor_blink_time"/>
+				<entry name="cursor_blink" mtime="1311481131" schema="/schemas/desktop/gnome/interface/cursor_blink"/>
+				<entry name="toolbar_icons_size" mtime="1311481131" schema="/schemas/desktop/gnome/interface/toolbar_icons_size"/>
+				<entry name="toolbar_detachable" mtime="1311481131" schema="/schemas/desktop/gnome/interface/toolbar_detachable"/>
+				<entry name="menubar_detachable" mtime="1311481131" schema="/schemas/desktop/gnome/interface/menubar_detachable"/>
+				<entry name="buttons_have_icons" mtime="1311481131" schema="/schemas/desktop/gnome/interface/buttons_have_icons"/>
+				<entry name="menus_have_icons" mtime="1311481131" schema="/schemas/desktop/gnome/interface/menus_have_icons"/>
+				<entry name="toolbar_style" mtime="1311481131" schema="/schemas/desktop/gnome/interface/toolbar_style"/>
+				<entry name="can_change_accels" mtime="1311481131" schema="/schemas/desktop/gnome/interface/can_change_accels"/>
+				<entry name="menus_have_tearoff" mtime="1311481131" schema="/schemas/desktop/gnome/interface/menus_have_tearoff"/>
+				<entry name="enable_animations" mtime="1311481131" schema="/schemas/desktop/gnome/interface/enable_animations"/>
+				<entry name="accessibility" mtime="1311481131" schema="/schemas/desktop/gnome/interface/accessibility"/>
+			</dir>
+			<dir name="file_views">
+				<entry name="icon_theme" mtime="1311481131" schema="/schemas/desktop/gnome/file-views/icon_theme"/>
+			</dir>
+			<dir name="background">
+				<entry name="color_shading_type" mtime="1311481131" schema="/schemas/desktop/gnome/background/color_shading_type"/>
+				<entry name="secondary_color" mtime="1311481131" schema="/schemas/desktop/gnome/background/secondary_color"/>
+				<entry name="primary_color" mtime="1311481131" schema="/schemas/desktop/gnome/background/primary_color"/>
+				<entry name="picture_opacity" mtime="1311481131" schema="/schemas/desktop/gnome/background/picture_opacity"/>
+				<entry name="picture_filename" mtime="1311481131" schema="/schemas/desktop/gnome/background/picture_filename"/>
+				<entry name="picture_options" mtime="1311481131" schema="/schemas/desktop/gnome/background/picture_options"/>
+				<entry name="draw_background" mtime="1311481131" schema="/schemas/desktop/gnome/background/draw_background"/>
+			</dir>
+			<dir name="accessibility">
+				<dir name="startup">
+					<entry name="exec_ats" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/startup/exec_ats"/>
+				</dir>
+				<dir name="keyboard">
+					<entry name="togglekeys_enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/togglekeys_enable"/>
+					<entry name="stickykeys_modifier_beep" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/stickykeys_modifier_beep"/>
+					<entry name="stickykeys_two_key_off" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/stickykeys_two_key_off"/>
+					<entry name="stickykeys_enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/stickykeys_enable"/>
+					<entry name="slowkeys_beep_reject" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_reject"/>
+					<entry name="slowkeys_beep_accept" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_accept"/>
+					<entry name="slowkeys_beep_press" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_press"/>
+					<entry name="slowkeys_delay" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_delay"/>
+					<entry name="slowkeys_enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_enable"/>
+					<entry name="mousekeys_init_delay" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_init_delay"/>
+					<entry name="mousekeys_accel_time" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_accel_time"/>
+					<entry name="mousekeys_max_speed" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_max_speed"/>
+					<entry name="mousekeys_enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_enable"/>
+					<entry name="bouncekeys_beep_reject" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_beep_reject"/>
+					<entry name="bouncekeys_delay" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_delay"/>
+					<entry name="bouncekeys_enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_enable"/>
+					<entry name="timeout" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/timeout"/>
+					<entry name="timeout_enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/timeout_enable"/>
+					<entry name="feature_state_change_beep" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/feature_state_change_beep"/>
+					<entry name="enable" mtime="1311481131" schema="/schemas/desktop/gnome/accessibility/keyboard/enable"/>
+				</dir>
+			</dir>
+			<dir name="applications">
+				<dir name="window_manager">
+					<entry name="workspace_names" mtime="1311481131" schema="/schemas/desktop/gnome/applications/window_manager/workspace_names"/>
+					<entry name="number_of_workspaces" mtime="1311481131" schema="/schemas/desktop/gnome/applications/window_manager/number_of_workspaces"/>
+					<entry name="current" mtime="1311481131" schema="/schemas/desktop/gnome/applications/window_manager/current"/>
+					<entry name="default" mtime="1311481131" schema="/schemas/desktop/gnome/applications/window_manager/default"/>
+				</dir>
+				<dir name="tasks">
+					<entry name="needs_term" mtime="1311481131" schema="/schemas/desktop/gnome/applications/tasks/needs_term"/>
+					<entry name="exec" mtime="1311481131" schema="/schemas/desktop/gnome/applications/tasks/exec"/>
+				</dir>
+				<dir name="calendar">
+					<entry name="needs_term" mtime="1311481131" schema="/schemas/desktop/gnome/applications/calendar/needs_term"/>
+					<entry name="exec" mtime="1311481131" schema="/schemas/desktop/gnome/applications/calendar/exec"/>
+				</dir>
+				<dir name="browser">
+					<entry name="nremote" mtime="1311481131" schema="/schemas/desktop/gnome/applications/browser/nremote"/>
+					<entry name="needs_term" mtime="1311481131" schema="/schemas/desktop/gnome/applications/browser/needs_term"/>
+					<entry name="exec" mtime="1311481131" schema="/schemas/desktop/gnome/applications/browser/exec"/>
+				</dir>
+				<dir name="at">
+					<dir name="visual">
+						<entry name="startup" mtime="1311481131" schema="/schemas/desktop/gnome/applications/at/visual/startup"/>
+						<entry name="exec" mtime="1311481131" schema="/schemas/desktop/gnome/applications/at/visual/exec"/>
+					</dir>
+					<dir name="mobility">
+						<entry name="startup" mtime="1311481131" schema="/schemas/desktop/gnome/applications/at/mobility/startup"/>
+						<entry name="exec" mtime="1311481131" schema="/schemas/desktop/gnome/applications/at/mobility/exec"/>
+					</dir>
+				</dir>
+				<dir name="component_viewer">
+					<entry name="exec" mtime="1311481129" schema="/schemas/desktop/gnome/applications/component_viewer/exec"/>
+				</dir>
+				<dir name="media">
+					<entry name="exec_arg" mtime="1311481129" schema="/schemas/desktop/gnome/applications/media/exec_arg"/>
+					<entry name="exec" mtime="1311481129" schema="/schemas/desktop/gnome/applications/media/exec"/>
+				</dir>
+				<dir name="terminal">
+					<entry name="exec_arg" mtime="1311481131" schema="/schemas/desktop/gnome/applications/terminal/exec_arg"/>
+					<entry name="exec" mtime="1311481131" schema="/schemas/desktop/gnome/applications/terminal/exec"/>
+				</dir>
+			</dir>
+			<dir name="url-handlers">
+				<dir name="h323">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/h323/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/h323/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/h323/enabled"/>
+				</dir>
+				<dir name="callto">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/callto/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/callto/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/callto/enabled"/>
+				</dir>
+				<dir name="aim">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/aim/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/aim/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/aim/enabled"/>
+				</dir>
+				<dir name="mailto">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/mailto/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/mailto/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/mailto/enabled"/>
+				</dir>
+				<dir name="about">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/about/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/about/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/about/enabled"/>
+				</dir>
+				<dir name="https">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/https/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/https/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/https/enabled"/>
+				</dir>
+				<dir name="http">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/http/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/http/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/http/enabled"/>
+				</dir>
+				<dir name="man">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/man/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/man/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/man/enabled"/>
+				</dir>
+				<dir name="info">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/info/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/info/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/info/enabled"/>
+				</dir>
+				<dir name="ghelp">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/ghelp/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/ghelp/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/ghelp/enabled"/>
+				</dir>
+				<dir name="trash">
+					<entry name="needs_terminal" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/trash/needs_terminal"/>
+					<entry name="command" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/trash/command"/>
+					<entry name="enabled" mtime="1311481129" schema="/schemas/desktop/gnome/url-handlers/trash/enabled"/>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="metacity">
+				<dir name="window_keybindings">
+					<entry name="move_to_center" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to center of screen">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_side_w" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to left side of screen">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_side_e" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to right side of screen">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_side_s" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to bottom edge of screen">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_side_n" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to top edge of screen">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_corner_se" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to bottom right corner">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_corner_sw" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to bottom left corner">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_corner_ne" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to top right corner">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_corner_nw" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to top left corner">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="maximize_horizontally" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Maximize window horizontally">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="maximize_vertically" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Maximize window vertically">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lower" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Lower window below other windows">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="raise" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Raise window above other windows">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="raise_or_lower" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Raise window if covered, otherwise lower it">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_down" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window one workspace down">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Down</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_up" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window one workspace up">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Up</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_right" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window one workspace to the right">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Right</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_left" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window one workspace to the left">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_12" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 12">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_11" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 11">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_10" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 10">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_9" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 9">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_8" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 8">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_7" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 7">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_6" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 6">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_5" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 5">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_4" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 4">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_3" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 3">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_2" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 2">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="move_to_workspace_1" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window to workspace 1">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toggle_on_all_workspaces" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Toggle window on all workspaces or one">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="begin_resize" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Resize window">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F8</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="begin_move" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move window">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F7</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="close" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Close window">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F4</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="minimize" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Minimize window">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toggle_shaded" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Toggle shaded state">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="unmaximize" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Restore window">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F5</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="maximize" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Maximize window">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toggle_above" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Toggle window always appearing on top">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toggle_maximized" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Toggle maximization state">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F10</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toggle_fullscreen" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Toggle fullscreen mode">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="activate_window_menu" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Activate the window menu">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;space</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="keybinding_commands">
+					<entry name="command_window_screenshot" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="The window screenshot command">
+							<default type="string">
+								<stringvalue>gnome-screenshot --window</stringvalue>
+							</default>
+							<longdesc>The /apps/metacity/global_keybindings/run_command_window_screenshot key defines a keybinding which causes the command specified by this setting to be invoked.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="command_screenshot" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="The screenshot command">
+							<default type="string">
+								<stringvalue>gnome-screenshot</stringvalue>
+							</default>
+							<longdesc>The /apps/metacity/global_keybindings/run_command_screenshot key defines a keybinding which causes the command specified by this setting to be invoked.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="command" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Commands to run in response to keybindings">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>The /apps/metacity/global_keybindings/run_command_N keys define keybindings that correspond to these commands. Pressing the keybinding for run_command_N will execute command_N.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="global_keybindings">
+					<entry name="run_command_terminal" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Launch Terminal">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="run_command_window_screenshot" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Take a screenshot of a window">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;Print</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="run_command_screenshot" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Take a screenshot">
+							<default type="string">
+								<stringvalue>Print</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="panel_run_dialog" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Show the run command prompt">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F2</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="panel_main_menu" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Show the activities overview">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F1</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_desktop" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Hide all normal windows">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cycle_panels_backward" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Reverse switch system controls directly">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cycle_panels" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch system controls directly">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Alt&gt;Escape</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cycle_windows_backward" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Reverse switch windows directly">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cycle_windows" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch windows directly">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;Escape</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cycle_group_backward" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Reverse switch windows of an app directly">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cycle_group" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch windows of an app directly">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;F6</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_panels_backward" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Reverse switch system controls">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_panels" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch system controls">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Alt&gt;Tab</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_windows_backward" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Reverse switch applications">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_windows" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch applications">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;Tab</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_group_backward" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Reverse switch windows of an application">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_group" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch windows of an application">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;Above_Tab</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action. This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_down" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move to workspace below">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Alt&gt;Down</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_up" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move to workspace above">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Alt&gt;Up</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_right" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move to workspace right">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Alt&gt;Right</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_left" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Move to workspace left">
+							<default type="string">
+								<stringvalue>&lt;Control&gt;&lt;Alt&gt;Left</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_12" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 12">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_11" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 11">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_10" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 10">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_9" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 9">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_8" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 8">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_7" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 7">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_6" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 6">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_5" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 5">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_4" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 4">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_3" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 3">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_2" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 2">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="switch_to_workspace_1" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Switch to workspace 1">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="run_command" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Run a defined command">
+							<default type="string">
+								<stringvalue>disabled</stringvalue>
+							</default>
+							<longdesc>The keybinding that runs the correspondingly-numbered command in /apps/metacity/keybinding_commands The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;. The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="workspace_names">
+					<entry name="name" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Name of workspace">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>The name of a workspace.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="disable_workarounds" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Disable misfeatures that are required by old or broken applications">
+							<default type="bool" value="false"/>
+							<longdesc>Some applications disregard specifications in ways that result in window manager misfeatures. This option puts Metacity in a rigorously correct mode, which gives a more consistent user interface, provided one does not need to run any misbehaving applications.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="application_based" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="(Not implemented) Navigation works in terms of applications not windows">
+							<default type="bool" value="false"/>
+							<longdesc>If true, then Metacity works in terms of applications rather than windows. The concept is a bit abstract, but in general an application-based setup is more like the Mac and less like Windows. When you focus a window in application-based mode, all the windows in the application will be raised. Also, in application-based mode, focus clicks are not passed through to windows in other applications. Application-based mode is, however, largely unimplemented at the moment.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="reduced_resources" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="If true, trade off usability for less resource usage">
+							<default type="bool" value="false"/>
+							<longdesc>If true, metacity will give the user less feedback by using wireframes, avoiding animations, or other means. This is a significant reduction in usability for many users, but may allow legacy applications to continue working, and may also be a useful tradeoff for terminal servers. However, the wireframe feature is disabled when accessibility is on.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="compositing_manager" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Compositing Manager">
+							<default type="bool" value="false"/>
+							<longdesc>Determines whether Metacity is a compositing manager.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="visual_bell_type" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Visual Bell Type">
+							<default type="string">
+								<stringvalue>fullscreen</stringvalue>
+							</default>
+							<longdesc>Tells Metacity how to implement the visual indication that the system bell or another application &apos;bell&apos; indicator has been rung. Currently there are two valid values, &quot;fullscreen&quot;, which causes a fullscreen white-black flash, and &quot;frame_flash&quot; which causes the titlebar of the application which sent the bell signal to flash. If the application which sent the bell is unknown (as is usually the case for the default &quot;system beep&quot;), the currently focused window&apos;s titlebar is flashed.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="audible_bell" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="System Bell is Audible">
+							<default type="bool" value="true"/>
+							<longdesc>Determines whether applications or the system can generate audible &apos;beeps&apos;; may be used in conjunction with &apos;visual bell&apos; to allow silent &apos;beeps&apos;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="visual_bell" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Enable Visual Bell">
+							<default type="bool" value="false"/>
+							<longdesc>Turns on a visual indication when an application or the system issues a &apos;bell&apos; or &apos;beep&apos;; useful for the hard-of-hearing and for use in noisy environments.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="num_workspaces" mtime="1311481638" type="schema" stype="int" owner="metacity">
+						<local_schema locale="C" short_desc="Number of workspaces">
+							<default type="int" value="2"/>
+							<longdesc>Number of workspaces. Must be more than zero, and has a fixed maximum to prevent making the desktop unusable by accidentally asking for too many workspaces.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="titlebar_font" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Window title font">
+							<default type="string">
+								<stringvalue>Cantarell Bold 11</stringvalue>
+							</default>
+							<longdesc>A font description string describing a font for window titlebars. The size from the description will only be used if the titlebar_font_size option is set to 0. Also, this option is disabled if the titlebar_uses_desktop_font option is set to true.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="titlebar_uses_system_font" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Use standard system font in window titles">
+							<default type="bool" value="false"/>
+							<longdesc>If true, ignore the titlebar_font option, and use the standard application font for window titles.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="theme" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Current theme">
+							<default type="string">
+								<stringvalue>Adwaita</stringvalue>
+							</default>
+							<longdesc>The theme determines the appearance of window borders, titlebar, and so forth.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auto_raise_delay" mtime="1311481638" type="schema" stype="int" owner="metacity">
+						<local_schema locale="C" short_desc="Delay in milliseconds for the auto raise option">
+							<default type="int" value="500"/>
+							<longdesc>The time delay before raising a window if auto_raise is set to true. The delay is given in thousandths of a second.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auto_raise" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Automatically raises the focused window">
+							<default type="bool" value="false"/>
+							<longdesc>If set to true, and the focus mode is either &quot;sloppy&quot; or &quot;mouse&quot; then the focused window will be automatically raised after a delay specified by the auto_raise_delay key. This is not related to clicking on a window to raise it, nor to entering a window during drag-and-drop.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="action_right_click_titlebar" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Action on title bar right-click">
+							<default type="string">
+								<stringvalue>menu</stringvalue>
+							</default>
+							<longdesc>This option determines the effects of right-clicking on the title bar. Current valid options are &apos;toggle_shade&apos;, which will shade/unshade the window, &apos;toggle_maximize&apos; which will maximize/unmaximize the window, &apos;toggle_maximize_horizontally&apos; and &apos;toggle_maximize_vertically&apos; which will maximize/unmaximize the window in that direction only, &apos;minimize&apos; which will minimize the window, &apos;shade&apos; which will roll the window up, &apos;menu&apos; which will display the window menu, &apos;lower&apos; which will put the window behind all the others, and &apos;none&apos; which will not do anything.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="action_middle_click_titlebar" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Action on title bar middle-click">
+							<default type="string">
+								<stringvalue>lower</stringvalue>
+							</default>
+							<longdesc>This option determines the effects of middle-clicking on the title bar. Current valid options are &apos;toggle_shade&apos;, which will shade/unshade the window, &apos;toggle_maximize&apos; which will maximize/unmaximize the window, &apos;toggle_maximize_horizontally&apos; and &apos;toggle_maximize_vertically&apos; which will maximize/unmaximize the window in that direction only, &apos;minimize&apos; which will minimize the window, &apos;shade&apos; which will roll the window up, &apos;menu&apos; which will display the window menu, &apos;lower&apos; which will put the window behind all the others, and &apos;none&apos; which will not do anything.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="action_double_click_titlebar" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Action on title bar double-click">
+							<default type="string">
+								<stringvalue>toggle_maximize</stringvalue>
+							</default>
+							<longdesc>This option determines the effects of double-clicking on the title bar. Current valid options are &apos;toggle_shade&apos;, which will shade/unshade the window, &apos;toggle_maximize&apos; which will maximize/unmaximize the window, &apos;toggle_maximize_horizontally&apos; and &apos;toggle_maximize_vertically&apos; which will maximize/unmaximize the window in that direction only, &apos;minimize&apos; which will minimize the window, &apos;shade&apos; which will roll the window up, &apos;menu&apos; which will display the window menu, &apos;lower&apos; which will put the window behind all the others, and &apos;none&apos; which will not do anything.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="new_windows_always_on_top" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Whether new windows should always be placed on top">
+							<default type="bool" value="false"/>
+							<longdesc>The normal behavior is that if a new window is not given the focus (since, for example, the user has interacted with another window after launching an application), then if the window would be stacked on top of the focus window, the window is instead stacked beneath and flashed in the taskbar. This behavior can be annoying on large screens and multihead setups where the taskbar is hard to notice and difficult to get to, so this option, if set, disables this behavior, and new windows are always placed on top, whether or not they get focus. Note that if this option is set, a new window may completely hide the focus window but not get focus itself, which can be quite confusing to users. Also, note that setting this option breaks the normal invariant in the &apos;click&apos; focus mode that the topmost window always has focus, so its most suitable for use with the &apos;mouse&apos; and &apos;sloppy&apos; focus modes. This key also affects windows that try to activate or raise themselves themselves but don&apos;t succeed in getting the the focus. Without this key being set, such windows are flashed in the taskbar. With this key set they, like entirely new windows, are raised but not focused.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="raise_on_click" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Whether raising should be a side-effect of other user interactions">
+							<default type="bool" value="true"/>
+							<longdesc>Setting this option to false can lead to buggy behavior, so users are strongly discouraged from changing it from the default of true. Many actions (e.g. clicking in the client area, moving or resizing the window) normally raise the window as a side-effect. Setting this option to false, which is strongly discouraged, will decouple raising from other user actions, and ignore raise requests generated by applications. See http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Even when this option is false, windows can still be raised by an alt-left-click anywhere on the window, a normal click on the window decorations, or by special messages from pagers, such as activation requests from tasklist applets. This option is currently disabled in click-to-focus mode. Note that the list of ways to raise windows when raise_on_click is false does not include programmatic requests from applications to raise windows; such requests will be ignored regardless of the reason for the request. If you are an application developer and have a user complaining that your application does not work with this setting disabled, tell them it is _their_ fault for breaking their window manager and that they need to change this option back to true or live with the &quot;bug&quot; they requested.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="no_focus_windows" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="New windows that shouldn&apos;t get focus">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>This option provides a way to specify new windows that shouldn&apos;t get focus. Normally an application specifies whether or not it gets focus by setting the _NET_WM_USER_TIME property, but legacy applications may not set this, which can cause unwanted focus stealing. The contents of this property is a space-separated list of expressions to match against windows. If any of the expressions match a window then the window will not get focus. The syntax of expressions is: (eq [name|class] &quot;&lt;value&gt;&quot;): window name (title) or the class from WM_CLASS matches &lt;value&gt; exactly. (glob [name|class] &quot;&lt;glob&gt;&quot;): window name (title) or the class from WM_CLASS matches the shell-style glob pattern &lt;glob&gt;. (and &lt;expr&gt; &lt;expr&gt;) (or &lt;expr&gt; &lt;expr&gt;) (not &lt;expr): Boolean combinations of expressions. New windows from the current active application are unaffected by this setting.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="focus_new_windows" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Control how new windows get focus">
+							<default type="string">
+								<stringvalue>smart</stringvalue>
+							</default>
+							<longdesc>This option provides additional control over how newly created windows get focus. It has two possible values; &quot;smart&quot; applies the user&apos;s normal focus mode, and &quot;strict&quot; results in windows started from a terminal not being given focus.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="focus_mode" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Window focus mode">
+							<default type="string">
+								<stringvalue>click</stringvalue>
+							</default>
+							<longdesc>The window focus mode indicates how windows are activated. It has three possible values; &quot;click&quot; means windows must be clicked in order to focus them, &quot;sloppy&quot; means windows are focused when the mouse enters the window, and &quot;mouse&quot; means windows are focused when the mouse enters the window and unfocused when the mouse leaves the window.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="button_layout" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Arrangement of buttons on the titlebar">
+							<default type="string">
+								<stringvalue>:minimize,maximize,close</stringvalue>
+							</default>
+							<longdesc>Arrangement of buttons on the titlebar. The value should be a string, such as &quot;menu:minimize,maximize,spacer,close&quot;; the colon separates the left corner of the window from the right corner, and the button names are comma-separated. Duplicate buttons are not allowed. Unknown button names are silently ignored so that buttons can be added in future metacity versions without breaking older versions. A special spacer tag can be used to insert some space between two adjacent buttons.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="resize_with_right_button" mtime="1311481638" type="schema" stype="bool" owner="metacity">
+						<local_schema locale="C" short_desc="Whether to resize with the right button">
+							<default type="bool" value="false"/>
+							<longdesc>Set this to true to resize with the right button and show a menu with the middle button while holding down the key given in &quot;mouse_button_modifier&quot;; set it to false to make it work the opposite way around.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="mouse_button_modifier" mtime="1311481638" type="schema" stype="string" owner="metacity">
+						<local_schema locale="C" short_desc="Modifier to use for modified window click actions">
+							<default type="string">
+								<stringvalue>&lt;Alt&gt;</stringvalue>
+							</default>
+							<longdesc>Clicking a window while holding down this modifier key will move the window (left click), resize the window (middle click), or show the window menu (right click). The middle and right click operations may be swapped using the &quot;resize_with_right_button&quot; key. Modifier is expressed as &quot;&lt;Alt&gt;&quot; or &quot;&lt;Super&gt;&quot; for example.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gnome_settings_daemon">
+				<dir name="gtk-modules">
+					<entry name="canberra-gtk-module" mtime="1311481636" type="schema" stype="bool" owner="libcanberra">
+						<local_schema locale="C" short_desc="GTK+ module for event sounds">
+							<default type="bool" value="true"/>
+							<longdesc>This key determines the GTK+ module to load for event sound support.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks" mtime="1311481365" type="schema" stype="list" owner="gconf-editor" list_type="string">
+					<local_schema locale="C" short_desc="Bookmarks">
+						<default type="list" ltype="string">
+						</default>
+						<longdesc>gconf-editor folder bookmarks</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="nm-applet">
+			</dir>
+			<dir name="gdm">
+				<dir name="simple-greeter">
+					<entry name="wm_use_compiz" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Use Compiz as the window manager">
+							<default type="bool" value="false"/>
+							<longdesc>Set to true to use Compiz as the window manager.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="recent-languages" mtime="1311481214" type="schema" stype="list" owner="gdm-simple-greeter" list_type="string">
+						<local_schema locale="C" short_desc="Recently selected languages">
+							<default type="list" ltype="string">
+							</default>
+							<longdesc>Set to a list of languages to be shown by default in the login window.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_user_list" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Do not show known users in the login window">
+							<default type="bool" value="false"/>
+							<longdesc>Set to true to disable showing known users in the login window.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_restart_buttons" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Disable showing the restart buttons">
+							<default type="bool" value="false"/>
+							<longdesc>Set to true to disable showing the restart buttons in the login window.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="logo_icon_name" mtime="1311481214" type="schema" stype="string" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Icon name to use for greeter logo">
+							<default type="string">
+								<stringvalue>cs50</stringvalue>
+							</default>
+							<longdesc>Set to the themed icon name to use for the greeter logo.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="banner_message_text_nochooser" mtime="1311481214" type="schema" stype="string" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Banner message text when chooser is empty">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>Text banner message to show in the login window when the user chooser is empty, instead of banner_message_text.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="banner_message_text" mtime="1311481214" type="schema" stype="string" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Banner message text">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>Text banner message to show in the login window.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="banner_message_enable" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+						<local_schema locale="C" short_desc="Enable showing the banner message">
+							<default type="bool" value="false"/>
+							<longdesc>Set to true to show the banner message text.</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="settings-manager-plugins">
+						<dir name="xsettings">
+							<entry name="priority" mtime="1311481214" type="schema" stype="int" owner="gdm-simple-greeter">
+								<local_schema locale="C">
+									<default type="int" value="2"/>
+								</local_schema>
+							</entry>
+							<entry name="active" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+								<local_schema locale="C" short_desc="True if the xsettings settings manager plugin is enabled.">
+									<default type="bool" value="true"/>
+									<longdesc>Set to true to enable the xsettings settings manager plugin.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="xrandr">
+							<entry name="priority" mtime="1311481214" type="schema" stype="int" owner="gdm-simple-greeter">
+								<local_schema locale="C">
+									<default type="int" value="1"/>
+								</local_schema>
+							</entry>
+							<entry name="active" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+								<local_schema locale="C" short_desc="True if the XRandR settings manager plugin is enabled.">
+									<default type="bool" value="true"/>
+									<longdesc>Set to true to enable the XRandR settings manager plugin.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="sound">
+							<entry name="priority" mtime="1311481214" type="schema" stype="int" owner="gdm-simple-greeter">
+								<local_schema locale="C">
+									<default type="int" value="3"/>
+								</local_schema>
+							</entry>
+							<entry name="active" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+								<local_schema locale="C" short_desc="True if the sound settings manager plugin is enabled.">
+									<default type="bool" value="true"/>
+									<longdesc>Set to true to enable the sound settings manager plugin.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="media-keys">
+							<entry name="priority" mtime="1311481214" type="schema" stype="int" owner="gdm-simple-greeter">
+								<local_schema locale="C">
+									<default type="int" value="20"/>
+								</local_schema>
+							</entry>
+							<entry name="active" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+								<local_schema locale="C" short_desc="True if the media-keys settings manager plugin is enabled.">
+									<default type="bool" value="false"/>
+									<longdesc>Set to true to enable the media-keys settings manager plugin.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="background">
+							<entry name="priority" mtime="1311481214" type="schema" stype="int" owner="gdm-simple-greeter">
+								<local_schema locale="C">
+									<default type="int" value="5"/>
+								</local_schema>
+							</entry>
+							<entry name="active" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+								<local_schema locale="C" short_desc="True if the background settings manager plugin is enabled.">
+									<default type="bool" value="true"/>
+									<longdesc>Set to true to enable the background settings manager plugin.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="a11y-keyboard">
+							<entry name="priority" mtime="1311481214" type="schema" stype="int" owner="gdm-simple-greeter">
+								<local_schema locale="C">
+									<default type="int" value="7"/>
+								</local_schema>
+							</entry>
+							<entry name="active" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+								<local_schema locale="C" short_desc="Enable accessibility keyboard plugin">
+									<default type="bool" value="true"/>
+									<longdesc>Set to true to enable the plugin to manage the accessibility keyboard settings.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="accessibility">
+						<entry name="screen_magnifier_enabled" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+							<local_schema locale="C" short_desc="Enable screen magnifier">
+								<default type="bool" value="false"/>
+								<longdesc>Set to true to enable the screen magnifier.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="screen_reader_enabled" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+							<local_schema locale="C" short_desc="Enable screen reader">
+								<default type="bool" value="false"/>
+								<longdesc>Set to true to enable the screen reader.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="screen_keyboard_enabled" mtime="1311481214" type="schema" stype="bool" owner="gdm-simple-greeter">
+							<local_schema locale="C" short_desc="Enable on-screen keyboard">
+								<default type="bool" value="false"/>
+								<longdesc>Set to true to enable the on-screen keyboard.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="typing_break">
+					<entry name="enabled" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Whether or not keyboard locking is enabled">
+							<default type="bool" value="false"/>
+							<longdesc>Whether or not keyboard locking is enabled.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="allow_postpone" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Allow postponing of breaks">
+							<default type="bool" value="false"/>
+							<longdesc>Whether or not the typing break screen can be postponed.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="break_time" mtime="1311481132" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="Break time">
+							<default type="int" value="3"/>
+							<longdesc>Number of minutes that the typing break should last.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="type_time" mtime="1311481132" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="Type time">
+							<default type="int" value="60"/>
+							<longdesc>Number of minutes of typing time before break mode starts.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="thumbnailers">
+					<entry name="disable_all" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable all external thumbnailers">
+							<default type="bool" value="false"/>
+							<longdesc>Set to true to disable all external thumbnailer programs, independent on whether they are independently disabled/enabled.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="thumbnail_cache">
+					<entry name="maximum_size" mtime="1311481132" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C">
+							<default type="int" value="512"/>
+							<longdesc>Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable cleaning.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="maximum_age" mtime="1311481132" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C">
+							<default type="int" value="180"/>
+							<longdesc>Maximum age for thumbnails in the cache, in days. Set to -1 to disable cleaning.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="sound">
+					<entry name="input_feedback_sounds" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Input feedback sounds">
+							<default type="bool" value="false"/>
+							<longdesc>Whether to play sounds on input events.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="theme_name" mtime="1311481132" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Sound theme name">
+							<default type="string">
+								<stringvalue>freedesktop</stringvalue>
+							</default>
+							<longdesc>The XDG sound theme to use for event sounds.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="event_sounds" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Sounds for events">
+							<default type="bool" value="true"/>
+							<longdesc>Whether to play sounds on user events.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="enable_esd" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Enable ESD">
+							<default type="bool" value="false"/>
+							<longdesc>Enable sound server startup.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="default_mixer_tracks" mtime="1311481132" type="schema" stype="list" owner="gnome" list_type="string">
+						<local_schema locale="C" short_desc="Default mixer tracks">
+							<default type="list" ltype="string">
+							</default>
+							<longdesc>The default mixer tracks used by the multimedia key bindings.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="default_mixer_device" mtime="1311481132" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Default mixer device">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>The default mixer device used by the multimedia key bindings.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="peripherals">
+					<dir name="mouse">
+						<entry name="cursor_size" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Cursor size">
+								<default type="int" value="24"/>
+								<longdesc>Size of the cursor referenced by cursor_theme.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="cursor_theme" mtime="1311481132" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Cursor theme">
+								<default type="string">
+									<stringvalue>dmz-aa</stringvalue>
+								</default>
+								<longdesc>Cursor theme name. Used only by Xservers that support Xcursor, such as XFree86 4.3 and later.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="cursor_font" mtime="1311481132" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Cursor font">
+								<longdesc>Font name of the cursor. If unset, the default font is used. This value is only propagated to the X server start of each session, so changing it mid-session won&apos;t have an effect until the next time you log in.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="locate_pointer" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Locate Pointer">
+								<default type="bool" value="false"/>
+								<longdesc>Highlights the current location of the pointer when the Control key is pressed and released.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="double_click" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Double Click Time">
+								<default type="int" value="400"/>
+								<longdesc>Length of a double click.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="drag_threshold" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Drag Threshold">
+								<default type="int" value="8"/>
+								<longdesc>Distance before a drag is started.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="motion_threshold" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Motion Threshold">
+								<default type="int" value="-1"/>
+								<longdesc>Distance in pixels the pointer must move before accelerated mouse motion is activated. A value of -1 is the system default.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="motion_acceleration" mtime="1311481132" type="schema" stype="float" owner="gnome">
+							<local_schema locale="C" short_desc="Single Click">
+								<default type="float" value="-1"/>
+								<longdesc>Acceleration multiplier for mouse motion. A value of -1 is the system default.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="single_click" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Single Click">
+								<default type="bool" value="true"/>
+								<longdesc>Single click to open icons.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="left_handed" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Mouse button orientation">
+								<default type="bool" value="false"/>
+								<longdesc>Swap left and right mouse buttons for left-handed mice.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="monitor">
+						<entry name="resolution_size" mtime="1311481132" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The resolution of the monitor.">
+								<longdesc>The resolution of the monitor.  Stored in the form
+	&quot;WIDTHxHEIGHT&quot;.  If an invalid value is stored, the default
+	resultion is used.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="keyboard">
+						<entry name="remember_numlock_state" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Remember NumLock state">
+								<default type="bool" value="true"/>
+								<longdesc>When set to true, GNOME will remember the state of the NumLock LED between sessions.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bell_custom_file" mtime="1311481132" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Keyboard Bell Custom Filename">
+								<longdesc>File name of the bell sound to be played.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bell_duration" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C">
+								<default type="int" value="100"/>
+							</local_schema>
+						</entry>
+						<entry name="bell_pitch" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C">
+								<default type="int" value="400"/>
+							</local_schema>
+						</entry>
+						<entry name="bell_mode" mtime="1311481132" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C">
+								<default type="string">
+									<stringvalue>on</stringvalue>
+								</default>
+								<longdesc>possible values are &quot;on&quot;, &quot;off&quot;, and &quot;custom&quot;.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="click_volume" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C">
+								<default type="int" value="0"/>
+							</local_schema>
+						</entry>
+						<entry name="delay" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C">
+								<default type="int" value="500"/>
+							</local_schema>
+						</entry>
+						<entry name="rate" mtime="1311481132" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C">
+								<default type="int" value="30"/>
+							</local_schema>
+						</entry>
+						<entry name="click" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="true"/>
+							</local_schema>
+						</entry>
+						<entry name="repeat" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="true"/>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="lockdown">
+					<entry name="disable_application_handlers" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable URL and MIME type handlers">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent running any URL or MIME type handler applications.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_lock_screen" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable lock screen">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent the user to lock his screen.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_user_switching" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable user switching">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent the user from switching to another account while his session is active.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_print_setup" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable print setup">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent the user from modifying print settings. For example, this would disable access to all applications&apos; &quot;Print Setup&quot; dialogs.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_printing" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable printing">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent the user from printing. For example, this would disable access to all applications&apos; &quot;Print&quot; dialogs.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_save_to_disk" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable saving files to disk">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent the user from saving files to disk. For example, this would disable access to all applications&apos; &quot;Save as&quot; dialogs.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_command_line" mtime="1311481132" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Disable command line">
+							<default type="bool" value="false"/>
+							<longdesc>Prevent the user from accessing the terminal or specifying a command line to be executed. For example, this would disable access to the panel&apos;s &quot;Run Application&quot; dialog.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="interface">
+					<entry name="show_unicode_menu" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Show the &apos;Unicode Control Character&apos; menu">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the context menus of entries and text views should offer to insert control characters.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_input_method_menu" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Show the &apos;Input Methods&apos; menu">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the context menus of entries and text views should offer to change the input method.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menubar_accel" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Menubar accelerator">
+							<default type="string">
+								<stringvalue>F10</stringvalue>
+							</default>
+							<longdesc>Keyboard shortcut to open the menu bars.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="file_chooser_backend" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Module for GtkFileChooser">
+							<default type="string">
+								<stringvalue>gio</stringvalue>
+							</default>
+							<longdesc>Module to use as the filesystem model for the GtkFileChooser widget. Possible values are &quot;gio&quot;, &quot;gnome-vfs&quot; and &quot;gtk+&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="status_bar_meter_on_right" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Status Bar on Right">
+							<default type="bool" value="false"/>
+							<longdesc>Whether to display a status bar meter on the right.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Use Custom Font">
+							<default type="bool" value="false"/>
+							<longdesc>Whether to use a custom font in gtk+ applications.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="monospace_font_name" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Monospace font">
+							<default type="string">
+								<stringvalue>Monospace 10</stringvalue>
+							</default>
+							<longdesc>Name of a monospaced (fixed-width) font for use in locations like terminals.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="document_font_name" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Document font">
+							<default type="string">
+								<stringvalue>Sans 10</stringvalue>
+							</default>
+							<longdesc>Name of the default font used for reading documents.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk-im-module" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GTK IM Module">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>Name of the input method module used by GTK+.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk-im-status-style" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GTK IM Status Style">
+							<default type="string">
+								<stringvalue>callback</stringvalue>
+							</default>
+							<longdesc>Name of the GTK+ input method Status Style used by gtk+.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk-im-preedit-style" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GTK IM Preedit Style">
+							<default type="string">
+								<stringvalue>callback</stringvalue>
+							</default>
+							<longdesc>Name of the GTK+ input method Preedit Style used by gtk+.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="font_name" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Default font">
+							<default type="string">
+								<stringvalue>Sans 10</stringvalue>
+							</default>
+							<longdesc>Name of the default font used by gtk+.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk_key_theme" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Gtk+ Theme">
+							<default type="string">
+								<stringvalue>Default</stringvalue>
+							</default>
+							<longdesc>Basename of the default theme used by gtk+.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk_theme" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Gtk+ Theme">
+							<default type="string">
+								<stringvalue>Clearlooks</stringvalue>
+							</default>
+							<longdesc>Basename of the default theme used by gtk+.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="icon_theme" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Icon Theme">
+							<default type="string">
+								<stringvalue>Fedora</stringvalue>
+							</default>
+							<longdesc>Icon theme to use for the panel, nautilus etc.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cursor_blink_time" mtime="1311481131" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="Cursor Blink Time">
+							<default type="int" value="1200"/>
+							<longdesc>Length of the cursor blink cycle, in milliseconds.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cursor_blink" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Cursor Blink">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the cursor should blink.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toolbar_icons_size" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Toolbar Icon Size">
+							<default type="string">
+								<stringvalue>large-toolbar</stringvalue>
+							</default>
+							<longdesc>Size of icons in toolbars, either &quot;small-toolbar&quot; or &quot;large-toolbar&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toolbar_detachable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Toolbar Detachable">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the user can detach toolbars and move them around.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menubar_detachable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Menubar Detachable">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the user can detach menubars and move them around.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="buttons_have_icons" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Buttons Have Icons">
+							<default type="bool" value="false"/>
+							<longdesc>Whether buttons may display an icon in addition to the button text.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menus_have_icons" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Menus Have Icons">
+							<default type="bool" value="false"/>
+							<longdesc>Whether menus may display an icon next to a menu entry.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toolbar_style" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Toolbar Style">
+							<default type="string">
+								<stringvalue>both-horiz</stringvalue>
+							</default>
+							<longdesc>Toolbar Style. Valid values are &quot;both&quot;, &quot;both-horiz&quot;, &quot;icons&quot;, and &quot;text&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="can_change_accels" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Can Change Accels">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the user can dynamically type a new accelerator when positioned over an active menuitem.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menus_have_tearoff" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Menus Have Tearoff">
+							<default type="bool" value="false"/>
+							<longdesc>Whether menus should have a tearoff.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="enable_animations" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Enable Animations">
+							<default type="bool" value="true"/>
+							<longdesc>Whether animations should be displayed. Note: This is a global key, it changes the behaviour of the window manager, the panel etc.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accessibility" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Enable Accessibility">
+							<default type="bool" value="false"/>
+							<longdesc>Whether Applications should have accessibility support.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="file-views">
+					<entry name="icon_theme" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="File Icon Theme">
+							<default type="string">
+								<stringvalue>crux_teal</stringvalue>
+							</default>
+							<longdesc>Theme used for displaying file icons.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="background">
+					<entry name="color_shading_type" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Color Shading Type">
+							<default type="string">
+								<stringvalue>vertical-gradient</stringvalue>
+							</default>
+							<longdesc>How to shade the background color. Possible values are &quot;horizontal-gradient&quot;, &quot;vertical-gradient&quot;, and &quot;solid&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="secondary_color" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Secondary Color">
+							<default type="string">
+								<stringvalue>#142C3D</stringvalue>
+							</default>
+							<longdesc>Right or Bottom color when drawing gradients, not used for solid color.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="primary_color" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Primary Color">
+							<default type="string">
+								<stringvalue>#224B68</stringvalue>
+							</default>
+							<longdesc>Left or Top color when drawing gradients, or the solid color.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="picture_opacity" mtime="1311481131" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="Picture Opacity">
+							<default type="int" value="100"/>
+							<longdesc>Opacity with which to draw the background picture.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="picture_filename" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Picture Filename">
+							<default type="string">
+								<stringvalue>/usr/share/backgrounds/lovelock/default-stripes/lovelock.xml</stringvalue>
+							</default>
+							<longdesc>File to use for the background image.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="picture_options" mtime="1311481131" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Picture Options">
+							<default type="string">
+								<stringvalue>stretched</stringvalue>
+							</default>
+							<longdesc>Determines how the image set by wallpaper_filename is rendered. Possible values are &quot;none&quot;, &quot;wallpaper&quot;, &quot;centered&quot;, &quot;scaled&quot;, &quot;stretched&quot;, &quot;zoom&quot;, &quot;spanned&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="draw_background" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="Draw Desktop Background">
+							<default type="bool" value="true"/>
+							<longdesc>Have GNOME draw the desktop background.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="accessibility">
+					<dir name="startup">
+						<entry name="exec_ats" mtime="1311481131" type="schema" stype="list" owner="gnome" list_type="string">
+							<local_schema locale="C" short_desc="Startup Assistive Technology Applications">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc>List of assistive technology applications to start when logging into the GNOME desktop.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="keyboard">
+						<entry name="togglekeys_enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="stickykeys_modifier_beep" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+								<longdesc>Beep when a modifier is pressed.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stickykeys_two_key_off" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+								<longdesc>Disable if two keys are pressed at the same time.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stickykeys_enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_beep_reject" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_beep_accept" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_beep_press" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_delay" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Minimum interval in milliseconds">
+								<default type="int" value="300"/>
+								<longdesc>Do not accept a key as being pressed unless held for @delay milliseconds.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_init_delay" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Initial delay in milliseconds">
+								<default type="int" value="300"/>
+								<longdesc>How many milliseconds to wait before mouse movement keys start to operate.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_accel_time" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="How long to accelerate in milliseconds">
+								<default type="int" value="300"/>
+								<longdesc>How many milliseconds it takes to go from 0 to maximum speed.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_max_speed" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Pixels per seconds">
+								<default type="int" value="10"/>
+								<longdesc>How many pixels per second to move at the maximum speed.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="bouncekeys_beep_reject" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="bouncekeys_delay" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="minimum interval in milliseconds">
+								<default type="int" value="300"/>
+								<longdesc>Ignore multiple presses of the _same_ key within @delay milliseconds.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bouncekeys_enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="timeout" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C">
+								<default type="int" value="200"/>
+							</local_schema>
+						</entry>
+						<entry name="timeout_enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="feature_state_change_beep" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+						<entry name="enable" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C">
+								<default type="bool" value="false"/>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="applications">
+					<dir name="window_manager">
+						<entry name="workspace_names" mtime="1311481131" type="schema" stype="list" owner="gnome" list_type="string">
+							<local_schema locale="C" short_desc="Names of the workspaces (deprecated)">
+								<longdesc>A list with names of the first window manager workspaces. This key has been deprecated since GNOME 2.12.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="number_of_workspaces" mtime="1311481131" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="The number of workspaces (deprecated)">
+								<longdesc>The number of workspaces the window manager should use This key has been deprecated since GNOME 2.12.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="current" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="User window manager (deprecated)">
+								<longdesc>Window manager to try first. This key has been deprecated since GNOME 2.12.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="default" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Fallback window manager (deprecated)">
+								<longdesc>Fallback window manager if user window manager can&apos;t be found. This key has been deprecated since GNOME 2.12.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="tasks">
+						<entry name="needs_term" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Tasks needs terminal">
+								<default type="bool" value="false"/>
+								<longdesc>Whether the default tasks application needs a terminal to run</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Default tasks">
+								<default type="string">
+									<stringvalue>evolution</stringvalue>
+								</default>
+								<longdesc>Default tasks application</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="calendar">
+						<entry name="needs_term" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Calendar needs terminal">
+								<default type="bool" value="false"/>
+								<longdesc>Whether the default calendar application needs a terminal to run</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Default calendar">
+								<default type="string">
+									<stringvalue>evolution</stringvalue>
+								</default>
+								<longdesc>Default calendar application</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="browser">
+						<entry name="nremote" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Browser understands remote">
+								<default type="bool" value="true"/>
+								<longdesc>Whether the default browser understands netscape remote.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="needs_term" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Browser needs terminal">
+								<default type="bool" value="false"/>
+								<longdesc>Whether the default browser needs a terminal to run.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Default browser">
+								<default type="string">
+									<stringvalue>firefox</stringvalue>
+								</default>
+								<longdesc>Default browser for all URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="at">
+						<dir name="visual">
+							<entry name="startup" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+								<local_schema locale="C" short_desc="Start preferred Visual assistive technology application">
+									<default type="bool" value="false"/>
+									<longdesc>GNOME to start preferred Visual assistive technology application during login.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="exec" mtime="1311481131" type="schema" stype="string" owner="gnome">
+								<local_schema locale="C" short_desc="Preferred Visual assistive technology application">
+									<default type="string">
+										<stringvalue>orca</stringvalue>
+									</default>
+									<longdesc>Preferred Visual assistive technology application be used for login, menu, or command line.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="mobility">
+							<entry name="startup" mtime="1311481131" type="schema" stype="bool" owner="gnome">
+								<local_schema locale="C" short_desc="Start preferred Mobility assistive technology application">
+									<default type="bool" value="false"/>
+									<longdesc>GNOME to start preferred Mobility assistive technology application during login.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="exec" mtime="1311481131" type="schema" stype="string" owner="gnome">
+								<local_schema locale="C" short_desc="Preferred Mobility assistive technology application">
+									<default type="string">
+										<stringvalue>dasher</stringvalue>
+									</default>
+									<longdesc>Preferred Mobility assistive technology application to be used for login, menu, or command line.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="component_viewer">
+						<entry name="exec" mtime="1311481129" type="schema" stype="string" owner="gnome-vfs">
+							<local_schema locale="C" short_desc="Default component viewer application">
+								<default type="string">
+									<stringvalue>nautilus %s</stringvalue>
+								</default>
+								<longdesc>The application to use for viewing files that require a component to view them. The parameter %s will be replaced by the file&apos;s URIs, the parameter %c will be replaced by the component IID.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="media">
+						<entry name="exec_arg" mtime="1311481129" type="schema" stype="string" owner="gnome-vfs">
+							<local_schema locale="C" short_desc="Exec argument for default media application">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>The exec argument to use for the default media application.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1311481129" type="schema" stype="string" owner="gnome-vfs">
+							<local_schema locale="C" short_desc="Default media application">
+								<default type="string">
+									<stringvalue>totem</stringvalue>
+								</default>
+								<longdesc>The default media application to use when media buttons are pressed.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="terminal">
+						<entry name="exec_arg" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Exec Arguments">
+								<default type="string">
+									<stringvalue>-x</stringvalue>
+								</default>
+								<longdesc>Argument used to execute programs in the terminal defined by the &apos;exec&apos; key.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1311481131" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Terminal application">
+								<default type="string">
+									<stringvalue>gnome-terminal</stringvalue>
+								</default>
+								<longdesc>Terminal program to use when starting applications that require one.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="url-handlers">
+					<dir name="h323">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;h323&quot; URLs">
+								<default type="string">
+									<stringvalue>gnomemeeting -c %s</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;h323&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;h323&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;h323&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="callto">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;callto&quot; URLs">
+								<default type="string">
+									<stringvalue>gnomemeeting -c %s</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;callto&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;callto&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;callto&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="aim">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;aim&quot; URLs">
+								<default type="string">
+									<stringvalue>gaim-remote uri &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;aim&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;aim&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;aim&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="mailto">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;mailto&quot; URLs">
+								<default type="string">
+									<stringvalue>evolution --component=mail %s</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;mailto&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;mailto&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;mailto&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="about">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run program in terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the program to handle this URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="about URL handler">
+								<default type="string">
+									<stringvalue>firefox %s</stringvalue>
+								</default>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Handle about URLs">
+								<default type="bool" value="true"/>
+								<longdesc>Set to true to have a program specified in &quot;command&quot; handle about URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="https">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;https&quot; URLs">
+								<default type="string">
+									<stringvalue>gvfs-open %s</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;https&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;https&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;https&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="http">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;http&quot; URLs">
+								<default type="string">
+									<stringvalue>gvfs-open %s</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;http&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;http&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;http&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="man">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;man&quot; URLs">
+								<default type="string">
+									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;man&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;man&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;man&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="info">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;info&quot; URLs">
+								<default type="string">
+									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;info&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;info&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;info&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ghelp">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;ghelp&quot; URLs">
+								<default type="string">
+									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;ghelp&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;ghelp&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;ghelp&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="trash">
+						<entry name="needs_terminal" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Run the command in a terminal">
+								<default type="bool" value="false"/>
+								<longdesc>True if the command used to handle this type of URL should be run in a terminal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1311481129" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="The handler for &quot;trash&quot; URLs">
+								<default type="string">
+									<stringvalue>nautilus &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>The command used to handle &quot;trash&quot; URLs, if enabled.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1311481129" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Whether the specified command should handle &quot;trash&quot; URLs">
+								<default type="bool" value="true"/>
+								<longdesc>True if the command specified in the &quot;command&quot; key should handle &quot;trash&quot; URLs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="smb">
+				<entry name="workgroup" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="SMB workgroup">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The Windows networking workgroup or domain that the user is part of. In order for a new workgroup to fully take effect the user may need to log out and log back in.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="dns_sd">
+				<entry name="extra_domains" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Extra domains to look for DNS-SD services in">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>Comma separated list of DNS-SD domains that should be visible in the &quot;network:///&quot; location.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="display_local" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="How to display local DNS-SD service">
+						<default type="string">
+							<stringvalue>merged</stringvalue>
+						</default>
+						<longdesc>Possible values are &quot;merged&quot;, &quot;separate&quot; and &quot;disabled&quot;.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="proxy">
+				<entry name="autoconfig_url" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Automatic proxy configuration URL">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>URL that provides proxy configuration values.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="socks_port" mtime="1311481128" type="schema" stype="int" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="SOCKS proxy port">
+						<default type="int" value="0"/>
+						<longdesc>The port on the machine defined by &quot;/system/proxy/socks_host&quot; that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="socks_host" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="SOCKS proxy host name">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The machine name to proxy socks through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="ftp_port" mtime="1311481128" type="schema" stype="int" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="FTP proxy port">
+						<default type="int" value="0"/>
+						<longdesc>The port on the machine defined by &quot;/system/proxy/ftp_host&quot; that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="ftp_host" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="FTP proxy host name">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The machine name to proxy FTP through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="secure_port" mtime="1311481128" type="schema" stype="int" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Secure HTTP proxy port">
+						<default type="int" value="0"/>
+						<longdesc>The port on the machine defined by &quot;/system/proxy/secure_host&quot; that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="secure_host" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Secure HTTP proxy host name">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The machine name to proxy secure HTTP through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="mode" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Proxy configuration mode">
+						<default type="string">
+							<stringvalue>none</stringvalue>
+						</default>
+						<longdesc>Select the proxy configuration mode. Supported values are &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="http_proxy">
+				<entry name="ignore_hosts" mtime="1311481128" type="schema" stype="list" owner="gnome-vfs" list_type="string">
+					<local_schema locale="C" short_desc="Non-proxy hosts">
+						<default type="list" ltype="string">
+							<li type="string">
+								<stringvalue>localhost</stringvalue>
+							</li>
+							<li type="string">
+								<stringvalue>127.0.0.0/8</stringvalue>
+							</li>
+						</default>
+						<longdesc>This key contains a list of hosts which are connected to directly, rather than via the proxy (if it is active). The values can be hostnames, domains (using an initial wildcard like *.foo.com), IP host addresses (both IPv4 and IPv6) and network addresses with a netmask (something like 192.168.0.0/24).</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="authentication_password" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="HTTP proxy password">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>Password to pass as authentication when doing HTTP proxying.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="authentication_user" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="HTTP proxy username">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>User name to pass as authentication when doing HTTP proxying.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="use_authentication" mtime="1311481128" type="schema" stype="bool" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Authenticate proxy server connections">
+						<default type="bool" value="false"/>
+						<longdesc>If true, then connections to the proxy server require authentication. The username/password combo is defined by &quot;/system/http_proxy/authentication_user&quot; and &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="port" mtime="1311481128" type="schema" stype="int" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="HTTP proxy port">
+						<default type="int" value="8080"/>
+						<longdesc>The port on the machine defined by &quot;/system/http_proxy/host&quot; that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="host" mtime="1311481128" type="schema" stype="string" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="HTTP proxy host name">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The machine name to proxy HTTP through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="use_http_proxy" mtime="1311481128" type="schema" stype="bool" owner="gnome-vfs">
+					<local_schema locale="C" short_desc="Use HTTP proxy">
+						<default type="bool" value="false"/>
+						<longdesc>Enables the proxy settings when accessing HTTP over the Internet.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+	<dir name="system">
+		<dir name="smb">
+			<entry name="workgroup" mtime="1311481128" schema="/schemas/system/smb/workgroup"/>
+		</dir>
+		<dir name="dns_sd">
+			<entry name="extra_domains" mtime="1311481128" schema="/schemas/system/dns_sd/extra_domains"/>
+			<entry name="display_local" mtime="1311481128" schema="/schemas/system/dns_sd/display_local"/>
+		</dir>
+		<dir name="proxy">
+			<entry name="autoconfig_url" mtime="1311481128" schema="/schemas/system/proxy/autoconfig_url"/>
+			<entry name="socks_port" mtime="1311481128" schema="/schemas/system/proxy/socks_port"/>
+			<entry name="socks_host" mtime="1311481128" schema="/schemas/system/proxy/socks_host"/>
+			<entry name="ftp_port" mtime="1311481128" schema="/schemas/system/proxy/ftp_port"/>
+			<entry name="ftp_host" mtime="1311481128" schema="/schemas/system/proxy/ftp_host"/>
+			<entry name="secure_port" mtime="1311481128" schema="/schemas/system/proxy/secure_port"/>
+			<entry name="secure_host" mtime="1311481128" schema="/schemas/system/proxy/secure_host"/>
+			<entry name="mode" mtime="1311481128" schema="/schemas/system/proxy/mode"/>
+		</dir>
+		<dir name="http_proxy">
+			<entry name="ignore_hosts" mtime="1311481128" schema="/schemas/system/http_proxy/ignore_hosts"/>
+			<entry name="authentication_password" mtime="1311481128" schema="/schemas/system/http_proxy/authentication_password"/>
+			<entry name="authentication_user" mtime="1311481128" schema="/schemas/system/http_proxy/authentication_user"/>
+			<entry name="use_authentication" mtime="1311481128" schema="/schemas/system/http_proxy/use_authentication"/>
+			<entry name="port" mtime="1311481128" schema="/schemas/system/http_proxy/port"/>
+			<entry name="host" mtime="1311481128" schema="/schemas/system/http_proxy/host"/>
+			<entry name="use_http_proxy" mtime="1311481128" schema="/schemas/system/http_proxy/use_http_proxy"/>
+		</dir>
+	</dir>
+</gconf>

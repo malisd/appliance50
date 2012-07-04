@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=firefox https://manual.cs50.net/CS50_Appliance_2.1
+Icon=help-contents
+StartupNotify=false
+Terminal=false
+Categories=CS50;
+Name=CS50 Appliance

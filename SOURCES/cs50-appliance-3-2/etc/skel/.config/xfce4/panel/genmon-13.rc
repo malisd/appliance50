@@ -1,0 +1,6 @@
+Command=ip50
+UseLabel=0
+Text=IP Address
+UpdatePeriod=30000
+Font=(default)
+

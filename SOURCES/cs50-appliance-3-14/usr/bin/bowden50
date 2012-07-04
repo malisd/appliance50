@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# !!!
+if [[ "$DISPLAY" != "" ]]; then
+    /usr/bin/google-chrome http://youtu.be/oHg5SJYRHA0 > /dev/null 2>&1 &
+else
+    /bin/echo "http://youtu.be/oHg5SJYRHA0"
+fi

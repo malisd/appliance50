@@ -1,0 +1,6 @@
+Command=/usr/bin/version50 -v
+UseLabel=0
+Text=version
+UpdatePeriod=5000
+Font=Sans 8
+

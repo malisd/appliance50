@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=google-chrome https://manual.cs50.net/Fall_2010
+Icon=help-contents
+StartupNotify=false
+Terminal=false
+Categories=CS50;
+Name=Fall 2010

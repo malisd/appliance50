@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Eclipse
+Exec=eclipse
+Icon=/usr/share/icons/hicolor/32x32/apps/eclipse.png
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+X-XFCE-Source=file:///usr/share/applications/eclipse.desktop

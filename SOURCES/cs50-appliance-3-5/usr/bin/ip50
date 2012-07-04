@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# format for genmon
+if [ "$1" == "-v" ]; then
+    echo "IP address"
+fi
+
+# display IP address of eth1
+declare addr=$(/sbin/ifconfig eth1 | /bin/grep 'inet addr:' | /bin/cut -d: -f2 | /bin/awk '{print $1}')
+if [ "$addr" != "" ]; then
+    echo $addr
+else
+    echo "none"
+fi
