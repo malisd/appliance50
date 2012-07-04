@@ -8,8 +8,8 @@ Group: System Environment/Base
 Vendor: CS50
 URL: https://manual.cs50.net/appliance50
 BuildArch: i386
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-Requires: generic-release = 16
+BuildRoot: %{_tmppath}/%{name}-root
+Requires: generic-release = 17
 Requires: acpid
 Requires: alsa-plugins-pulseaudio
 Requires: at-spi2-atk
@@ -65,8 +65,8 @@ Requires: httpd
 Requires: icedtea-web
 Requires: indent
 Requires: iptables
-Requires: java7
-Requires: java7-devel
+Requires: java
+Requires: java-devel
 Requires: kernel
 Requires: kernel-devel
 Requires: kernel-headers
@@ -147,12 +147,12 @@ Requires: system-config-keyboard
 Requires: system-config-language
 Requires: system-config-network
 Requires: system-config-services
-Requires: teamviewer6
+Requires: teamviewer7
 Requires: telnet
 Requires: tidy
 Requires: traceroute
 Requires: tree
-Requires: tunnel50
+#Requires: tunnel50
 
 # TODO
 #Requires: usermin
@@ -201,15 +201,15 @@ take CS50, even if you're not a student at Harvard.
 
 ############################################################################
 %prep
-/bin/rm -rf %{_builddir}/%{name}-%{version}-%{release}/
-/bin/cp -a %{_sourcedir}/%{name}-%{version}-%{release} %{_builddir}/
+/bin/rm -rf %{_builddir}
+/bin/cp -a %{_sourcedir} %{_builddir}/
 
 
 ############################################################################
 %install
 /bin/rm -rf %{buildroot}
-/bin/mkdir -p %{buildroot}/tmp/
-/bin/cp -a %{_builddir}/%{name}-%{version}-%{release} %{buildroot}/tmp/
+/bin/mkdir -p %{buildroot}/opt/%{name}
+/bin/cp -a %{_builddir} %{buildroot}/opt/%{name}/
 
 
 ############################################################################
@@ -224,8 +224,8 @@ take CS50, even if you're not a student at Harvard.
 # http://forum.xfce.org/viewtopic.php?id=5775
 /usr/bin/killall xfconfd > /dev/null 2>&1
 
-# /tmp/%{name}-%{version}-%{release}
-declare tmp=/tmp/%{name}-%{version}-%{release}
+# /opt/%{name}
+declare opt=/opt/%{name}
 
 # remove deprecated directories and files
 declare -a deprecated=()
@@ -241,9 +241,9 @@ do
 done
 
 # install directories
-for src in $(/bin/find $tmp -mindepth 1 -type d | /bin/sort)
+for src in $(/bin/find $opt -mindepth 1 -type d | /bin/sort)
 do
-    declare dst=${src#$tmp}
+    declare dst=${src#$opt}
     declare dir=$(/usr/bin/dirname $dst)
     declare base=$(/bin/basename $dst)
     if [ -e $dir/$base.lock ] || [ -e $dir/.$base.lock ]
@@ -256,9 +256,9 @@ do
 done
 
 # install files
-for src in $(/bin/find $tmp ! -type d | /bin/sort)
+for src in $(/bin/find $opt ! -type d | /bin/sort)
 do
-    declare dst=${src#$tmp}
+    declare dst=${src#$opt}
     declare dir=$(/usr/bin/dirname $dst)
     declare base=$(/bin/basename $dst)
     if [ -e $dir/$base.lock ] || [ -e $dir/.$base.lock ]
@@ -410,9 +410,6 @@ echo "   Updated John Harvard's and superuser's desktops."
 /bin/rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 /bin/rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386
 
-# remove sources
-/bin/rm -rf /tmp/%{name}-%{version}-%{release}
-
 # rebuild mlocate.db
 /etc/cron.daily/mlocate.cron
 
@@ -423,9 +420,11 @@ echo "   Updated John Harvard's and superuser's desktops."
 ##########################################################################
 %files
 %defattr(-,root,root,-)
-/tmp/%{name}-%{version}-%{release}
-%defattr(-,root,students,1770)
-/tmp/%{name}-%{version}-%{release}/usr/local/samba/lib/usershares
+/opt/%{name}
+
+# TODO: fix?
+#%defattr(-,root,students,1770)
+#/opt/%{name}/usr/local/samba/lib/usershares
 
 
 ##########################################################################
