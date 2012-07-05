@@ -12,25 +12,30 @@
 ## Kickstart Options
 ############################################################################
 
-autopart --type=plain
-bootloader --append="biosdevname=0 quiet rhgb" --driveorder=sda --location=mbr
+#autopart --type=plain
+#bootloader --append="biosdevname=0 quiet rhgb" --driveorder=sda --location=mbr
+bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 cdrom
-#clearpart --all --initlabel
+clearpart --all --initlabel
 firstboot --disable
 install
 keyboard us
 lang en_US.UTF-8
+#part biosboot --fstype=biosboot --size=1
 part biosboot --fstype=biosboot --size=1
 
 # sda2
 # http://docs.fedoraproject.org/en-US/Fedora/16/html/Installation_Guide/s2-diskpartrecommend-x86.html
 #part swap --ondisk=sda --size=2048
+part swap --size=2048
 
 # sda3
 #part /boot --fstype=ext4 --ondisk=sda --size=500
+part /boot --fstype=ext4 --size=500
 
 # sda4
 #part / --fstype=ext4 --grow --ondisk=sda
+part / --fstype=ext4 --grow
 
 poweroff
 repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386
