@@ -12,23 +12,24 @@
 ## Kickstart Options
 ############################################################################
 
+autopart
 bootloader --append="biosdevname=0 quiet rhgb" --driveorder=sda --location=mbr
 cdrom
 clearpart --all --initlabel
 install
 keyboard us
 lang en_US.UTF-8
-part biosboot --fstype=biosboot --size=1
+#part biosboot --fstype=biosboot --size=1
 
 # sda2
 # http://docs.fedoraproject.org/en-US/Fedora/16/html/Installation_Guide/s2-diskpartrecommend-x86.html
-part swap --ondisk=sda --size=2048
+#part swap --ondisk=sda --size=2048
 
 # sda3
-part /boot --fstype=ext4 --ondisk=sda --size=500
+#part /boot --fstype=ext4 --ondisk=sda --size=500
 
 # sda4
-part / --fstype=ext4 --grow --ondisk=sda
+#part / --fstype=ext4 --grow --ondisk=sda
 
 poweroff
 repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386
@@ -49,10 +50,10 @@ xconfig --startxonboot
 ## Package Selection
 ############################################################################
 
-%packages --nobase
+%packages
 
 # base
-@base-x --nodefaults
+@base-x
 
 # kernel
 kernel
@@ -61,6 +62,7 @@ kernel-headers
 
 # core
 @core
+#@fonts
 
 # Xfce
 @xfce-desktop
@@ -73,38 +75,38 @@ generic-release
 -fedora-release-notes
 
 # fonts
-dejavu-fonts-common
-dejavu-sans-fonts
-dejavu-sans-mono-fonts
-dejavu-serif-fonts
-liberation-fonts-common
-liberation-mono-fonts
-liberation-sans-fonts
-liberation-serif-fonts
-liberation-narrow-fonts
+#dejavu-fonts-common
+#dejavu-sans-fonts
+#dejavu-sans-mono-fonts
+#dejavu-serif-fonts
+#liberation-fonts-common
+#liberation-mono-fonts
+#liberation-sans-fonts
+#liberation-serif-fonts
+#liberation-narrow-fonts
 
 # CS50
-appliance50
+#appliance50
 
 # unwanted
--audit
--gnome-bluetooth-libs
--java-*-gcj
--leafpad
--libgcj
--libpcap
--ModemManager
--mousepad
--openbox
--openbox-libs
--openssh-askpass
--orage
--policycoreutils*
--ppp
--selinux-*
--xfce4-appfinder
--xfce4-power-manager
--xscreensaver-base
+#-audit
+#-gnome-bluetooth-libs
+#-java-*-gcj
+#-leafpad
+#-libgcj
+#-libpcap
+#-ModemManager
+#-mousepad
+#-openbox
+#-openbox-libs
+#-openssh-askpass
+#-orage
+#-policycoreutils*
+#-ppp
+#-selinux-*
+#-xfce4-appfinder
+#-xfce4-power-manager
+#-xscreensaver-base
 
 %end
 
@@ -119,7 +121,7 @@ appliance50
 #/usr/bin/yum -y remove NetworkManager
 #/usr/bin/yum -y remove NetworkManager-glib
 #/usr/bin/yum -y remove NetworkManager-gnome
-#
+
 ## unwanted, but - doesn't suffice above
 #/usr/bin/yum -y remove abrt dnsmasq kernel-PAE wpa_supplicant
 #
