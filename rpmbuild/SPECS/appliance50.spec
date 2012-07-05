@@ -116,6 +116,8 @@ Requires: php-mysql
 Requires: php-pear
 Requires: php-pecl-xdebug
 Requires: php-PHPMailer
+Requires: php-phpunit-DbUnit
+Requires: php-phpunit-PHPUnit
 Requires: php-tidy
 Requires: php-xml
 Requires: phpMyAdmin
@@ -123,7 +125,6 @@ Requires: proftpd
 Requires: pulseaudio
 Requires: python
 Requires: pyxdg
-Requires: RBTools
 Requires: render50
 Requires: ristretto
 Requires: rpm 
@@ -160,7 +161,7 @@ Requires: tree
 Requires: valgrind
 Requires: vim
 Requires: vim-X11
-Requires: webmin
+#Requires: webmin
 Requires: wget
 Requires: words
 Requires: xfce4-panel
@@ -194,6 +195,10 @@ Requires(post): yum-utils
 
 
 ############################################################################
+%define _optdir /opt
+
+
+############################################################################
 %description
 The CS50 Appliance is a virtual machine that lets you
 take CS50, even if you're not a student at Harvard.
@@ -201,15 +206,15 @@ take CS50, even if you're not a student at Harvard.
 
 ############################################################################
 %prep
-/bin/rm -rf %{_builddir}
-/bin/cp -a %{_sourcedir} %{_builddir}/
+/bin/rm -rf %{_builddir}/%{name}
+/bin/cp -a %{_sourcedir}/%{name} %{_builddir}/
 
 
 ############################################################################
 %install
 /bin/rm -rf %{buildroot}
-/bin/mkdir -p %{buildroot}/opt/%{name}
-/bin/cp -a %{_builddir} %{buildroot}/opt/%{name}/
+/bin/mkdir -p %{buildroot}%{_optdir}
+/bin/cp -a %{_builddir}/%{name} %{buildroot}%{_optdir}/%{name}
 
 
 ############################################################################
@@ -224,7 +229,7 @@ take CS50, even if you're not a student at Harvard.
 # http://forum.xfce.org/viewtopic.php?id=5775
 /usr/bin/killall xfconfd > /dev/null 2>&1
 
-# /opt/%{name}
+# /tmp/%{name}
 declare opt=/opt/%{name}
 
 # remove deprecated directories and files
@@ -275,8 +280,8 @@ do
 done
 
 # /boot/grub2/grub.cfg
-/bin/sed -i -e 's/^GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/' /etc/default/grub
-/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg > /dev/null 2>&1
+#/bin/sed -i -e 's/^GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/' /etc/default/grub
+#/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg > /dev/null 2>&1
 
 # /etc/group
 /usr/sbin/groupadd -r courses > /dev/null 2>&1
@@ -291,6 +296,10 @@ echo "   Reset John Harvard's password to \"crimson\"."
 /bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
+# lock root
+/usr/bin/passwd -l root
+echo "   Locked superuser's account."
+
 # synchronize with /etc/skel/{.config,.local}
 /usr/bin/rsync --backup --devices --exclude='*.rpmsave' --links --perms --quiet --recursive --specials --suffix=.rpmsave /etc/skel/{.config,.local} /home/jharvard
 /bin/chown -R jharvard:students /home/jharvard/{.config,.local}
@@ -299,32 +308,32 @@ echo "   Reset John Harvard's password for Samba to \"crimson\"."
 echo "   Synchronized John Harvard and superuser with /etc/skel/{.config,.local}."
 
 # disable services
-declare -a off=(netconsole netfs)
-for service in "${off[@]}"
-do
-    /sbin/chkconfig $service off > /dev/null 2>&1
-    echo "   Disabled $service."
-done
-declare -a off=(avahi-daemon ip6tables mdmonitor proftpd saslauthd)
-for service in "${off[@]}"
-do
-    /bin/systemctl disable $service.service > /dev/null 2>&1
-    echo "   Disabled $service."
-done
+#declare -a off=(netconsole netfs)
+#for service in "${off[@]}"
+#do
+#    /sbin/chkconfig $service off > /dev/null 2>&1
+#    echo "   Disabled $service."
+#done
+#declare -a off=(avahi-daemon ip6tables mdmonitor proftpd saslauthd)
+#for service in "${off[@]}"
+#do
+#    /bin/systemctl disable $service.service > /dev/null 2>&1
+#    echo "   Disabled $service."
+#done
 
 # enable services
-declare -a on=(dkms_autoinstaller network webmin)
-for service in "${on[@]}"
-do
-    /sbin/chkconfig $service on > /dev/null 2>&1
-    echo "   Enabled $service."
-done
-declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd usermin yum-updatesd)
-for service in "${on[@]}"
-do
-    /bin/systemctl enable $service.service > /dev/null 2>&1
-    echo "   Enabled $service."
-done
+#declare -a on=(dkms_autoinstaller network webmin)
+#for service in "${on[@]}"
+#do
+#    /sbin/chkconfig $service on > /dev/null 2>&1
+#    echo "   Enabled $service."
+#done
+#declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd usermin yum-updatesd)
+#for service in "${on[@]}"
+#do
+#    /bin/systemctl enable $service.service > /dev/null 2>&1
+#    echo "   Enabled $service."
+#done
 
 # reset MySQL privileges
 /bin/systemctl stop mysqld.service > /dev/null 2>&1
@@ -342,42 +351,23 @@ EOF
 /usr/bin/mysql --user=root > /dev/null 2>&1 <<"EOF"
 DELETE FROM mysql.user WHERE User = '';
 DELETE FROM mysql.user WHERE User = 'root';
-INSERT INTO mysql.user (Host, User, Password, Grant_priv, Super_priv) VALUES('localhost', 'root', PASSWORD('crimson'), 'Y', 'Y');
+DELETE FROM mysql.user WHERE User = 'jharvard';
+INSERT INTO mysql.user (Host, User, Password, Grant_priv, Super_priv) VALUES('localhost', 'jharvard', PASSWORD('crimson'), 'Y', 'Y');
 FLUSH PRIVILEGES;
-GRANT ALL ON *.* TO 'root'@'localhost';
+GRANT ALL ON *.* TO 'jharvard'@'localhost';
 EOF
 /bin/systemctl stop mysqld.service > /dev/null 2>&1
 /bin/mv /etc/.my.cnf /etc/my.cnf
 /bin/systemctl start mysqld.service > /dev/null 2>&1
-echo "   Reset superuser's password for MySQL to \"crimson\"."
-
-# reset John Harvard's password for MySQL
-/usr/bin/mysql --force --user=root --password=crimson > /dev/null 2>&1 <<"EOF"
-DROP USER 'jharvard'@'%';
-CREATE USER 'jharvard'@'%' IDENTIFIED BY 'crimson';
-GRANT ALL PRIVILEGES ON `jharvard\_%`.* TO 'jharvard'@'%';
-FLUSH PRIVILEGES;
-EOF
 echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 
 # restart services
-declare -a restart=(usermin webmin)
-for service in "${restart[@]}"
-do
-    /sbin/service $service restart > /dev/null 2>&1
-    echo "   Restarted $service."
-done
 declare -a restart=(httpd iptables network smb sshd)
 for service in "${restart[@]}"
 do
-    /bin/systemctl restart $service.service > /dev/null 2>&1
+    /bin/systemctl condrestart $service.service > /dev/null 2>&1
     echo "   Restarted $service."
 done
-
-# install PHPUnit
-/usr/bin/pear config-set auto_discover 1 > /dev/null 2>&1
-/usr/bin/pear install pear.phpunit.de/PHPUnit > /dev/null 2>&1
-/usr/bin/pear install phpunit/DbUnit > /dev/null 2>&1
 
 # workaround for Fedora 16's lack of php-zip
 # https://bugzilla.redhat.com/show_bug.cgi?id=551513
