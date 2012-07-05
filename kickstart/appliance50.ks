@@ -12,7 +12,6 @@
 ## Kickstart Options
 ############################################################################
 
-#bootloader --append="biosdevname=0 quiet rhgb" --driveorder=sda --location=mbr
 cdrom
 
 # for boxgrinder (to avoid prompts)
@@ -24,7 +23,7 @@ part swap --label=swap --recommended
 part /boot --fstype=ext4 --label=/boot --size=500
 part / --fstype=ext4 --grow --label=/
 
-# for manual installs, leave off autopart, bootloader, clearpart, and part
+# FYI: for manual installs, leave off autopart, bootloader, clearpart, and part
 
 firstboot --disable
 install
