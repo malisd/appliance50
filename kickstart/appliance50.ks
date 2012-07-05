@@ -12,30 +12,44 @@
 ## Kickstart Options
 ############################################################################
 
-#autopart --type=plain
 #bootloader --append="biosdevname=0 quiet rhgb" --driveorder=sda --location=mbr
-bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 cdrom
+
+# for boxgrinder (to avoid prompts)
+## https://bugzilla.redhat.com/show_bug.cgi?id=752216
+bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 clearpart --all --initlabel
+part biosboot --fstype=biosboot --size=1
+part swap --label=swap --recommended
+part /boot --fstype=ext4 --label=/boot --size=500
+part / --fstype=ext4 --grow --label=/
+
+# for manual installs, leave off autopart, bootloader, clearpart, and part
+
 firstboot --disable
 install
 keyboard us
 lang en_US.UTF-8
-#part biosboot --fstype=biosboot --size=1
-part biosboot --fstype=biosboot --size=1
 
-# sda2
+# "As of Fedora 16 there must be a biosboot partition for the bootloader to 
+# be installed successfully onto a disk that contains a GPT/GUID partition 
+# table, which includes disks initialized by anaconda."
+# http://fedoraproject.org/wiki/Anaconda/Kickstart#part_or_partition
+#part biosboot --fstype=biosboot --size=1
+
+# sda2?
 # http://docs.fedoraproject.org/en-US/Fedora/16/html/Installation_Guide/s2-diskpartrecommend-x86.html
 #part swap --ondisk=sda --size=2048
-part swap --size=2048
+#part swap --size=2048
+#part swap --recommended
 
-# sda3
+# sda3?
 #part /boot --fstype=ext4 --ondisk=sda --size=500
-part /boot --fstype=ext4 --size=500
+#part /boot --fstype=ext4 --size=500
 
-# sda4
+# sda4?
 #part / --fstype=ext4 --grow --ondisk=sda
-part / --fstype=ext4 --grow
+#part / --fstype=ext4 --grow
 
 poweroff
 repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386
@@ -47,6 +61,10 @@ repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
 repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386
 repo --cost=3 --name=webmin --mirrorlist=http://download.webmin.com/download/yum/mirrorlist
 rootpw --plaintext crimson
+
+# TEMP
+user --name=jharvard --password=crimson --plaintext
+
 selinux --permissive
 timezone --utc America/New_York
 xconfig --startxonboot
@@ -62,9 +80,9 @@ xconfig --startxonboot
 @base-x
 
 # kernel
-kernel
-kernel-devel
-kernel-headers
+#kernel
+#kernel-devel
+#kernel-headers
 
 # core
 @core
@@ -84,11 +102,11 @@ dejavu-fonts-common
 dejavu-sans-fonts
 dejavu-sans-mono-fonts
 dejavu-serif-fonts
-liberation-fonts-common
-liberation-mono-fonts
-liberation-sans-fonts
-liberation-serif-fonts
-liberation-narrow-fonts
+#liberation-fonts-common
+#liberation-mono-fonts
+#liberation-sans-fonts
+#liberation-serif-fonts
+#liberation-narrow-fonts
 
 # CS50
 #appliance50
