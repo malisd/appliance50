@@ -12,14 +12,15 @@
 ## Kickstart Options
 ############################################################################
 
-autopart
+autopart --type=plain
 bootloader --append="biosdevname=0 quiet rhgb" --driveorder=sda --location=mbr
 cdrom
-clearpart --all --initlabel
+#clearpart --all --initlabel
+firstboot --disable
 install
 keyboard us
 lang en_US.UTF-8
-#part biosboot --fstype=biosboot --size=1
+part biosboot --fstype=biosboot --size=1
 
 # sda2
 # http://docs.fedoraproject.org/en-US/Fedora/16/html/Installation_Guide/s2-diskpartrecommend-x86.html
@@ -62,7 +63,6 @@ kernel-headers
 
 # core
 @core
-#@fonts
 
 # Xfce
 @xfce-desktop
@@ -75,15 +75,15 @@ generic-release
 -fedora-release-notes
 
 # fonts
-#dejavu-fonts-common
-#dejavu-sans-fonts
-#dejavu-sans-mono-fonts
-#dejavu-serif-fonts
-#liberation-fonts-common
-#liberation-mono-fonts
-#liberation-sans-fonts
-#liberation-serif-fonts
-#liberation-narrow-fonts
+dejavu-fonts-common
+dejavu-sans-fonts
+dejavu-sans-mono-fonts
+dejavu-serif-fonts
+liberation-fonts-common
+liberation-mono-fonts
+liberation-sans-fonts
+liberation-serif-fonts
+liberation-narrow-fonts
 
 # CS50
 #appliance50
