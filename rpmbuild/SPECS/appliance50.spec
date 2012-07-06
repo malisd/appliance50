@@ -121,7 +121,6 @@ Requires: php-phpunit-PHPUnit
 Requires: php-tidy
 Requires: php-xml
 Requires: phpMyAdmin
-Requires: proftpd
 Requires: pulseaudio
 Requires: python
 Requires: pyxdg
@@ -195,10 +194,6 @@ Requires(post): yum-utils
 
 
 ############################################################################
-%define _optdir /opt
-
-
-############################################################################
 %description
 The CS50 Appliance is a virtual machine that lets you
 take CS50, even if you're not a student at Harvard.
@@ -213,8 +208,8 @@ take CS50, even if you're not a student at Harvard.
 ############################################################################
 %install
 /bin/rm -rf %{buildroot}
-/bin/mkdir -p %{buildroot}%{_optdir}
-/bin/cp -a %{_builddir}/%{name} %{buildroot}%{_optdir}/%{name}
+/bin/mkdir -p %{buildroot}/tmp/
+/bin/cp -a %{_builddir}/%{name} %{buildroot}/tmp/
 
 
 ############################################################################
@@ -229,8 +224,8 @@ take CS50, even if you're not a student at Harvard.
 # http://forum.xfce.org/viewtopic.php?id=5775
 /usr/bin/killall xfconfd > /dev/null 2>&1
 
-# /tmp/%{name}
-declare opt=/opt/%{name}
+# /tmp/%{name}-%{version}-%{release}
+declare tmp=/tmp/%{name}
 
 # remove deprecated directories and files
 declare -a deprecated=()
@@ -246,9 +241,9 @@ do
 done
 
 # install directories
-for src in $(/bin/find $opt -mindepth 1 -type d | /bin/sort)
+for src in $(/bin/find $tmp -mindepth 1 -type d | /bin/sort)
 do
-    declare dst=${src#$opt}
+    declare dst=${src#$tmp}
     declare dir=$(/usr/bin/dirname $dst)
     declare base=$(/bin/basename $dst)
     if [ -e $dir/$base.lock ] || [ -e $dir/.$base.lock ]
@@ -261,9 +256,9 @@ do
 done
 
 # install files
-for src in $(/bin/find $opt ! -type d | /bin/sort)
+for src in $(/bin/find $tmp ! -type d | /bin/sort)
 do
-    declare dst=${src#$opt}
+    declare dst=${src#$tmp}
     declare dir=$(/usr/bin/dirname $dst)
     declare base=$(/bin/basename $dst)
     if [ -e $dir/$base.lock ] || [ -e $dir/.$base.lock ]
@@ -293,11 +288,11 @@ done
 echo "   Reset John Harvard's password to \"crimson\"."
 
 # /var/lib/samba/private/passdb.tdb
-/bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null
+/bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null 2>&1
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
 # lock root
-/usr/bin/passwd -l root
+/usr/bin/passwd -l root > /dev/null 2>&1
 echo "   Locked superuser's account."
 
 # synchronize with /etc/skel/{.config,.local}
@@ -308,32 +303,32 @@ echo "   Locked superuser's account."
 echo "   Synchronized John Harvard and superuser with /etc/skel/{.config,.local}."
 
 # disable services
-#declare -a off=(netconsole netfs)
-#for service in "${off[@]}"
-#do
-#    /sbin/chkconfig $service off > /dev/null 2>&1
-#    echo "   Disabled $service."
-#done
-#declare -a off=(avahi-daemon ip6tables mdmonitor proftpd saslauthd)
-#for service in "${off[@]}"
-#do
-#    /bin/systemctl disable $service.service > /dev/null 2>&1
-#    echo "   Disabled $service."
-#done
+declare -a off=(netconsole)
+for service in "${off[@]}"
+do
+    /sbin/chkconfig $service off > /dev/null 2>&1
+    echo "   Disabled $service."
+done
+declare -a off=(avahi-daemon ip6tables mdmonitor saslauthd)
+for service in "${off[@]}"
+do
+    /bin/systemctl disable $service.service > /dev/null 2>&1
+    echo "   Disabled $service."
+done
 
 # enable services
-#declare -a on=(dkms_autoinstaller network webmin)
-#for service in "${on[@]}"
-#do
-#    /sbin/chkconfig $service on > /dev/null 2>&1
-#    echo "   Enabled $service."
-#done
-#declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd usermin yum-updatesd)
-#for service in "${on[@]}"
-#do
-#    /bin/systemctl enable $service.service > /dev/null 2>&1
-#    echo "   Enabled $service."
-#done
+declare -a on=(dkms_autoinstaller network webmin)
+for service in "${on[@]}"
+do
+    /sbin/chkconfig $service on > /dev/null 2>&1
+    echo "   Enabled $service."
+done
+declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd usermin yum-updatesd)
+for service in "${on[@]}"
+do
+    /bin/systemctl enable $service.service > /dev/null 2>&1
+    echo "   Enabled $service."
+done
 
 # reset MySQL privileges
 /bin/systemctl stop mysqld.service > /dev/null 2>&1
@@ -369,19 +364,15 @@ do
     echo "   Restarted $service."
 done
 
-# workaround for Fedora 16's lack of php-zip
-# https://bugzilla.redhat.com/show_bug.cgi?id=551513
-/usr/bin/pecl install zip > /dev/null 2>&1
-
 # recompile schemas
 # https://github.com/Quixotix/gedit-source-code-browser
-/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/
-/bin/chmod -R a+rX /usr/share/glib-2.0/schemas/
-echo "   Recompiled schemas."
+#/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/
+#/bin/chmod -R a+rX /usr/share/glib-2.0/schemas/
+#echo "   Recompiled schemas."
 
 # rebuild icon cache
-/usr/bin/gtk-update-icon-cache /usr/share/icons/hicolor/ > /dev/null 2>&1
-echo "   Rebuilt icon cache."
+#/usr/bin/gtk-update-icon-cache /usr/share/icons/hicolor/ > /dev/null 2>&1
+#echo "   Rebuilt icon cache."
 
 # redraw panel
 /bin/find /home/jharvard/.config/xfce4/panel -type f -exec /bin/touch {} \;
@@ -389,8 +380,8 @@ echo "   Rebuilt icon cache."
 echo "   Updated John Harvard's and superuser's panels."
 
 # redraw desktop
-/usr/bin/xfdesktop --reload > /dev/null 2>&1
-echo "   Updated John Harvard's and superuser's desktops."
+#/usr/bin/xfdesktop --reload > /dev/null 2>&1
+#echo "   Updated John Harvard's and superuser's desktops."
 
 # fix Scratch's audio
 /bin/sed -i -e 's/^SCRATCH_SND_PLUGIN=vm-sound-alsa/SCRATCH_SND_PLUGIN=vm-sound-pulse/' /usr/bin/scratch
@@ -399,6 +390,9 @@ echo "   Updated John Harvard's and superuser's desktops."
 /bin/rpm --import http://linux.dropbox.com/fedora/rpm-public-key.asc
 /bin/rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 /bin/rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386
+
+# remove sources
+/bin/rm -rf /tmp/%{name}
 
 # rebuild mlocate.db
 /etc/cron.daily/mlocate.cron
@@ -410,7 +404,7 @@ echo "   Updated John Harvard's and superuser's desktops."
 ##########################################################################
 %files
 %defattr(-,root,root,-)
-/opt/%{name}
+/tmp/%{name}
 
 # TODO: fix?
 #%defattr(-,root,students,1770)
