@@ -56,7 +56,7 @@ repos:
 
 packages:
   - @core
-#  - appliance50 
+  - appliance50 
 
 post:
   base:
