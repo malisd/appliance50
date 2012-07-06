@@ -1,0 +1,11 @@
+--- /usr/share/gems/gems/boxgrinder-build-0.10.2/lib/boxgrinder-build/helpers/qemu.wrapper	2012-07-06 17:01:55.198227938 -0400
++++ qemu.wrapper	2012-07-06 17:02:09.981228103 -0400
+@@ -9,7 +9,7 @@
+ if [ "`uname -a | grep x86_64 | wc -l`" -eq "1" ]; then
+   bin=/usr/bin/qemu-system-x86_64
+ else
+-  bin=/usr/bin/qemu
++  bin=/usr/bin/qemu-system-i386
+ fi
+ 
+ exec $bin "${args[@]}"

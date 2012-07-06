@@ -1,10 +1,8 @@
 cdrom
-
 firstboot --disable
 install
 keyboard us
 lang en_US.UTF-8
-
 #poweroff
 repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386
 repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386
@@ -38,6 +36,9 @@ xconfig --startxonboot
 # per https://bugzilla.redhat.com/show_bug.cgi?id=547152
 system-config-firewall-base
 
+# for boxgrinder
+grub2
+
 # kernel
 #kernel
 #kernel-devel
@@ -68,7 +69,7 @@ dejavu-serif-fonts
 #liberation-narrow-fonts
 
 # CS50
-appliance50
+#appliance50
 
 # unwanted
 #-audit
