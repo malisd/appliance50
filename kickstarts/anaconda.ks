@@ -1,6 +1,5 @@
 %include base.ks
 
-bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 clearpart --all --initlabel
 part biosboot --fstype=biosboot --size=1
 part swap --label=swap --recommended

@@ -1,3 +1,9 @@
+# for anaconda
+#bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
+
+# for boxgrinder?
+bootloader --append="biosdevname=0 quiet rhgb"
+
 cdrom
 firstboot --disable
 install
@@ -38,6 +44,8 @@ system-config-firewall-base
 
 # for boxgrinder
 grub2
+dhclient
+kernel-PAE
 
 # kernel
 #kernel

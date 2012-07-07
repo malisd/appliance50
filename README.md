@@ -9,6 +9,7 @@
 1. Follow http://fedoraproject.org/wiki/How_to_create_an_RPM_package#Preparing_your_system.
 1. Follow http://boxgrinder.org/tutorials/boxgrinder-build-quick-start/installation/.
 1. `yum install qemu` (else boxgrinder errs)
+1. Change `SELINUX=enforcing` to `SELINUX=permissive` in /etc/sysconfig/selinux in boxgrinding VM.
 
 ## References
 
