@@ -19,9 +19,9 @@ cdrom
 bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 clearpart --all --initlabel
 part biosboot --fstype=biosboot --size=1
-part swap --label=swap --recommended
-part /boot --fstype=ext4 --label=/boot --size=500
-part / --fstype=ext4 --grow --label=/
+part swap --label=swap --ondisk=sda --recommended
+part /boot --fstype=ext4 --label=/boot --ondisk=sda --size=500
+part / --fstype=ext4 --grow --label=/ --ondisk=sda
 
 # FYI: for manual installs, leave off autopart, bootloader, clearpart, and part
 
@@ -108,7 +108,7 @@ dejavu-serif-fonts
 #liberation-narrow-fonts
 
 # CS50
-#appliance50
+appliance50
 
 # unwanted
 #-audit
