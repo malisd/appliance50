@@ -11,7 +11,7 @@ hardware:
   memory: 512
   partitions:
     "/boot":
-      size: 0.1
+      size: 0.5
     "/":
       size: 16
       type: ext4
@@ -55,6 +55,7 @@ repos:
 #    ephemeral: true
 
 packages:
+  - @base-x
   - @core
   - appliance50 
 

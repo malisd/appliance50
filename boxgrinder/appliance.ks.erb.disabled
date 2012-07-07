@@ -1,0 +1,2 @@
+<%= IO.read "#{File.expand_path(File.dirname(__FILE__))}/../kickstarts/boxgrinder.ks" %>
+<%= IO.read "#{File.expand_path(File.dirname(__FILE__))}/../kickstarts/base.ks" %>

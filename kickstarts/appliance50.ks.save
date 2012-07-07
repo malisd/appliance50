@@ -18,7 +18,7 @@ cdrom
 ## https://bugzilla.redhat.com/show_bug.cgi?id=752216
 bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 clearpart --all --initlabel
-part biosboot --fstype=biosboot --size=1
+part biosboot --fstype=biosboot --ondisk=sda --size=1
 part swap --label=swap --ondisk=sda --recommended
 part /boot --fstype=ext4 --label=/boot --ondisk=sda --size=500
 part / --fstype=ext4 --grow --label=/ --ondisk=sda

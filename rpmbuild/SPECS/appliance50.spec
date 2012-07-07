@@ -312,7 +312,7 @@ done
 declare -a off=(avahi-daemon ip6tables mdmonitor saslauthd)
 for service in "${off[@]}"
 do
-    /bin/systemctl disable $service.service > /dev/null 2>&1
+    #/bin/systemctl disable $service.service > /dev/null 2>&1
     echo "   Disabled $service."
 done
 
@@ -326,7 +326,7 @@ done
 declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd usermin yum-updatesd)
 for service in "${on[@]}"
 do
-    /bin/systemctl enable $service.service > /dev/null 2>&1
+    #/bin/systemctl enable $service.service > /dev/null 2>&1
     echo "   Enabled $service."
 done
 
@@ -360,7 +360,7 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 declare -a restart=(httpd iptables network smb sshd)
 for service in "${restart[@]}"
 do
-    /bin/systemctl condrestart $service.service > /dev/null 2>&1
+    #/bin/systemctl condrestart $service.service > /dev/null 2>&1
     echo "   Restarted $service."
 done
 
