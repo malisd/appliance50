@@ -44,8 +44,8 @@ system-config-firewall-base
 
 # for boxgrinder
 grub2
-dhclient
-kernel-PAE
+#dhclient
+#kernel-PAE
 
 # kernel
 #kernel
