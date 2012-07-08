@@ -89,6 +89,14 @@ appliance50
 
 %post
 
+/usr/bin/yum -y remove NetworkManager
+/usr/bin/yum -y remove NetworkManager-glib
+/usr/bin/yum -y remove NetworkManager-gnome
+
+%end
+
+#%post
+
 # interferes with biosdevname=0
 #/usr/bin/yum -y remove NetworkManager
 #/usr/bin/yum -y remove NetworkManager-glib
@@ -191,4 +199,4 @@ appliance50
 #/bin/rm -f /tmp/zero.fill
 
 
-%end
+#%end
