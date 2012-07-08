@@ -72,8 +72,8 @@ module BoxGrinder
     end
 
     # don't override appliance50.ks.erb
-    #def use_labels_for_partitions(guestfs)
-    #end
+    def use_labels_for_partitions(guestfs)
+    end
 
   end
 end
