@@ -14,7 +14,7 @@
     </Include>
 
     <Layout>
-        <Filename>xfrun4.desktop</Filename>
+        <Filename>xfce4-run.desktop</Filename>
         <Separator/>
         <Menuname>CS50</Menuname>
         <Separator/>

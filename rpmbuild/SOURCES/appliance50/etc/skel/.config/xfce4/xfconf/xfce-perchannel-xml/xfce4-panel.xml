@@ -41,6 +41,7 @@
         <value type="int" value="14"/>
         <value type="int" value="15"/>
         <value type="int" value="16"/>
+        <value type="int" value="17"/>
       </property>
     </property>
   </property>
@@ -71,16 +72,22 @@
       </property>
     </property>
     <property name="plugin-7" type="string" value="separator"/>
-    <property name="plugin-8" type="string" value="showdesktop"/>
-    <property name="plugin-9" type="string" value="separator"/>
-    <property name="plugin-10" type="string" value="tasklist">
+    <property name="plugin-8" type="string" value="separator"/>
+    <property name="plugin-9" type="string" value="tasklist">
       <property name="show-handle" type="bool" value="false"/>
     </property>
-    <property name="plugin-11" type="string" value="separator"/>
-    <property name="plugin-12" type="string" value="genmon"/>
-    <property name="plugin-13" type="string" value="separator"/>
-    <property name="plugin-14" type="string" value="genmon"/>
-    <property name="plugin-15" type="string" value="separator"/>
-    <property name="plugin-16" type="string" value="actions"/>
+    <property name="plugin-10" type="string" value="separator"/>
+    <property name="plugin-11" type="string" value="genmon"/>
+    <property name="plugin-12" type="string" value="separator"/>
+    <property name="plugin-13" type="string" value="genmon"/>
+    <property name="plugin-14" type="string" value="separator"/>
+    <property name="plugin-15" type="string" value="systray">
+      <property name="names-visible" type="array">
+        <value type="string" value="dropbox"/>
+      </property>
+      <property name="show-frame" type="bool" value="false"/>
+    </property>
+    <property name="plugin-16" type="string" value="separator"/>
+    <property name="plugin-17" type="string" value="actions"/>
   </property>
 </channel>
