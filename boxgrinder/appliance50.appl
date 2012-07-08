@@ -21,6 +21,7 @@ hardware:
   partitions:
     "/boot":
       size: 0.5
+      type: ext4
     "/":
       size: 16
       type: ext4

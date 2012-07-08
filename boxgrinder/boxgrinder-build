@@ -15,6 +15,31 @@ if ARGV.first =~ /^_(.*)_$/ and Gem::Version.correct? $1 then
   ARGV.shift
 end
 
+# plugins/os/fedora/fedora-plugin.rb
+print "Monkey-patching plugins/os/fedora/fedora-plugin.rb...\n"
+require 'boxgrinder-build/plugins/os/fedora/fedora-plugin.rb'
+module BoxGrinder
+  class FedoraPlugin < RPMBasedOSPlugin
+
+    # don't override appliance50.ks
+    def disable_biosdevname(guestfs)
+    end
+
+    # don't override appliance50.ks
+    def change_runlevel(guestfs)
+    end
+
+    # no need in Fedora 17
+    def disable_netfs(guestfs)
+    end
+
+    # no need in Fedora 17
+    def link_mtab(guestfs)
+    end
+
+  end
+end
+
 # plugins/os/rpm-based/rpm-based-os-plugin
 print "Monkey-patching plugins/os/rpm-based/rpm-based-os-plugin.rb...\n"
 require 'boxgrinder-build/plugins/os/rpm-based/rpm-based-os-plugin'
