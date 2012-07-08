@@ -14,7 +14,8 @@ export GTK_MODULES=gail:atk-bridge
 # Failed to load module: /usr/lib/gio/modules/libgvfsdbus.so
 # http://forums.dropbox.com/topic.php?id=48321
 # http://forums.dropbox.com/topic.php?id=19439
-alias dropbox="dropbox 2> /dev/null"
+# TODO: uncomment?
+#alias dropbox="dropbox 2> /dev/null"
 
 # if not root
 if [[ $UID -ne 0 ]]; then
@@ -22,8 +23,8 @@ if [[ $UID -ne 0 ]]; then
   # set umask
   umask 0077
 
-  # configure gcc
-  export CC=gcc
+  # configure clang
+  export CC=clang
   export CFLAGS="-ggdb -std=c99 -Wall -Werror"
   export LDLIBS="-lcrypt -lcs50 -lm"
 
