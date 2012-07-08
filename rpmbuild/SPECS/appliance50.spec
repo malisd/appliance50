@@ -356,6 +356,12 @@ EOF
 /bin/systemctl start mysqld.service > /dev/null 2>&1
 echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 
+# ensure /home/jharvard/logs exists
+/bin/mkdir /home/jharvard/logs > /dev/null 2>&1
+/bin/chown -R apache:apache /home/jharvard/logs > /dev/null 2>&1
+/bin/chmod 0755 /home/jharvard/logs > /dev/null 2>&1
+/bin/chmod 0644 /home/jharvard/logs/* > /dev/null 2>&1
+
 # restart services
 declare -a restart=(httpd iptables network smb sshd)
 for service in "${restart[@]}"

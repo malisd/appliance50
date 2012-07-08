@@ -35,11 +35,10 @@ os:
 
 # RPM repositories
 default_repos: false
-
-# unused for now
-#  - name: "vmware-tools"
-#    baseurl: "http://packages.vmware.com/tools/esx/latest/rhel6/x86_64/"
-#    ephemeral: true
+repos:
+  - name: "vmware-tools"
+    baseurl: "http://packages.vmware.com/tools/esx/latest/rhel6/x86_64/"
+    ephemeral: true
 
 post:
   base:
