@@ -299,7 +299,7 @@ echo "   Locked superuser's account."
 /usr/bin/rsync --backup --devices --exclude='*.rpmsave' --links --perms --quiet --recursive --specials --suffix=.rpmsave /etc/skel/{.config,.local} /home/jharvard
 /bin/chown -R jharvard:students /home/jharvard/{.config,.local}
 /usr/bin/rsync --backup --devices --exclude='*.rpmsave' --links --perms --quiet --recursive --specials --suffix=.rpmsave /etc/skel/{.config,.local} /root
-/usr/bin/xfce4-panel & > /dev/null 2>&1
+/usr/bin/xfce4-panel > /dev/null 2>&1
 echo "   Synchronized John Harvard and superuser with /etc/skel/{.config,.local}."
 
 # disable services

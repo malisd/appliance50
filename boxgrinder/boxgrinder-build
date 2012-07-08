@@ -21,9 +21,10 @@ require 'boxgrinder-build/plugins/os/fedora/fedora-plugin.rb'
 module BoxGrinder
   class FedoraPlugin < RPMBasedOSPlugin
 
-    # don't override appliance50.ks
-    def disable_biosdevname(guestfs)
-    end
+    ## move this to appliance50 RPM instead perhaps, whereby RPM should write its own /etc/default/grub
+    ## don't override appliance50.ks
+    #def disable_biosdevname(guestfs)
+    #end
 
     # don't override appliance50.ks
     def change_runlevel(guestfs)
@@ -42,7 +43,7 @@ end
 
 # plugins/os/rpm-based/rpm-based-os-plugin
 print "Monkey-patching plugins/os/rpm-based/rpm-based-os-plugin.rb...\n"
-require 'boxgrinder-build/plugins/os/rpm-based/rpm-based-os-plugin'
+require 'boxgrinder-build/plugins/os/rpm-based/rpm-based-os-plugin.rb'
 module BoxGrinder
   class RPMBasedOSPlugin < BasePlugin
 
@@ -71,8 +72,8 @@ module BoxGrinder
     end
 
     # don't override appliance50.ks.erb
-    def use_labels_for_partitions(guestfs)
-    end
+    #def use_labels_for_partitions(guestfs)
+    #end
 
   end
 end
