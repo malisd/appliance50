@@ -1,15 +1,11 @@
 # for anaconda
 #bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 
-# for boxgrinder?
-bootloader --append="biosdevname=0 quiet rhgb"
-
 cdrom
 firstboot --disable
 install
 keyboard us
 lang en_US.UTF-8
-#poweroff
 repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386
 repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386
 repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f17&arch=i386
@@ -19,10 +15,6 @@ repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
 repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386
 repo --cost=3 --name=webmin --mirrorlist=http://download.webmin.com/download/yum/mirrorlist
 rootpw --plaintext crimson
-
-# TEMP
-user --name=jharvard --password=crimson --plaintext
-
 selinux --permissive
 timezone --utc America/New_York
 xconfig --startxonboot
@@ -37,20 +29,16 @@ xconfig --startxonboot
 # base
 @base-x
 
-# avoids
+# per https://bugzilla.redhat.com/show_bug.cgi?id=547152, avoids
 # Unable to disable SELinux because the installed package set did not include the file /usr/sbin/lokkit
-# per https://bugzilla.redhat.com/show_bug.cgi?id=547152
 system-config-firewall-base
 
-# for boxgrinder
+# avoids
+# Unable to create appliance : Unable to install grub2 bootloader
 grub2
+
 #dhclient
 #kernel-PAE
-
-# kernel
-#kernel
-#kernel-devel
-#kernel-headers
 
 # core
 @core
@@ -70,14 +58,9 @@ dejavu-fonts-common
 dejavu-sans-fonts
 dejavu-sans-mono-fonts
 dejavu-serif-fonts
-#liberation-fonts-common
-#liberation-mono-fonts
-#liberation-sans-fonts
-#liberation-serif-fonts
-#liberation-narrow-fonts
 
 # CS50
-#appliance50
+appliance50
 
 # unwanted
 #-audit

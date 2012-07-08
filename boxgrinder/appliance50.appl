@@ -9,6 +9,10 @@ release: 0
 hardware:
   cpus: 1
   memory: 512
+
+  # partitions must be defined here (rather than in .ks) to avoid
+  # TypeError: unsupported operand type(s) for *: 'NoneType' and 'long'
+  # and is presumably necessary to create the virtual disk
   partitions:
     "/boot":
       size: 0.5
@@ -54,10 +58,10 @@ repos:
 #    baseurl: "http://packages.vmware.com/tools/esx/latest/rhel6/x86_64/"
 #    ephemeral: true
 
-packages:
-  - @base-x
-  - @core
-  - appliance50 
+#packages:
+#  - @base-x
+#  - @core
+#  - appliance50 
 
 post:
   base:

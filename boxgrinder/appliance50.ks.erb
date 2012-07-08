@@ -1,3 +1,4 @@
+bootloader --append="biosdevname=0 quiet rhgb"
 part biosboot --fstype=biosboot --ondisk=sda --size=1
 
 <% mount_points.each do |root| %>
