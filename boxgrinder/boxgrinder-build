@@ -46,18 +46,27 @@ require 'boxgrinder-build/plugins/os/rpm-based/rpm-based-os-plugin'
 module BoxGrinder
   class RPMBasedOSPlugin < BasePlugin
 
+    # don't override appliance50.ks
     def apply_root_password(guestfs)
     end
 
+    # don't override appliance50.ks
+    def change_configuration(guestfs_helper)
+    end
+
+    # don't override appliance50.ks
     def disable_firewall(guestfs)
     end
 
+    # don't override appliance50.ks
     def install_repos(guestfs)
     end
 
+    # don't override appliance50.ks
     def set_label_for_swap_partitions(guestfs, guestfs_helper)
     end
 
+    # don't override appliance50.ks
     def set_motd(guestfs)
     end
 
