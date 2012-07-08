@@ -61,24 +61,16 @@ appliance50
 @xfce-desktop
 
 # unwanted
-#-audit
-#-gnome-bluetooth-libs
-#-java-*-gcj
-#-leafpad
-#-libgcj
-#-libpcap
-#-ModemManager
-#-mousepad
-#-openbox
-#-openbox-libs
-#-openssh-askpass
-#-orage
-#-policycoreutils*
-#-ppp
-#-selinux-*
-#-xfce4-appfinder
-#-xfce4-power-manager
-#-xscreensaver-base
+-audit
+-leafpad
+-libpcap
+-ModemManager
+-openssh-askpass
+-orage
+-ppp
+-xfce4-appfinder
+-xfce4-power-manager
+-xscreensaver-base
 
 %end
 
@@ -89,18 +81,13 @@ appliance50
 
 %post
 
-#/usr/bin/yum -y remove NetworkManager
-#/usr/bin/yum -y remove NetworkManager-glib
-#/usr/bin/yum -y remove NetworkManager-gnome
-
-%end
-
-#%post
-
-# interferes with biosdevname=0
-#/usr/bin/yum -y remove NetworkManager
-#/usr/bin/yum -y remove NetworkManager-glib
-#/usr/bin/yum -y remove NetworkManager-gnome
+## unwanted, but - doesn't suffice above
+/usr/bin/yum -y remove \
+abrt \
+dnsmasq \
+NetManager \
+NetManager-gnome \
+wpa_supplicant
 
 ## unwanted, but - doesn't suffice above
 #/usr/bin/yum -y remove abrt dnsmasq kernel-PAE wpa_supplicant
@@ -199,4 +186,4 @@ appliance50
 #/bin/rm -f /tmp/zero.fill
 
 
-#%end
+%end
