@@ -386,9 +386,11 @@ echo "   Updated John Harvard's and superuser's panels."
 # fix Scratch's audio
 /bin/sed -i -e 's/^SCRATCH_SND_PLUGIN=vm-sound-alsa/SCRATCH_SND_PLUGIN=vm-sound-pulse/' /usr/bin/scratch
 
-# import keys (to avoid warnings during future software updates)
-/bin/rpm --import http://linux.dropbox.com/fedora/rpm-public-key.asc
-/bin/rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+## import keys (to avoid warnings during future software updates)
+# http://linux.dropbox.com/fedora/rpm-public-key.asc
+/bin/rpm --import /etc/pki/rpm-gpg/rpm-public-key.asc
+# https://dl-ssl.google.com/linux/linux_signing_key.pub
+/bin/rpm --import /etc/pki/rpm-gpg/linux_signing_key.pub
 /bin/rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386
 
 # remove sources
@@ -405,9 +407,6 @@ echo "   Updated John Harvard's and superuser's panels."
 %files
 %defattr(-,root,root,-)
 /tmp/%{name}
-
-%defattr(-,root,root,0440)
-/tmp/%{name}/etc/sudoers.d/appliance50
 
 # TODO: fix?
 #%defattr(-,root,students,1770)
