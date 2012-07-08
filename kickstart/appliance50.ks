@@ -68,7 +68,6 @@ appliance50
 -openssh-askpass
 -orage
 -ppp
--xfce4-appfinder
 -xfce4-power-manager
 -xscreensaver-base
 

@@ -14,8 +14,7 @@ export GTK_MODULES=gail:atk-bridge
 # Failed to load module: /usr/lib/gio/modules/libgvfsdbus.so
 # http://forums.dropbox.com/topic.php?id=48321
 # http://forums.dropbox.com/topic.php?id=19439
-# TODO: uncomment?
-#alias dropbox="dropbox 2> /dev/null"
+alias dropbox="dropbox 2> /dev/null"
 
 # if not root
 if [[ $UID -ne 0 ]]; then
