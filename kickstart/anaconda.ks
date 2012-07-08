@@ -2,11 +2,10 @@
 
 bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
 
-# necessary, per https://bugzilla.redhat.com/show_bug.cgi?id=752216#c10
-#clearpart --all --initlabel
-
-# compels Anaconda to prompt user
-clearpart --none
+# necessary, per https://bugzilla.redhat.com/show_bug.cgi?id=752216#c10, since
+# clearpart --none 
+# results in "not enough free space" if installing on top of a disk that already has partitions
+clearpart --all --initlabel
 
 part biosboot --fstype=biosboot --size=1
 part swap --label=swap --recommended

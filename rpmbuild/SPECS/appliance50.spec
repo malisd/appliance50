@@ -406,6 +406,9 @@ echo "   Updated John Harvard's and superuser's panels."
 %defattr(-,root,root,-)
 /tmp/%{name}
 
+%defattr(-,root,root,0440)
+/tmp/%{name}/etc/sudoers.d/appliance50
+
 # TODO: fix?
 #%defattr(-,root,students,1770)
 #/opt/%{name}/usr/local/samba/lib/usershares

@@ -89,9 +89,9 @@ appliance50
 
 %post
 
-/usr/bin/yum -y remove NetworkManager
-/usr/bin/yum -y remove NetworkManager-glib
-/usr/bin/yum -y remove NetworkManager-gnome
+#/usr/bin/yum -y remove NetworkManager
+#/usr/bin/yum -y remove NetworkManager-glib
+#/usr/bin/yum -y remove NetworkManager-gnome
 
 %end
 
