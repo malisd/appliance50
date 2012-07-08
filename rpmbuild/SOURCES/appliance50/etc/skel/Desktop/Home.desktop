@@ -2,6 +2,6 @@
 Version=1.0
 Encoding=UTF-8
 Name=Home
-Exec=nautilus --no-desktop $HOME
+Exec=nautilus --no-desktop
 Icon=user-home
 Type=Application
