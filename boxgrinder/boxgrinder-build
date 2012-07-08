@@ -61,8 +61,8 @@ module BoxGrinder
     def set_motd(guestfs)
     end
 
-    def use_labels_for_partitions(guestfs)
-    end
+    #def use_labels_for_partitions(guestfs)
+    #end
 
   end
 end
