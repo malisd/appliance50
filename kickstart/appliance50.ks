@@ -1,5 +1,6 @@
-# for anaconda
-#bootloader --append="biosdevname=0 quiet rhgb" --location=mbr
+############################################################################
+## Kickstart Options
+############################################################################
 
 cdrom
 firstboot --disable
@@ -29,22 +30,16 @@ xconfig --startxonboot
 # base
 @base-x
 
-# per https://bugzilla.redhat.com/show_bug.cgi?id=547152, avoids
-# Unable to disable SELinux because the installed package set did not include the file /usr/sbin/lokkit
-system-config-firewall-base
+# core
+@core
 
 # avoids
 # Unable to create appliance : Unable to install grub2 bootloader
 grub2
 
-#dhclient
-#kernel-PAE
-
-# core
-@core
-
-# Xfce
-@xfce-desktop
+# per https://bugzilla.redhat.com/show_bug.cgi?id=547152, avoids
+# Unable to disable SELinux because the installed package set did not include the file /usr/sbin/lokkit
+system-config-firewall-base
 
 # release
 generic-logos
@@ -61,6 +56,9 @@ dejavu-serif-fonts
 
 # CS50
 appliance50
+
+# Xfce
+@xfce-desktop
 
 # unwanted
 #-audit

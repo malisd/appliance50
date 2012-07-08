@@ -1,5 +1,0 @@
-<% mount_points.each do |root| %>
-<% partition = appliance_config.hardware.partitions[root]%>
-part <%= root %> --size <%= (partition['size'].to_f * 1024).to_i %> --fstype <%= root.eql?('swap') ? 'swap' : partition['type'] %> <% unless partition['options'].nil? %> --fsoptions '<%= partition['options'] %>' <% end %> --ondisk sda<% end %>
-
-<%= IO.read "#{File.expand_path(File.dirname(__FILE__))}/../kickstarts/base.ks" %>
