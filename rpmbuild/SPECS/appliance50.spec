@@ -364,17 +364,17 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 
 # ensure /home/jharvard/public_html exists
 /bin/mkdir /home/jharvard/public_html > /dev/null 2>&1
-/bin/chown jharvard:students /home/jharvard/public_html
+/bin/chown jharvard:students /home/jharvard/public_html > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/public_html > /dev/null 2>&1
 
 # ensure /home/jharvard/vhosts/localhost/html exists
 /bin/mkdir -p /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
-/bin/chown jharvard:students /home/jharvard/vhosts
+/bin/chown jharvard:students /home/jharvard/vhosts > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/vhosts > /dev/null 2>&1
-/bin/chown jharvard:students /home/jharvard/vhosts/localhost
+/bin/chown jharvard:students /home/jharvard/vhosts/localhost > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/vhosts/localhost > /dev/null 2>&1
-/bin/chown jharvard:students /home/jharvard/vhosts/localhost/html
+/bin/chown jharvard:students /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 
 # restart services
