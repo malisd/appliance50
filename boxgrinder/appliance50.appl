@@ -1,12 +1,17 @@
 # VMware: ./boxgrinder-build server50-1-0.appl -p vmware --platform-config type:personal,thin_disk:true --debug
 # VirtualBox (because OVF requires streamOptimized): ./boxgrinder-build -p multidisk server50-6-0.appl -l multidisk-boxgrinder-plugin --debug --trace
 
+# name, summary
 name: appliance50
 summary: This is CS50.
+
+# version, release
 version: 17
 release: 0
 
+# hardware to virtualize
 hardware:
+
   cpus: 1
   memory: 512
 
@@ -22,74 +27,25 @@ hardware:
     "swap":
       size: 1
 
+# OS to install
 os:
   name: fedora
   version: 17
 
+# RPM repositories
 default_repos: false
-repos:
-  - name: "fedora"
-    mirrorlist: "http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386"
-    ephemeral: true
-  - name: "fedora-debuginfo"
-    mirrorlist: "http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386"
-    ephemeral: true
-  - name: "updates"
-    mirrorlist: "http://mirrors.fedoraproject.org/metalink?repo=updates-released-f17&arch=i386"
-    ephemeral: true
-  - name: "updates-debuginfo"
-    mirrorlist: "http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f17&arch=i386"
-    ephemeral: true
-  - name: "appliance50"
-    baseurl: "http://mirror.cs50.net/appliance50/17/RPMS/"
-    ephemeral: true
-  - name: "dropbox"
-    baseurl: "http://linux.dropbox.com/fedora/17/"
-    ephemeral: true
-  - name: "google-chrome"
-    baseurl: "http://dl.google.com/linux/chrome/rpm/stable/i386"
-    ephemeral: true
-  - name: "nodejs"
-    baseurl: "http://nodejs.tchol.org/stable/f17/i386/"
-    ephemeral: true
 
 # unused for now
 #  - name: "vmware-tools"
 #    baseurl: "http://packages.vmware.com/tools/esx/latest/rhel6/x86_64/"
 #    ephemeral: true
 
-#packages:
-#  - @base-x
-#  - @core
-#  - appliance50 
-
 post:
   base:
     - |
-      # lock root
-      #/usr/bin/passwd -l root
  
-      # /srv/www
-      #/bin/mkdir /srv/www
-      #/bin/chown apache:apache /srv/www
-      #/bin/chmod 0771 /srv/www
-
-      # /etc/httpd/conf.d/vhosts.conf
-      #/bin/echo "<VirtualHost *:80>" > /etc/httpd/conf.d/vhosts.conf
-      #/bin/echo >> /etc/httpd/conf.d/vhosts.conf
-      #/bin/echo "# DocumentRoot /path/to/webroot" >> /etc/httpd/conf.d/vhosts.conf
-      #/bin/echo "# ServerName www.example.com" >> /etc/httpd/conf.d/vhosts.conf
-      #/bin/echo >> /etc/httpd/conf.d/vhosts.conf
-      #/bin/echo "</VirtualHost>" >> /etc/httpd/conf.d/vhosts.conf
-
       # unused for now
       # /usr/bin/yum --nogpg -y install vmware-tools-esx-kmods vmware-tools-esx-nox
 
       # reinstall to ensure its files overwrite other RPMs'
       #LIBGUESTFS_MEMSIZE=768 /usr/bin/yum --nogpg -y reinstall server50
-
-      # avoids "according to mtab, /sys is already mounted on /sys" on boot
-      #/bin/rm -f /etc/mtab
-
-      # unneeded
-      #/usr/bin/yum -y remove audit 

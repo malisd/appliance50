@@ -1,8 +1,11 @@
+<%# necessary but can't be represented in .appl file %>
 bootloader --append="biosdevname=0 quiet rhgb"
 part biosboot --fstype=biosboot --ondisk=sda --size=1
 
+<%# generate partitions %>
 <% mount_points.each do |root| %>
 <% partition = appliance_config.hardware.partitions[root]%>
 part <%= root %> --size <%= (partition['size'].to_f * 1024).to_i %> --fstype <%= root.eql?('swap') ? 'swap' : partition['type'] %> <% unless partition['options'].nil? %> --fsoptions '<%= partition['options'] %>' <% end %> --ondisk sda<% end %>
 
+<%# include base.ks %>
 <%= IO.read "#{File.expand_path(File.dirname(__FILE__))}/../kickstarts/base.ks" %>
