@@ -292,7 +292,7 @@ echo "   Reset John Harvard's password to \"crimson\"."
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
 # ensure proper ownership
-/bin/find /home/jharvard -path /home/jharvard/logs -prune -exec /bin/chown jharvard:students {} \;
+/bin/find /home/jharvard -path /home/jharvard/logs -prune -o -exec /bin/chown jharvard:students {} \;
 /usr/bin/xfce4-panel > /dev/null 2>&1
 echo "   Updated John Harvard's dotfiles."
 
@@ -379,7 +379,7 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 declare -a restart=(httpd iptables network smb sshd)
 for service in "${restart[@]}"
 do
-    #/bin/systemctl condrestart $service.service > /dev/null 2>&1
+    /bin/systemctl reload-or-try-restart $service.service > /dev/null 2>&1
     echo "   Restarted $service."
 done
 
