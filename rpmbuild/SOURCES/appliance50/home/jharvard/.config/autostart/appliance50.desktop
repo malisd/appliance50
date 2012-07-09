@@ -6,7 +6,8 @@ Name=appliance50
 Comment=
 
 # http://inspirated.com/2009/07/02/workaround-for-autostarting-applications-in-a-particular-order-on-xfcegnomekde
-Exec=/bin/bash -c "/bin/sleep 3 && /usr/bin/xfwm4 --daemon --replace && /usr/bin/xfdesktop --reload"
+# TODO: determine whether it's necessary in Fedora 17
+#Exec=/bin/bash -c "/bin/sleep 3 && /usr/bin/xfwm4 --daemon --replace && /usr/bin/xfdesktop --reload"
 
 StartupNotify=false
 Terminal=false

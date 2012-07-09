@@ -291,16 +291,14 @@ echo "   Reset John Harvard's password to \"crimson\"."
 /bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null 2>&1
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
+# ensure proper ownership
+/bin/find ~jharvard -path ~jharvard/logs -prune -exec /bin/chown jharvard:students {} \;
+/usr/bin/xfce4-panel > /dev/null 2>&1
+echo "   Updated John Harvard's dotfiles."
+
 # lock root
 /usr/bin/passwd -l root > /dev/null 2>&1
 echo "   Locked superuser's account."
-
-# synchronize with /etc/skel/{.config,.local}
-/usr/bin/rsync --backup --devices --exclude='*.rpmsave' --links --perms --quiet --recursive --specials --suffix=.rpmsave /etc/skel/{.config,.local} /home/jharvard
-/bin/chown -R jharvard:students /home/jharvard/{.config,.local}
-/usr/bin/rsync --backup --devices --exclude='*.rpmsave' --links --perms --quiet --recursive --specials --suffix=.rpmsave /etc/skel/{.config,.local} /root
-/usr/bin/xfce4-panel > /dev/null 2>&1
-echo "   Synchronized John Harvard and superuser with /etc/skel/{.config,.local}."
 
 # disable services
 declare -a off=(netconsole)
@@ -358,7 +356,7 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 
 # ensure /home/jharvard/logs exists
 /bin/mkdir /home/jharvard/logs > /dev/null 2>&1
-/bin/chown -R apache:apache /home/jharvard/logs > /dev/null 2>&1
+/bin/chown -R root:root /home/jharvard/logs > /dev/null 2>&1
 /bin/chmod 0755 /home/jharvard/logs > /dev/null 2>&1
 /bin/chmod 0644 /home/jharvard/logs/* > /dev/null 2>&1
 
