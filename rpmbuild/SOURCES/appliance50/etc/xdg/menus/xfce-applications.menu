@@ -124,7 +124,7 @@
             <Or>
                 <Category>Development</Category>
                 <Filename>emacs.desktop</Filename>
-                <Filename>gedit.desktop</Filename>
+                <Filename>geany.desktop</Filename>
                 <Filename>Terminal.desktop</Filename>
                 <Filename>fedora-gvim.desktop</Filename>
             </Or>
@@ -201,6 +201,11 @@
         <Include>
             <Category>Office</Category>
         </Include>
+        <Exclude>
+            <Or>
+                <Filename>evince.desktop</Filename>
+            </Or>
+        </Exclude>
     </Menu>
 
     <Menu>
