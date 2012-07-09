@@ -11,7 +11,7 @@ repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?r
 repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386
 repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f17&arch=i386
 repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f17&arch=i386
-repo --cost=2 --name=appliance50 --baseurl=http://mirror.cs50.net/appliance50/17/RPMS/
+repo --cost=2 --name=appliance50 --baseurl=http://mirror.cs50.net/appliance50/17a/RPMS/
 repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
 repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386
 repo --cost=3 --name=webmin --mirrorlist=http://download.webmin.com/download/yum/mirrorlist
@@ -79,6 +79,12 @@ appliance50
 ############################################################################
 
 %post
+
+# lock root (because doing so in appliance50 RPM alone doesn't work when boxgrinding or kickstarting)
+/usr/bin/passwd -l root
+
+# reinstall to ensure appliance's RPM overwrites other RPMs' files
+/usr/bin/yum -y reinstall appliance50
 
 ## unwanted, but - doesn't suffice above
 /usr/bin/yum -y remove \

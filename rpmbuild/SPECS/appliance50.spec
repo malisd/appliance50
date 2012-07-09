@@ -293,8 +293,10 @@ echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
 # ensure proper ownership
 /bin/find /home/jharvard -path /home/jharvard/logs -prune -o -exec /bin/chown jharvard:students {} \;
-/usr/bin/xfce4-panel > /dev/null 2>&1
-echo "   Updated John Harvard's dotfiles."
+echo "   Updated ownership of John Harvard's home directory."
+
+# might be causing new panel to be created during reinstall
+#/usr/bin/xfce4-panel > /dev/null 2>&1
 
 # lock root
 /usr/bin/passwd -l root > /dev/null 2>&1

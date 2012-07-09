@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=google-chrome https://manual.cs50.net/CS50_Appliance_3
+Exec=google-chrome https://manual.cs50.net/CS50_Appliance_17a
 Icon=help-contents
 StartupNotify=false
 Terminal=false
 Categories=CS50;
-Name=CS50 Appliance 3
+Name=CS50 Appliance 17a

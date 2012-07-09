@@ -226,8 +226,10 @@
         <Exclude>
             <Or>
                 <Filename>dconf-editor.desktop</Filename>
+                <Filename>fedora-Thunar.desktop</Filename>
                 <Filename>fedora-Thunar-bulk-rename.desktop</Filename>
                 <Filename>fedora-xterm.desktop</Filename>
+                <Filename>gnome-gconf-editor.desktop</Filename>
                 <Filename>redhat-usermount.desktop</Filename>
                 <Filename>Terminal.desktop</Filename>
                 <Filename>xfce4-session-logout.desktop</Filename>
