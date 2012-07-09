@@ -292,7 +292,7 @@ echo "   Reset John Harvard's password to \"crimson\"."
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
 # ensure proper ownership
-/bin/find ~jharvard -path ~jharvard/logs -prune -exec /bin/chown jharvard:students {} \;
+/bin/find /home/jharvard -path /home/jharvard/logs -prune -exec /bin/chown jharvard:students {} \;
 /usr/bin/xfce4-panel > /dev/null 2>&1
 echo "   Updated John Harvard's dotfiles."
 
@@ -395,8 +395,7 @@ done
 
 # redraw panel
 /bin/find /home/jharvard/.config/xfce4/panel -type f -exec /bin/touch {} \;
-/bin/find /root/.config/xfce4/panel -type f -exec /bin/touch {} \;
-echo "   Updated John Harvard's and superuser's panels."
+echo "   Updated John Harvard's panel."
 
 # redraw desktop
 #/usr/bin/xfdesktop --reload > /dev/null 2>&1
