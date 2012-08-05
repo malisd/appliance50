@@ -23,13 +23,14 @@ Requires: bind-utils
 # TODO
 #Requires: check50
 
-# TODO
-#Requires: clone50
+Requires: clang
 
 Requires: coreutils 
 
 # TODO
 #Requires: cs50-2012-fall
+#Requires: library50-c
+#Requires: library50-php
 
 Requires: cs50-library-c
 Requires: cs50-library-php
