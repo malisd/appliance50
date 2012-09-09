@@ -90,8 +90,8 @@ appliance50
 /usr/bin/yum -y remove \
 abrt \
 dnsmasq \
-NetManager \
-NetManager-gnome \
+NetworkManager \
+NetworkManager-gnome \
 wpa_supplicant
 
 ## unwanted, but - doesn't suffice above

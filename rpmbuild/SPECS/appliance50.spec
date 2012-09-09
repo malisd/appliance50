@@ -19,6 +19,7 @@ Requires: bc
 Requires: binutils
 
 Requires: bind-utils
+Requires: cgdb
 
 # TODO
 #Requires: check50
@@ -285,6 +286,10 @@ done
 /bin/echo crimson | /usr/bin/passwd --stdin jharvard > /dev/null 2>&1
 echo "   Reset John Harvard's password to \"crimson\"."
 
+# /home/jharvard/Dropbox
+/bin/mkdir /home/jharvard/Dropbox > /dev/null 2>&1
+/bin/chown jharvard:students /home/jharvard/Dropbox > /dev/null 2>&1
+
 # /var/lib/samba/private/passdb.tdb
 /bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null 2>&1
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
@@ -341,8 +346,8 @@ socket=/var/lib/mysql/mysql.sock
 user=mysql
 EOF
 /bin/systemctl start mysqld.service > /dev/null 2>&1
-/usr/bin/mysql --user=root > /dev/null 2>&1 <<"EOF"
-DELETE FROM mysql.user WHERE User = '';
+/usr/bin/mysql --force --user=root > /dev/null 2>&1 <<"EOF"
+DROP USER ''@'%';
 DELETE FROM mysql.user WHERE User = 'root';
 DELETE FROM mysql.user WHERE User = 'jharvard';
 INSERT INTO mysql.user (Host, User, Password, Grant_priv, Super_priv) VALUES('localhost', 'jharvard', PASSWORD('crimson'), 'Y', 'Y');
@@ -354,11 +359,24 @@ EOF
 /bin/systemctl start mysqld.service > /dev/null 2>&1
 echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 
-# ensure /home/jharvard/logs exists
+# /home/jharvard/logs
 /bin/mkdir /home/jharvard/logs > /dev/null 2>&1
-/bin/chown -R root:root /home/jharvard/logs > /dev/null 2>&1
+/bin/chown root:root /home/jharvard/logs > /dev/null 2>&1
 /bin/chmod 0755 /home/jharvard/logs > /dev/null 2>&1
-/bin/chmod 0644 /home/jharvard/logs/* > /dev/null 2>&1
+
+# /home/jharvard/logs/httpd
+/bin/mkdir /home/jharvard/logs/httpd > /dev/null 2>&1
+/bin/chown -R root:root /home/jharvard/logs/httpd > /dev/null 2>&1
+/bin/chmod 0755 /home/jharvard/logs/httpd > /dev/null 2>&1
+/bin/chmod 0644 /home/jharvard/logs/httpd/* > /dev/null 2>&1
+
+# /home/jharvard/logs/mysqld
+/bin/mkdir /home/jharvard/logs/mysqld > /dev/null 2>&1
+/bin/chown mysql:mysql /home/jharvard/logs/mysqld > /dev/null 2>&1
+/bin/chmod 0755 /home/jharvard/logs/mysqld > /dev/null 2>&1
+/bin/touch /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} > /dev/nul 2>&1
+/bin/chown jharvard:mysql /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} > /dev/nul 2>&1
+/bin/chmod 0660 /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} > /dev/nul 2>&1
 
 # ensure /home/jharvard/public_html exists
 /bin/mkdir /home/jharvard/public_html > /dev/null 2>&1
@@ -385,6 +403,9 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 # /etc/ssh
 /bin/chmod 0600 /etc/ssh/*
 /bin/chmod 0645 /etc/ssh/*.pub
+
+# ensure /root/.local/share exists, to avoid Gtk-WARNING from geany
+mkdir -p /root/.local/share > /dev/null 2>&1
 
 # restart services
 declare -a restart=(httpd iptables network smb sshd)
