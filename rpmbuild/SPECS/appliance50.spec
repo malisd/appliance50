@@ -321,7 +321,7 @@ do
     /sbin/chkconfig $service on > /dev/null 2>&1
     echo "   Enabled $service."
 done
-declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd yum-updatesd)
+declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd)
 for service in "${on[@]}"
 do
     /bin/systemctl enable $service.service > /dev/null 2>&1
@@ -374,6 +374,10 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 /bin/chmod 0711 /home/jharvard/vhosts/localhost > /dev/null 2>&1
 /bin/chown jharvard:students /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
+
+# /home/jharvard/.ssh
+/bin/chmod 0600 /home/jharvard/.ssh/*
+/bin/chmod 0644 /home/jharvard/.ssh/*.pub
 
 # /etc/sudoers.d/appliance50
 /bin/chmod 0440 /etc/sudoers.d/appliance50
