@@ -86,6 +86,11 @@ Requires: ncurses
 Requires: ncurses-debuginfo
 Requires: ncurses-devel
 
+# http://nodejs.tchol.org/
+Requires: nodejs-stable-release
+Requires: nodejs*
+Requires: npm
+
 # -lcrypt
 Requires: nss-softokn-debuginfo
 
