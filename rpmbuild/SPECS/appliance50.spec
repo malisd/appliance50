@@ -42,11 +42,6 @@ Requires: gcc
 Requires: gdb
 Requires: gdm
 Requires: gconf-editor
-Requires: geany
-Requires: geany-plugins-debugger
-Requires: geany-plugins-geanyvc
-Requires: geany-plugins-shiftcolumn
-Requires: geany-plugins-webhelper
 Requires: gedit
 Requires: gedit-plugins
 Requires: git
@@ -403,9 +398,6 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 # /etc/ssh
 /bin/chmod 0600 /etc/ssh/*
 /bin/chmod 0645 /etc/ssh/*.pub
-
-# ensure /root/.local/share exists, to avoid Gtk-WARNING from geany
-mkdir -p /root/.local/share > /dev/null 2>&1
 
 # restart services
 declare -a restart=(httpd iptables network smb sshd)
