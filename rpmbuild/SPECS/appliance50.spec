@@ -24,7 +24,6 @@ Requires: bind-utils
 #Requires: check50
 
 Requires: clang
-
 Requires: coreutils 
 
 # TODO
@@ -88,7 +87,7 @@ Requires: ncurses-devel
 
 # http://nodejs.tchol.org/
 Requires: nodejs-stable-release
-Requires: nodejs*
+Requires: nodejs
 Requires: npm
 
 # -lcrypt
