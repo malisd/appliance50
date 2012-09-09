@@ -1,7 +1,7 @@
 ###########################################################################
 Summary: Configures the CS50 Appliance.
 Name: appliance50
-Version: 17a
+Version: 17
 Release: 0
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
@@ -29,11 +29,7 @@ Requires: coreutils
 
 # TODO
 #Requires: cs50-2012-fall
-#Requires: library50-c
-#Requires: library50-php
 
-Requires: cs50-library-c
-Requires: cs50-library-php
 Requires: ctags
 Requires: dconf-editor
 Requires: diffutils
@@ -48,7 +44,7 @@ Requires: gdb
 Requires: gdm
 Requires: gconf-editor
 Requires: geany
-Requires: geany-plugins-geanygdb
+Requires: geany-plugins-debugger
 Requires: geany-plugins-geanyvc
 Requires: geany-plugins-shiftcolumn
 Requires: geany-plugins-webhelper
@@ -71,6 +67,8 @@ Requires: java-devel
 Requires: kernel
 Requires: kernel-devel
 Requires: kernel-headers
+Requires: library50-c
+Requires: library50-php
 Requires: lynx
 Requires: make
 Requires: man
@@ -109,7 +107,7 @@ Requires: patch
 
 # workaround for Fedora 16's lack of php-zip
 # https://bugzilla.redhat.com/show_bug.cgi?id=551513
-Requires: pcre-devel
+#Requires: pcre-devel
 
 Requires: php
 Requires: php-devel
@@ -153,15 +151,15 @@ Requires: telnet
 Requires: tidy
 Requires: traceroute
 Requires: tree
-#Requires: tunnel50
 
 # TODO
-#Requires: usermin
+#Requires: tunnel50
 
+Requires: usermin
 Requires: valgrind
 Requires: vim
 Requires: vim-X11
-#Requires: webmin
+Requires: webmin
 Requires: wget
 Requires: words
 Requires: xfce4-panel
@@ -377,6 +375,13 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 /bin/chmod 0711 /home/jharvard/vhosts/localhost > /dev/null 2>&1
 /bin/chown jharvard:students /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
+
+# /etc/sudoers.d/appliance50
+/bin/chmod 0440 /etc/sudoers.d/appliance50
+
+# /etc/ssh
+/bin/chmod 0600 /etc/ssh/*
+/bin/chmod 0645 /etc/ssh/*.pub
 
 # restart services
 declare -a restart=(httpd iptables network smb sshd)
