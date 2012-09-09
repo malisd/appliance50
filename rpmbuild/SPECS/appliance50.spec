@@ -36,7 +36,6 @@ Requires: diffutils
 Requires: dkms
 Requires: emacs
 Requires: evince
-Requires: ftp
 Requires: garcon
 Requires: glibc-debuginfo
 Requires: gcc
