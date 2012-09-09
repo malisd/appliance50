@@ -135,7 +135,6 @@ Requires: rsync
 Requires: ruby
 Requires: rubygems
 Requires: samba
-Requires: scratch
 Requires: screen
 Requires: sed
 Requires: setup
@@ -188,7 +187,6 @@ Requires(post): mysql-server
 Requires(post): php-pear
 Requires(post): rpm 
 Requires(post): rsync
-Requires(post): scratch
 Requires(post): sed
 Requires(post): shadow-utils
 Requires(post): yum-utils
@@ -410,9 +408,6 @@ echo "   Updated John Harvard's panel."
 # redraw desktop
 #/usr/bin/xfdesktop --reload > /dev/null 2>&1
 #echo "   Updated John Harvard's and superuser's desktops."
-
-# fix Scratch's audio
-/bin/sed -i -e 's/^SCRATCH_SND_PLUGIN=vm-sound-alsa/SCRATCH_SND_PLUGIN=vm-sound-pulse/' /usr/bin/scratch
 
 ## import keys (to avoid warnings during future software updates)
 # http://linux.dropbox.com/fedora/rpm-public-key.asc
