@@ -155,11 +155,9 @@ Requires: tree
 # TODO
 #Requires: tunnel50
 
-Requires: usermin
 Requires: valgrind
 Requires: vim
 Requires: vim-X11
-Requires: webmin
 Requires: wget
 Requires: words
 Requires: xfce4-panel
@@ -316,13 +314,13 @@ do
 done
 
 # enable services
-declare -a on=(dkms_autoinstaller network webmin)
+declare -a on=(dkms_autoinstaller network)
 for service in "${on[@]}"
 do
     /sbin/chkconfig $service on > /dev/null 2>&1
     echo "   Enabled $service."
 done
-declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd usermin yum-updatesd)
+declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd yum-updatesd)
 for service in "${on[@]}"
 do
     /bin/systemctl enable $service.service > /dev/null 2>&1
