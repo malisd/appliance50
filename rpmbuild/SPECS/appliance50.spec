@@ -343,11 +343,13 @@ EOF
 /bin/systemctl start mysqld.service > /dev/null 2>&1
 /usr/bin/mysql --force --user=root > /dev/null 2>&1 <<"EOF"
 DROP USER ''@'%';
+DROP USER ''@'localhost';
+DROP USER ''@'localhost.localdomain';
 DELETE FROM mysql.user WHERE User = 'root';
 DELETE FROM mysql.user WHERE User = 'jharvard';
 INSERT INTO mysql.user (Host, User, Password, Grant_priv, Super_priv) VALUES('localhost', 'jharvard', PASSWORD('crimson'), 'Y', 'Y');
-FLUSH PRIVILEGES;
 GRANT ALL ON *.* TO 'jharvard'@'localhost';
+FLUSH PRIVILEGES;
 EOF
 /bin/systemctl stop mysqld.service > /dev/null 2>&1
 /bin/mv /etc/.my.cnf /etc/my.cnf

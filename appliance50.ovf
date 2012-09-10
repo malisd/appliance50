@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Envelope ovf:version="1.0" xml:lang="en-US" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vbox="http://www.virtualbox.org/ovf/machine">
   <References>
-    <File ovf:href="cs50-appliance-3-disk1.vmdk" ovf:id="file1"/>
+    <File ovf:href="appliance50.vmdk" ovf:id="file1"/>
   </References>
   <DiskSection>
     <Info>List of the virtual disks used in the package</Info>
-    <Disk ovf:capacity="34359738368" ovf:diskId="vmdisk1" ovf:fileRef="file1" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized"/>
+    <Disk ovf:capacity="17179869184" ovf:diskId="vmdisk1" ovf:fileRef="file1" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized"/>
   </DiskSection>
   <NetworkSection>
     <Info>Logical networks used in the package</Info>
@@ -19,14 +19,14 @@
       <Description>Logical network used by this appliance.</Description>
     </Network>
   </NetworkSection>
-  <VirtualSystem ovf:id="CS50 Appliance 3">
+  <VirtualSystem ovf:id="CS50 Appliance 17">
     <Info>A virtual machine</Info>
     <ProductSection>
       <Info>Meta-information about the installed software</Info>
-      <Product>CS50 Appliance 3</Product>
+      <Product>CS50 Appliance 17</Product>
       <Vendor>CS50</Vendor>
       <Version>3</Version>
-      <ProductUrl>https://manual.cs50.net/CS50_Appliance_3</ProductUrl>
+      <ProductUrl>https://manual.cs50.net/CS50_Appliance_17</ProductUrl>
       <VendorUrl>http://cs50.tv/</VendorUrl>
     </ProductSection>
     <EulaSection>
@@ -43,7 +43,7 @@
       <System>
         <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
         <vssd:InstanceID>0</vssd:InstanceID>
-        <vssd:VirtualSystemIdentifier>CS50 Appliance 3</vssd:VirtualSystemIdentifier>
+        <vssd:VirtualSystemIdentifier>CS50 Appliance 17</vssd:VirtualSystemIdentifier>
         <vssd:VirtualSystemType>virtualbox-3</vssd:VirtualSystemType>
       </System>
       <Item>
