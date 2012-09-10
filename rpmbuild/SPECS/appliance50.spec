@@ -321,7 +321,7 @@ do
     /sbin/chkconfig $service on > /dev/null 2>&1
     echo "   Enabled $service."
 done
-declare -a on=(httpd iptables mysqld ntpd rsyslog smb sshd)
+declare -a on=(iptables ntpd rsyslog smb sshd)
 for service in "${on[@]}"
 do
     /bin/systemctl enable $service.service > /dev/null 2>&1
