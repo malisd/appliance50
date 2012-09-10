@@ -124,18 +124,20 @@ then
     ;;
     vmware)
         # download and mount VMware Tools ISO
-        /usr/bin/wget --directory-prefix=/tmp http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/4.1.3/730298/packages/com.vmware.fusion.tools.linux.zip.tar
+        #/usr/bin/wget --directory-prefix=/tmp http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/4.1.3/730298/packages/com.vmware.fusion.tools.linux.zip.tar
+        /usr/bin/wget --directory-prefix=/tmp http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
         /bin/tar xf /tmp/com.vmware.fusion.tools.linux.zip.tar -C /tmp
         /usr/bin/unzip /tmp/com.vmware.fusion.tools.linux.zip -d /tmp
         /bin/mount -r -o loop -t iso9660 /tmp/payload/linux.iso /mnt
-        /bin/tar xf /mnt/VMwareTools-8.8.4-730257.tar.gz -C /tmp
-        /bin/rm -f /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
+        #/bin/tar xf /mnt/VMwareTools-8.8.4-730257.tar.gz -C /tmp
+        /bin/tar xf /mnt/VMwareTools-9.2.1-818201.tar.gz -C /tmp
+        #/bin/rm -f /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
 
-        # convince VMware Tools to install within VirtualBox
-        /bin/echo "#!/bin/bash" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
-        /bin/echo "/bin/echo 'good'" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
-        /bin/echo "/bin/true" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
-        /bin/chmod a+x /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
+        ## convince VMware Tools to install within VirtualBox
+        #/bin/echo "#!/bin/bash" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
+        #/bin/echo "/bin/echo 'good'" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
+        #/bin/echo "/bin/true" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
+        #/bin/chmod a+x /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
 
         # install VMware Tools
         /tmp/vmware-tools-distrib/vmware-install.pl -d
