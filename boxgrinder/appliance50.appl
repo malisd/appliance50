@@ -1,5 +1,5 @@
-# VMware: ./boxgrinder-build server50-1-0.appl -p vmware --platform-config type:personal,thin_disk:true --debug
-# VirtualBox (because OVF requires streamOptimized): ./boxgrinder-build -p multidisk server50-6-0.appl -l multidisk-boxgrinder-plugin --debug --trace
+# VMware: sudo ./boxgrinder-build appliance50.appl -p vmware --platform-config type:personal,thin_disk:true --debug
+# VirtualBox (because OVF requires streamOptimized): sudo ./boxgrinder-build -p multidisk server50-6-0.appl -l multidisk-boxgrinder-plugin --debug --trace
 
 # name, summary
 name: appliance50

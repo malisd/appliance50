@@ -67,7 +67,7 @@ Requires: lynx
 Requires: make
 Requires: man
 Requires: man-pages
-Requires: mercurial
+#Requires: mercurial
 Requires: mlocate
 Requires: mod_suphp
 Requires: mysql
@@ -77,9 +77,9 @@ Requires: nautilus-dropbox
 Requires: ncftp
 
 # -lncurses
-Requires: ncurses
-Requires: ncurses-debuginfo
-Requires: ncurses-devel
+#Requires: ncurses
+#Requires: ncurses-debuginfo
+#Requires: ncurses-devel
 
 # http://nodejs.tchol.org/
 Requires: nodejs-stable-release
@@ -98,7 +98,7 @@ Requires: openssh-server
 # TODO: check if broken in F16
 # http://comments.gmane.org/gmane.linux.redhat.fedora.xfce/311
 # http://comments.gmane.org/gmane.linux.redhat.fedora.general/397725
-Requires: PackageKit-yum-plugin
+#Requires: PackageKit-yum-plugin
 
 Requires: parole
 Requires: parole-mozplugin
@@ -167,12 +167,12 @@ Requires: xterm
 Requires: yum-plugin-fastestmirror
 Requires: yum-plugin-priorities
 Requires: yum-plugin-protectbase
-Requires: yum-updatesd
+#Requires: yum-updatesd
 Requires: yum-utils
 
 # workaround for Fedora 16's lack of php-zip
 # https://bugzilla.redhat.com/show_bug.cgi?id=551513
-Requires: zlib-devel
+#Requires: zlib-devel
 
 Requires(post): coreutils 
 Requires(post): glib2
@@ -373,13 +373,13 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 /bin/chown jharvard:mysql /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} > /dev/nul 2>&1
 /bin/chmod 0660 /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} > /dev/nul 2>&1
 
-# ensure /home/jharvard/public_html exists
+# /home/jharvard/public_html
 /bin/mkdir /home/jharvard/public_html > /dev/null 2>&1
 /bin/chown jharvard:students /home/jharvard/public_html > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/public_html > /dev/null 2>&1
 
-# ensure /home/jharvard/vhosts/localhost/html exists
+# /home/jharvard/vhosts/localhost/html
 /bin/mkdir -p /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 /bin/chown jharvard:students /home/jharvard/vhosts > /dev/null 2>&1
 /bin/chmod 0711 /home/jharvard/vhosts > /dev/null 2>&1
@@ -389,15 +389,15 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 /bin/chmod 0711 /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 
 # /home/jharvard/.ssh
-/bin/chmod 0600 /home/jharvard/.ssh/*
-/bin/chmod 0644 /home/jharvard/.ssh/*.pub
+/bin/chmod 0600 /home/jharvard/.ssh/* > /dev/null 2>&1
+/bin/chmod 0644 /home/jharvard/.ssh/*.pub > /dev/null 2>&1
 
 # /etc/sudoers.d/appliance50
-/bin/chmod 0440 /etc/sudoers.d/appliance50
+/bin/chmod 0440 /etc/sudoers.d/appliance50 > /dev/null 2>&1
 
 # /etc/ssh
-/bin/chmod 0600 /etc/ssh/*
-/bin/chmod 0645 /etc/ssh/*.pub
+/bin/chmod 0600 /etc/ssh/* > /dev/null 2>&1
+/bin/chmod 0645 /etc/ssh/*.pub > /dev/null 2>&1
 
 # restart services
 declare -a restart=(httpd iptables network smb sshd)
