@@ -304,7 +304,7 @@ do
     /sbin/chkconfig $service off > /dev/null 2>&1
     echo "   Disabled $service."
 done
-declare -a off=(avahi-daemon ip6tables mdmonitor saslauthd)
+declare -a off=(avahi-daemon ip6tables mdmonitor saslauthd sendmail)
 for service in "${off[@]}"
 do
     /bin/systemctl disable $service.service > /dev/null 2>&1
