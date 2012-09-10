@@ -13,8 +13,8 @@ repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metal
 repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f17&arch=i386
 repo --cost=2 --name=appliance50 --baseurl=http://mirror-local.cs50.net/appliance50/17/i386/RPMS/
 repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
-repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386
-repo --cost=3 --name=webmin --mirrorlist=http://download.webmin.com/download/yum/mirrorlist
+repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386/
+repo --cost=3 --name=nodejs-stable --baseurl=http://nodejs.tchol.org/stable/f17/i386/
 rootpw --plaintext crimson
 selinux --permissive
 timezone --utc America/New_York
@@ -102,7 +102,7 @@ wpa_supplicant
 /bin/sleep 10
 
 # re-install appliance's RPM (to configure MySQL)
-/usr/bin/yum -y reinstall cs50-appliance
+/usr/bin/yum -y reinstall appliance50
 
 # install VirtualBox Guest Additions or VMware Tools
 declare vmm=$(/bin/grep vmm= /proc/cmdline)
