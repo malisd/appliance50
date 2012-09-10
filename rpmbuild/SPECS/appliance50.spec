@@ -134,10 +134,7 @@ Requires: screen
 Requires: sed
 Requires: setup
 Requires: shadow-utils
-
-# TODO
-#Requires: submit50
-
+Requires: submit50
 Requires: sudo
 Requires: system-config-firewall
 Requires: system-config-keyboard
