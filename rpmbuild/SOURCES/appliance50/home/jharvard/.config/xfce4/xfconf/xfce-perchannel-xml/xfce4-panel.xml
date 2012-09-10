@@ -50,7 +50,7 @@
     <property name="plugin-2" type="string" value="separator"/>
     <property name="plugin-3" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="fedora-geany.desktop"/>
+        <value type="string" value="gedit.desktop"/>
       </property>
     </property>
     <property name="plugin-4" type="string" value="launcher">
