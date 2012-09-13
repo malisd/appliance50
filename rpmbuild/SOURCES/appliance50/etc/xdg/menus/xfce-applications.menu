@@ -124,7 +124,7 @@
             <Or>
                 <Category>Development</Category>
                 <Filename>emacs.desktop</Filename>
-                <Filename>geany.desktop</Filename>
+                <Filename>gedit.desktop</Filename>
                 <Filename>Terminal.desktop</Filename>
                 <Filename>fedora-gvim.desktop</Filename>
             </Or>
