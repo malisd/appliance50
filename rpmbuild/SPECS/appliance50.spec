@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 0
+Release: 1
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
@@ -26,10 +26,7 @@ Requires: cgdb
 
 Requires: clang
 Requires: coreutils 
-
-# TODO
-#Requires: cs50-2012-fall
-
+Requires: cs50-2012-fall
 Requires: ctags
 Requires: dconf-editor
 Requires: diffutils
@@ -281,6 +278,7 @@ echo "   Reset John Harvard's password to \"crimson\"."
 # /home/jharvard/Dropbox
 /bin/mkdir /home/jharvard/Dropbox > /dev/null 2>&1
 /bin/chown jharvard:students /home/jharvard/Dropbox > /dev/null 2>&1
+/bin/chmod 0700 /home/jharvard/Dropbox > /dev/null 2>&1
 
 # /var/lib/samba/private/passdb.tdb
 /bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null 2>&1
