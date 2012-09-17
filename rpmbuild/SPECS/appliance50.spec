@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 1
+Release: 2
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
@@ -337,14 +337,12 @@ user=mysql
 EOF
 /bin/systemctl start mysqld.service > /dev/null 2>&1
 /usr/bin/mysql --force --user=root > /dev/null 2>&1 <<"EOF"
-DROP USER ''@'%';
-DROP USER ''@'localhost';
-DROP USER ''@'localhost.localdomain';
+DELETE FROM mysql.user WHERE User = '';
 DELETE FROM mysql.user WHERE User = 'root';
 DELETE FROM mysql.user WHERE User = 'jharvard';
 INSERT INTO mysql.user (Host, User, Password, Grant_priv, Super_priv) VALUES('localhost', 'jharvard', PASSWORD('crimson'), 'Y', 'Y');
-GRANT ALL ON *.* TO 'jharvard'@'localhost';
 FLUSH PRIVILEGES;
+GRANT ALL ON *.* TO 'jharvard'@'localhost';
 EOF
 /bin/systemctl stop mysqld.service > /dev/null 2>&1
 /bin/mv /etc/.my.cnf /etc/my.cnf
