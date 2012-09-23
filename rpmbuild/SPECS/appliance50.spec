@@ -285,7 +285,7 @@ echo "   Reset John Harvard's password to \"crimson\"."
 echo "   Reset John Harvard's password for Samba to \"crimson\"."
 
 # ensure proper ownership
-/bin/find /home/jharvard -path /home/jharvard/logs -prune -o -exec /bin/chown jharvard:students {} \;
+/bin/find /home/jharvard -path /home/jharvard/logs -prune -o -exec /bin/chown jharvard:students {} \; > /dev/null 2>&1
 echo "   Updated ownership of John Harvard's home directory."
 
 # might be causing new panel to be created during reinstall
