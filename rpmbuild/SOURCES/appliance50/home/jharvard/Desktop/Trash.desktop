@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Encoding=UTF-8
-Name=Trash
-Exec=nautilus --no-desktop trash://
-Icon=xfce-trash_full
-Type=Application
