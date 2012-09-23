@@ -216,7 +216,9 @@ take CS50, even if you're not a student at Harvard.
 declare tmp=/tmp/%{name}
 
 # remove deprecated directories and files
-declare -a deprecated=()
+declare -a deprecated=(
+ "/home/jharvard/Desktop/Trash.desktop"
+)
 for dst in "${deprecated[@]}"
 do
     if [ -e $dst.lock ]
