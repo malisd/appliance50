@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 3
+Release: 4
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
