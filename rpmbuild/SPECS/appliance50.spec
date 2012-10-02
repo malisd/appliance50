@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 2
+Release: 3
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
@@ -277,10 +277,11 @@ done
 /bin/echo crimson | /usr/bin/passwd --stdin jharvard > /dev/null 2>&1
 echo "   Reset John Harvard's password to \"crimson\"."
 
-# /home/jharvard/Dropbox
-/bin/mkdir /home/jharvard/Dropbox > /dev/null 2>&1
-/bin/chown jharvard:students /home/jharvard/Dropbox > /dev/null 2>&1
-/bin/chmod 0700 /home/jharvard/Dropbox > /dev/null 2>&1
+# seems to cause confusion because it's empty by default
+## /home/jharvard/Dropbox
+#/bin/mkdir /home/jharvard/Dropbox > /dev/null 2>&1
+#/bin/chown jharvard:students /home/jharvard/Dropbox > /dev/null 2>&1
+#/bin/chmod 0700 /home/jharvard/Dropbox > /dev/null 2>&1
 
 # /var/lib/samba/private/passdb.tdb
 /bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null 2>&1
