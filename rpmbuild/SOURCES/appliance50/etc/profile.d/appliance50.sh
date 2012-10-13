@@ -24,8 +24,8 @@ if [[ $UID -ne 0 ]]; then
 
   # configure clang
   export CC=clang
-  export CFLAGS="-ggdb -std=c99 -Wall -Werror"
-  export LDLIBS="-lcrypt -lcs50 -lm"
+  export CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror"
+  export LDLIBS="-lcs50 -lm"
 
   # protect user
   alias cp="cp -i"
