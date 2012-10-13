@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 4
+Release: 5
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
@@ -20,10 +20,7 @@ Requires: binutils
 
 Requires: bind-utils
 Requires: cgdb
-
-# TODO
-#Requires: check50
-
+Requires: check50
 Requires: clang
 Requires: coreutils 
 Requires: cs50-2012-fall
@@ -131,6 +128,7 @@ Requires: screen
 Requires: sed
 Requires: setup
 Requires: shadow-utils
+Requires: style50
 Requires: submit50
 Requires: sudo
 Requires: system-config-firewall
