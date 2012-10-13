@@ -275,11 +275,10 @@ done
 /bin/echo crimson | /usr/bin/passwd --stdin jharvard > /dev/null 2>&1
 echo "   Reset John Harvard's password to \"crimson\"."
 
-# seems to cause confusion because it's empty by default
-## /home/jharvard/Dropbox
-#/bin/mkdir /home/jharvard/Dropbox > /dev/null 2>&1
-#/bin/chown jharvard:students /home/jharvard/Dropbox > /dev/null 2>&1
-#/bin/chmod 0700 /home/jharvard/Dropbox > /dev/null 2>&1
+# /home/jharvard/Dropbox
+/bin/mkdir /home/jharvard/Dropbox > /dev/null 2>&1
+/bin/chown jharvard:students /home/jharvard/Dropbox > /dev/null 2>&1
+/bin/chmod 0700 /home/jharvard/Dropbox > /dev/null 2>&1
 
 # /var/lib/samba/private/passdb.tdb
 /bin/echo -e "crimson\ncrimson" | /usr/bin/smbpasswd -a -s jharvard > /dev/null 2>&1
@@ -385,8 +384,7 @@ echo "   Reset John Harvard's password for MySQL to \"crimson\"."
 /bin/chmod 0711 /home/jharvard/vhosts/localhost/html > /dev/null 2>&1
 
 # /home/jharvard/.ssh
-/bin/chmod 0600 /home/jharvard/.ssh/* > /dev/null 2>&1
-/bin/chmod 0644 /home/jharvard/.ssh/*.pub > /dev/null 2>&1
+/bin/chmod 0600 /home/jharvard/.ssh/{authorized_keys,config,known_hosts} > /dev/null 2>&1
 
 # /etc/sudoers.d/appliance50
 /bin/chmod 0440 /etc/sudoers.d/appliance50 > /dev/null 2>&1
