@@ -104,34 +104,54 @@ wpa_supplicant
 # re-install appliance's RPM (to configure MySQL)
 /usr/bin/yum -y reinstall appliance50
 
-# install VirtualBox Guest Additions or VMware Tools
+# custom password for EC2 (trim leading and trailing whitespace)
+# http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/AESDG-chapter-instancedata.html
+PASSWORD=`/usr/bin/wget -O - -q http://169.254.169.254/latest/user-data`
+if [ $? -eq 0 ]; then
+    PASSWORD=`/bin/echo "$PASSWORD" | /usr/bin/perl -p -e 's/^\s*(.*)\s*$/$1/g'`
+    if [ ! -z "$PASSWORD" ]; then
+        echo "$PASSWORD" | /usr/bin/passwd --stdin jharvard
+    fi
+fi
+
+# install Parallels Tools, VirtualBox Guest Additions, or VMware Tools
 declare vmm=$(/bin/grep vmm= /proc/cmdline)
 declare regex='vmm=(\w+)'
 if [[ "$vmm" =~ $regex ]]
 then
     case ${BASH_REMATCH[1]} in
+    parallels)
+        # download and mount Parallels Tools
+        # /Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin.iso
+        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/prl-tools-lin.iso
+        /bin/mount -r -o loop -t iso9660 /tmp/prl-tools-lin.iso /mnt
+
+        # install VirtualBox Guest Additions
+        /mnt/install --install-unattended
+
+        # tidy up
+        /bin/umount /mnt
+        /bin/rm -f /tmp/prl-tools-lin.iso
+    ;;
     vbox)
         # download and mount VirtualBox Guest Additions
-        /usr/bin/wget --directory-prefix=/tmp http://download.virtualbox.org/virtualbox/4.1.22/VBoxGuestAdditions_4.1.22.iso
-        /bin/mount -r -o loop -t iso9660 /tmp/VBoxGuestAdditions_4.1.22.iso /mnt
+        # http://download.virtualbox.org/virtualbox/4.2.2/VBoxGuestAdditions_4.2.2.iso
+        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/VBoxGuestAdditions_4.2.2.iso
+        /bin/mount -r -o loop -t iso9660 /tmp/VBoxGuestAdditions_4.2.2.iso /mnt
 
         # install VirtualBox Guest Additions
         /mnt/VBoxLinuxAdditions.run --nox11
 
         # tidy up
         /bin/umount /mnt
-        /bin/rm -f /tmp/VBoxGuestAdditions_4.1.22.iso
+        /bin/rm -f /tmp/VBoxGuestAdditions_4.2.2.iso
     ;;
     vmware)
-        # download and mount VMware Tools ISO
-        #/usr/bin/wget --directory-prefix=/tmp http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/4.1.3/730298/packages/com.vmware.fusion.tools.linux.zip.tar
-        /usr/bin/wget --directory-prefix=/tmp http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
-        /bin/tar xf /tmp/com.vmware.fusion.tools.linux.zip.tar -C /tmp
-        /usr/bin/unzip /tmp/com.vmware.fusion.tools.linux.zip -d /tmp
-        /bin/mount -r -o loop -t iso9660 /tmp/payload/linux.iso /mnt
-        #/bin/tar xf /mnt/VMwareTools-8.8.4-730257.tar.gz -C /tmp
+        # download and mount VMware Tools
+        # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
+        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/linux.iso
+        /bin/mount -r -o loop -t iso9660 /tmp/linux.iso /mnt
         /bin/tar xf /mnt/VMwareTools-9.2.1-818201.tar.gz -C /tmp
-        #/bin/rm -f /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
 
         ## convince VMware Tools to install within VirtualBox
         #/bin/echo "#!/bin/bash" >> /tmp/vmware-tools-distrib/lib/sbin32/vmware-checkvm
@@ -145,9 +165,7 @@ then
         # tidy up
         /bin/rm -rf /tmp/vmware-tools-distrib
         /bin/umount /mnt
-        /bin/rm -rf /tmp/payload
-        /bin/rm -f /tmp/com.vmware.fusion.tools.linux.zip
-        /bin/rm -f /tmp/com.vmware.fusion.tools.linux.zip.tar
+        /bin/rm -f /tmp/linux.iso
     ;;
     esac
 fi
@@ -171,7 +189,7 @@ EOF
 /bin/rm -f /root/*
 /bin/rm -rf /tmp/.[^.]* && /bin/rm -rf /tmp/..?*
 
-# fill disk with 0s, to facilitate VMDK's compression
+# fill disk with 0s, to facilitate disk's compression
 /bin/cat /dev/zero > /tmp/zero.fill
 /bin/sync
 /bin/sleep 1
