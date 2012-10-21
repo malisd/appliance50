@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 6
+Release: 7
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
@@ -30,7 +30,10 @@ Requires: diffutils
 Requires: dkms
 Requires: emacs
 Requires: evince
+
+# http://juraboy.wordpress.com/2011/07/26/installing-freenx-in-fedora-15/
 Requires: freenx-server
+
 Requires: garcon
 Requires: glibc-debuginfo
 Requires: gcc
