@@ -15,7 +15,7 @@ Requires: alsa-plugins-pulseaudio
 Requires: at-spi2-atk
 Requires: bc
 
-# gcov, gprof (for Problem Set 6)
+# ar, strings
 Requires: binutils
 
 Requires: bind-utils
@@ -61,7 +61,6 @@ Requires: lynx
 Requires: make
 Requires: man
 Requires: man-pages
-#Requires: mercurial
 Requires: mlocate
 Requires: mod_suphp
 Requires: mysql
@@ -69,11 +68,6 @@ Requires: mysql-server
 Requires: nano
 Requires: nautilus-dropbox
 Requires: ncftp
-
-# -lncurses
-#Requires: ncurses
-#Requires: ncurses-debuginfo
-#Requires: ncurses-devel
 
 # http://nodejs.tchol.org/
 Requires: nodejs-stable-release
@@ -88,20 +82,9 @@ Requires: orca
 Requires: openssh-clients
 Requires: openssh-server
 
-# broken in F15
-# TODO: check if broken in F16
-# http://comments.gmane.org/gmane.linux.redhat.fedora.xfce/311
-# http://comments.gmane.org/gmane.linux.redhat.fedora.general/397725
-#Requires: PackageKit-yum-plugin
-
 Requires: parole
 Requires: parole-mozplugin
 Requires: patch
-
-# workaround for Fedora 16's lack of php-zip
-# https://bugzilla.redhat.com/show_bug.cgi?id=551513
-#Requires: pcre-devel
-
 Requires: php
 Requires: php-devel
 Requires: php-mysql
@@ -159,12 +142,7 @@ Requires: xterm
 Requires: yum-plugin-fastestmirror
 Requires: yum-plugin-priorities
 Requires: yum-plugin-protectbase
-#Requires: yum-updatesd
 Requires: yum-utils
-
-# workaround for Fedora 16's lack of php-zip
-# https://bugzilla.redhat.com/show_bug.cgi?id=551513
-#Requires: zlib-devel
 
 Requires(post): coreutils 
 Requires(post): glib2
@@ -261,10 +239,6 @@ do
         echo "   Installed $dst."
     fi
 done
-
-# /boot/grub2/grub.cfg
-#/bin/sed -i -e 's/^GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/' /etc/default/grub
-#/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg > /dev/null 2>&1
 
 # /etc/group
 /usr/sbin/groupadd -r courses > /dev/null 2>&1
@@ -444,9 +418,3 @@ echo "   Updated John Harvard's panel."
 # TODO: fix?
 #%defattr(-,root,students,1770)
 #/opt/%{name}/usr/local/samba/lib/usershares
-
-
-##########################################################################
-%changelog
-* Wed Jan 4 2012 David J. Malan <malan@harvard.edu> - 3-1
-- Initial build
