@@ -11,7 +11,7 @@ repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?r
 repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386
 repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f17&arch=i386
 repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f17&arch=i386
-repo --cost=2 --name=appliance50 --baseurl=http://mirror-local.cs50.net/appliance50/17/i386/RPMS/
+repo --cost=2 --name=appliance50 --baseurl=http://mirror.cs50.net/appliance50/17/i386/RPMS/
 repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
 repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386/
 repo --cost=3 --name=nodejs-stable --baseurl=http://nodejs.tchol.org/stable/f17/i386/
