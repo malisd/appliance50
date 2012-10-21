@@ -36,18 +36,6 @@ os:
 # RPM repositories
 default_repos: false
 
-plugins:
-  ebs:
-    access_key:
-    secret_access_key:
-    account_number: 
-    delete_on_termination: false
-    availability_zone: us-east-1a
-    snapshot: false
-    overwrite: false
-    terminate_instances: false
-    preserve_snapshots: false
-
 post:
   base:
     - |
