@@ -30,6 +30,7 @@ Requires: diffutils
 Requires: dkms
 Requires: emacs
 Requires: evince
+Requires: freenx-server
 Requires: garcon
 Requires: glibc-debuginfo
 Requires: gcc
@@ -399,6 +400,9 @@ echo "   Updated John Harvard's panel."
 # https://dl-ssl.google.com/linux/linux_signing_key.pub
 /bin/rpm --import /etc/pki/rpm-gpg/linux_signing_key.pub
 /bin/rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386
+
+# install FreeNX
+/sbin/nxsetup --install --setup-nomachine-key
 
 # remove sources
 /bin/rm -rf /tmp/%{name}
