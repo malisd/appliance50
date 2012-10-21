@@ -110,8 +110,12 @@ PASSWORD=`/usr/bin/wget -O - -q http://169.254.169.254/latest/user-data`
 if [ $? -eq 0 ]; then
     PASSWORD=`/bin/echo "$PASSWORD" | /usr/bin/perl -p -e 's/^\s*(.*)\s*$/$1/g'`
     if [ ! -z "$PASSWORD" ]; then
-        echo "$PASSWORD" | /usr/bin/passwd --stdin jharvard
+        /bin/echo "$PASSWORD" | /usr/bin/passwd --stdin jharvard
+        /bin/echo -e "$PASSWORD\n$PASSWORD" | /usr/bin/smbpasswd -a -s jharvard 
+        /bin/mysqladmin -u jharvard -p"crimson" password "$PASSWORD"
     fi
+    /bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
+    /bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth2
 fi
 
 # install Parallels Tools, VirtualBox Guest Additions, or VMware Tools
