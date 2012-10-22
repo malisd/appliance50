@@ -116,8 +116,9 @@ then
         /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/prl-tools-lin.iso
         /bin/mount -r -o loop -t iso9660 /tmp/prl-tools-lin.iso /mnt
 
-        # install VirtualBox Guest Additions
+        # install Parallels Tools
         /mnt/install --install-unattended
+        /bin/rm -f /home/jharvard/Desktop/Parallels\ Shared\ Folders
 
         # tidy up
         /bin/umount /mnt
