@@ -11,7 +11,7 @@ repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?r
 repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386
 repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f17&arch=i386
 repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f17&arch=i386
-repo --cost=2 --name=appliance50 --baseurl=http://mirror.cs50.net/appliance50/17/i386/RPMS/
+repo --cost=2 --name=appliance50 --baseurl=http://mirror-local.cs50.net/appliance50/17/i386/RPMS/
 repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
 repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386/
 repo --cost=3 --name=nodejs-stable --baseurl=http://nodejs.tchol.org/stable/f17/i386/
@@ -49,16 +49,16 @@ generic-release
 -fedora-release-notes
 
 # fonts
-dejavu-fonts-common
-dejavu-sans-fonts
-dejavu-sans-mono-fonts
-dejavu-serif-fonts
+#dejavu-fonts-common
+#dejavu-sans-fonts
+#dejavu-sans-mono-fonts
+#dejavu-serif-fonts
 
 # CS50
 appliance50
 
 # Xfce
-@xfce-desktop
+#@xfce-desktop
 
 # unwanted
 -audit
@@ -103,20 +103,6 @@ wpa_supplicant
 
 # re-install appliance's RPM (to configure MySQL)
 /usr/bin/yum -y reinstall appliance50
-
-# custom password for EC2 (trim leading and trailing whitespace)
-# http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/AESDG-chapter-instancedata.html
-PASSWORD=`/usr/bin/wget -O - -q http://169.254.169.254/latest/user-data`
-if [ $? -eq 0 ]; then
-    PASSWORD=`/bin/echo "$PASSWORD" | /usr/bin/perl -p -e 's/^\s*(.*)\s*$/$1/g'`
-    if [ ! -z "$PASSWORD" ]; then
-        /bin/echo "$PASSWORD" | /usr/bin/passwd --stdin jharvard
-        /bin/echo -e "$PASSWORD\n$PASSWORD" | /usr/bin/smbpasswd -a -s jharvard 
-        /bin/mysqladmin -u jharvard -p"crimson" password "$PASSWORD"
-    fi
-    /bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
-    /bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth2
-fi
 
 # install Parallels Tools, VirtualBox Guest Additions, or VMware Tools
 declare vmm=$(/bin/grep vmm= /proc/cmdline)
@@ -171,7 +157,22 @@ then
         /bin/umount /mnt
         /bin/rm -f /tmp/linux.iso
     ;;
-    esac
+    *)
+        # custom password for EC2 (trim leading and trailing whitespace)
+        # http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/AESDG-chapter-instancedata.html
+        PASSWORD=`/usr/bin/wget --output-document=- --quiet --timeout=5 --tries=10 http://169.254.169.254/latest/user-data`
+        if [ $? -eq 0 ]; then
+            PASSWORD=`/bin/echo "$PASSWORD" | /usr/bin/perl -p -e 's/^\s*(.*)\s*$/$1/g'`
+        if [ ! -z "$PASSWORD" ]; then
+            /bin/echo "$PASSWORD" | /usr/bin/passwd --stdin jharvard
+            /bin/echo -e "$PASSWORD\n$PASSWORD" | /usr/bin/smbpasswd -a -s jharvard 
+            /bin/mysqladmin -u jharvard -p"crimson" password "$PASSWORD"
+        fi
+        /bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
+        /bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth2
+        fi
+    ;;
+   esac
 fi
 /bin/rm -f /etc/rc.d/rc.local
 /bin/rm -f /root/*

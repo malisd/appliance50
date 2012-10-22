@@ -9,7 +9,7 @@ Vendor: CS50
 URL: https://manual.cs50.net/appliance50
 BuildArch: i386
 BuildRoot: %{_tmppath}/%{name}-root
-Requires: generic-release = 17
+Requires: system-release = 17
 Requires: acpid
 Requires: alsa-plugins-pulseaudio
 Requires: at-spi2-atk
@@ -26,6 +26,50 @@ Requires: coreutils
 Requires: cs50-2012-fall
 Requires: ctags
 Requires: dconf-editor
+
+## @xfce-desktop
+# Mandatory Packages
+Requires: Thunar
+Requires: desktop-backgrounds-compat
+Requires: xfce-utils
+Requires: xfce4-panel
+Requires: xfce4-session
+Requires: xfce4-settings
+Requires: xfconf
+Requires: xfdesktop
+Requires: xfwm4
+# Default Packages
+#Requires: ConsoleKit
+#Requires: NetworkManager-gnome
+Requires: Terminal
+#Requires: abrt-desktop
+Requires: fedora-icon-theme
+Requires: gdm
+Requires: gtk-xfce-engine
+#Requires: gvfs
+#Requires: leafpad
+#Requires: openssh-askpass
+#Requires: orage
+#Requires: polkit-gnome
+#Requires: thunar-archive-plugin
+#Requires: thunar-volman
+#Requires: tumbler
+Requires: xarchiver
+Requires: xfce4-appfinder
+Requires: xfce4-icon-theme
+Requires: xfce4-mixer
+#Requires: xfce4-power-manager
+#Requires: xfce4-session-engines
+Requires: xfwm4-theme-nodoka
+#Requires: xscreensaver-base
+
+# TODO: decide if can be removed from .ks
+# (here so that can install with yum on an EC2 Fedora AMI)
+Requires: dejavu-fonts-common
+Requires: dejavu-sans-fonts
+Requires: dejavu-sans-mono-fonts
+Requires: dejavu-serif-fonts
+
 Requires: diffutils
 Requires: dkms
 Requires: emacs
