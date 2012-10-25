@@ -2,7 +2,7 @@
 Summary: Configures the CS50 Appliance.
 Name: appliance50
 Version: 17
-Release: 8
+Release: 9
 License: CC BY-NC-SA 3.0
 Group: System Environment/Base
 Vendor: CS50
@@ -448,8 +448,10 @@ echo "   Updated John Harvard's panel."
 /bin/rpm --import /etc/pki/rpm-gpg/linux_signing_key.pub
 /bin/rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386
 
-# install FreeNX
-/sbin/nxsetup --install --setup-nomachine-key
+## install FreeNX
+# rm avoids REMOTE HOST IDENTIFICATION HAS CHANGED
+/bin/rm -f /root/.ssh/known_hosts > /dev/null 2>&1
+/sbin/nxsetup --install --setup-nomachine-key > /dev/null 2>&1
 
 # remove sources
 /bin/rm -rf /tmp/%{name}
