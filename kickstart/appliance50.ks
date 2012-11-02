@@ -58,7 +58,7 @@ generic-release
 appliance50
 
 # Xfce
-#@xfce-desktop
+@xfce-desktop
 
 # unwanted
 -audit
