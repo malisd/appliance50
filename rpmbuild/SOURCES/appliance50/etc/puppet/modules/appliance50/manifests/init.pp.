@@ -1,0 +1,7 @@
+class appliance50 {
+
+    host { 'appliance.localdomain':
+        host_aliases => 'appliance',
+        ip => '127.0.0.1'
+    }
+}
