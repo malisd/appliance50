@@ -1,0 +1,46 @@
+#!/usr/bin/bash
+#
+# This is CS50 update!
+#
+# To run, execute "update50" at the command line.
+#
+
+URL=http://docs.danallan.net/cs50/updater
+
+# write log in user's home directory
+HOMEDIR=$(getent passwd $USER | cut -d: -f6)
+LOG=$HOMEDIR/.update50.log
+
+#begin logging
+rm -f $LOG >/dev/null 2>&1
+echo UPDATE50 >>$LOG
+
+
+UPDATER=$(mktemp 2>>$LOG) || {
+  echo ERROR
+  echo Cannot download the updater to the filesystem.
+  echo mktemp failure! >>$LOG
+  exit 1
+}
+
+echo Downloading updater to $UPDATER >>$LOG
+
+# make sure we have sudo access..
+sudo bash <<EOF
+
+#### Fetch updater ####
+echo -n "Downloading updater.. "
+
+curl -s -S -o $UPDATER $URL >>$LOG 2>&1 || {
+  echo ERROR
+  echo Cannot download the updater. Do you have an Internet connection?
+  echo CURL failure! >>$LOG
+  exit 1
+}
+
+echo Done!
+
+# run updater..
+chmod +x $UPDATER
+$UPDATER 2>>$LOG
+EOF

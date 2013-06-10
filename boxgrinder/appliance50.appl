@@ -6,7 +6,7 @@ name: appliance50
 summary: This is CS50.
 
 # version, release
-version: 17
+version: 18
 release: 0
 
 # hardware to virtualize
@@ -31,7 +31,7 @@ hardware:
 # OS to install
 os:
   name: fedora
-  version: 17
+  version: 18
 
 # RPM repositories
 default_repos: false

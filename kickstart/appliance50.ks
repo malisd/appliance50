@@ -6,15 +6,12 @@ cdrom
 firstboot --disable
 install
 keyboard us
+#network --onboot=yes --device=eth0 --bootproto=dhcp --noipv6 --nameserver=8.8.8.8
 lang en_US.UTF-8
-repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-17&arch=i386
-repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-17&arch=i386
-repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f17&arch=i386
-repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f17&arch=i386
-repo --cost=2 --name=appliance50 --baseurl=http://mirror-local.cs50.net/appliance50/17/i386/RPMS/
-repo --cost=3 --name=dropbox --baseurl=http://linux.dropbox.com/fedora/17/
-repo --cost=3 --name=google-chrome --baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386/
-repo --cost=3 --name=nodejs-stable --baseurl=http://nodejs.tchol.org/stable/f17/i386/
+repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-18&arch=i386
+repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-18&arch=i386
+repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f18&arch=i386
+repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f18&arch=i386
 rootpw --plaintext crimson
 selinux --permissive
 timezone --utc America/New_York
@@ -37,39 +34,20 @@ xconfig --startxonboot
 # Unable to create appliance : Unable to install grub2 bootloader
 grub2
 
-# per https://bugzilla.redhat.com/show_bug.cgi?id=547152, avoids
-# Unable to disable SELinux because the installed package set did not include the file /usr/sbin/lokkit
-system-config-firewall-base
-
-# release
+# release; cannot be installed by puppet due to grub2 dependencies
 generic-logos
 generic-release
 -fedora-logos
 -fedora-release
 -fedora-release-notes
 
-# fonts
-#dejavu-fonts-common
-#dejavu-sans-fonts
-#dejavu-sans-mono-fonts
-#dejavu-serif-fonts
+# necessary packages for update50
+puppet
+unzip
 
-# CS50
-appliance50
-
-# Xfce
-@xfce-desktop
-
-# unwanted
--audit
--leafpad
--libpcap
--ModemManager
--openssh-askpass
--orage
--ppp
--xfce4-power-manager
--xscreensaver-base
+#prevent "Unable to run ['/usr/bin/firewall-offline-cmd', '--enabled']!" error
+firewall-config
+#@xfce-desktop
 
 %end
 
@@ -83,17 +61,6 @@ appliance50
 # lock root (because doing so in appliance50 RPM alone doesn't work when boxgrinding or kickstarting)
 /usr/bin/passwd -l root
 
-# reinstall to ensure appliance's RPM overwrites other RPMs' files
-/usr/bin/yum -y reinstall appliance50
-
-## unwanted, but - doesn't suffice above
-/usr/bin/yum -y remove \
-abrt \
-dnsmasq \
-NetworkManager \
-NetworkManager-gnome \
-wpa_supplicant
-
 # finish configuration after a boot
 /bin/cat > /etc/rc.d/rc.local << "EOF"
 #!/bin/bash
@@ -101,8 +68,11 @@ wpa_supplicant
 # ensure networking has enough time to start
 /bin/sleep 10
 
-# re-install appliance's RPM (to configure MySQL)
-/usr/bin/yum -y reinstall appliance50
+# download and run the updater
+#TODO update URL
+/bin/curl -o /tmp/updater50 http://docs.danallan.net/cs50/updater
+/bin/chmod +x /tmp/updater50
+/tmp/updater50
 
 # install Parallels Tools, VirtualBox Guest Additions, or VMware Tools
 declare vmm=$(/bin/grep vmm= /proc/cmdline)
@@ -177,7 +147,7 @@ then
 fi
 /bin/rm -f /etc/rc.d/rc.local
 /bin/rm -f /root/*
-/usr/bin/poweroff
+/usr/sbin/poweroff
 EOF
 /bin/chmod 755 /etc/rc.d/rc.local
 

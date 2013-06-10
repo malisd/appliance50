@@ -19,14 +19,14 @@
       <Description>Logical network used by this appliance.</Description>
     </Network>
   </NetworkSection>
-  <VirtualSystem ovf:id="CS50 Appliance 17">
+  <VirtualSystem ovf:id="CS50 Appliance 18">
     <Info>A virtual machine</Info>
     <ProductSection>
       <Info>Meta-information about the installed software</Info>
-      <Product>CS50 Appliance 17</Product>
+      <Product>CS50 Appliance 18</Product>
       <Vendor>CS50</Vendor>
       <Version>3</Version>
-      <ProductUrl>https://manual.cs50.net/CS50_Appliance_17</ProductUrl>
+      <ProductUrl>https://manual.cs50.net/CS50_Appliance_18</ProductUrl>
       <VendorUrl>http://cs50.tv/</VendorUrl>
     </ProductSection>
     <EulaSection>
@@ -43,7 +43,7 @@
       <System>
         <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
         <vssd:InstanceID>0</vssd:InstanceID>
-        <vssd:VirtualSystemIdentifier>CS50 Appliance 17</vssd:VirtualSystemIdentifier>
+        <vssd:VirtualSystemIdentifier>CS50 Appliance 18</vssd:VirtualSystemIdentifier>
         <vssd:VirtualSystemType>virtualbox-3</vssd:VirtualSystemType>
       </System>
       <Item>

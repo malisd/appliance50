@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # determine version
-declare rpmquery=$(/usr/bin/rpmquery appliance50)
-declare version=$(/usr/bin/expr "$rpmquery" : 'appliance50-\([0-9]*-[0-9]*\)\.i386')
+source /etc/appliance50
+
 if [ "$version" == "" ]; then
     declare version="unknown version"
 fi
