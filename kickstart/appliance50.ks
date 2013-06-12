@@ -83,7 +83,7 @@ then
     parallels)
         # download and mount Parallels Tools
         # /Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin.iso
-        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/prl-tools-lin.iso
+        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/18a/source/iso/prl-tools-lin.iso
         /bin/mount -r -o loop -t iso9660 /tmp/prl-tools-lin.iso /mnt
 
         # install Parallels Tools
@@ -97,7 +97,7 @@ then
     vbox)
         # download and mount VirtualBox Guest Additions
         # http://download.virtualbox.org/virtualbox/4.2.2/VBoxGuestAdditions_4.2.2.iso
-        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/VBoxGuestAdditions_4.2.2.iso
+        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/18a/source/iso/VBoxGuestAdditions_4.2.2.iso
         /bin/mount -r -o loop -t iso9660 /tmp/VBoxGuestAdditions_4.2.2.iso /mnt
 
         # install VirtualBox Guest Additions
@@ -110,7 +110,7 @@ then
     vmware)
         # download and mount VMware Tools
         # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
-        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/17/source/iso/linux.iso
+        /usr/bin/wget --directory-prefix=/tmp http://mirror.cs50.net/appliance50/18a/source/iso/linux.iso
         /bin/mount -r -o loop -t iso9660 /tmp/linux.iso /mnt
         /bin/tar xf /mnt/VMwareTools-9.2.1-818201.tar.gz -C /tmp
 
