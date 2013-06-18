@@ -8,10 +8,10 @@ install
 keyboard us
 #network --onboot=yes --device=eth0 --bootproto=dhcp --noipv6 --nameserver=8.8.8.8
 lang en_US.UTF-8
-repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-18&arch=i386
-repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-18&arch=i386
-repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f18&arch=i386
-repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f18&arch=i386
+repo --cost=1 --name=os --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-18&arch=x86_64
+repo --cost=1 --name=fedora-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-debug-18&arch=x86_64
+repo --cost=1 --name=updates --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f18&arch=x86_64
+repo --cost=1 --name=updates-debuginfo --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f18&arch=x86_64
 rootpw --plaintext crimson
 selinux --permissive
 timezone --utc America/New_York

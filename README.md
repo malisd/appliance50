@@ -7,14 +7,18 @@
 1. ...
 1. Boot VM.
 1. Follow http://boxgrinder.org/tutorials/boxgrinder-build-quick-start/installation/.
-1. `yum -y install qemu` (else boxgrinder errs)
+1. `yum -y install qemu VirtualBox` (else boxgrinder errs)
 1. `gem install multidisk-boxgrinder-plugin`
-#1. `su -c 'yum -y localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'`
-1. `yum -y install VirtualBox`
 1. Change `SELINUX=enforcing` to `SELINUX=permissive` in /etc/sysconfig/selinux in boxgrinding VM.
-1. `export LIBGUESTFS_ATTACH_METHOD=appliance` so that boxgrinder will build.
+1. `export LIBGUESTFS_ATTACH_METHOD=appliance` so that boxgrinder will build (recommended to add to ~/.bashrc).
 1. Modify /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/plugins/os/fedora/fedora-plugin.rb so that SUPPORTED_VERSIONS includes '18'.
 1. Patch guestfs and kickstart generation with `cd /; patch -p1 <~/appliance/boxgrinder.patch` (boxgrinder.patch is found in this repo)
+
+To build VMWare-ready VMs:
+`alias bv="setarch i386 /root/appliance50/boxgrinder/boxgrinder-build -f appliance50.appl -p vmware --platform-config type:personal,thin_disk:true --debug"
+alias bv64="/root/appliance50/boxgrinder/boxgrinder-build-64 -f appliance50.appl -p vmware --platform-config type:personal,thin_disk:true --debug"`
+
+Execute either 'bv' (for 32-bit) or 'bv64' (for 64-bit) when in the boxgrinder directory. The above alias commands are useful in ~/.bashrc.
 
 ## References
 
