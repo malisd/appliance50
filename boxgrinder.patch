@@ -12,18 +12,6 @@
          @log.trace "SElinux policy loaded."
        rescue
 
---- /usr/lib/python2.7/site-packages/imgcreate/kickstart.py.orig	2013-06-12 22:10:41.302058349 -0400
-+++ /usr/lib/python2.7/site-packages/imgcreate/kickstart.py	2013-06-12 22:10:51.381057187 -0400
-@@ -178,7 +178,7 @@
- class FirewallConfig(KickstartConfig):
-     """A class to apply a kickstart firewall configuration to a system."""
-     def apply(self, ksfirewall):
--        args = ["/usr/bin/firewall-offline-cmd"]
-+        args = ["/usr/sbin/lokkit"]
-         # enabled is None if neither --enable or --disable is passed
-         # default to enabled if nothing has been set.
-         if ksfirewall.enabled == False:
-
 --- /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/helpers/guestfs-helper.rb.orig	2013-06-12 22:14:10.446058627 -0400
 +++ /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/helpers/guestfs-helper.rb	2013-06-12 22:13:56.585057780 -0400
 @@ -213,11 +213,11 @@
