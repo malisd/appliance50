@@ -34,7 +34,7 @@ xconfig --startxonboot
 # Unable to create appliance : Unable to install grub2 bootloader
 grub2
 
-# release; cannot be installed by puppet due to grub2 dependencies
+# release; cannot be installed by update50 due to grub2 dependencies
 generic-logos
 generic-release
 -fedora-logos
@@ -42,7 +42,6 @@ generic-release
 -fedora-release-notes
 
 # necessary packages for update50
-puppet
 unzip
 
 #prevent "Unable to run ['/usr/bin/firewall-offline-cmd', '--enabled']!" error

@@ -1,0 +1,42 @@
+--- /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/helpers/guestfs-helper.rb.orig	2013-05-22 01:05:00.043819926 -0400
++++ /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/helpers/guestfs-helper.rb	2013-05-22 01:05:32.694722504 -0400
+@@ -216,9 +216,8 @@
+       @guestfs.aug_rm("/augeas/load//incl[. != '/etc/sysconfig/selinux']")
+       @guestfs.aug_load
+ 
+-      selinux = @guestfs.aug_get("/files/etc/sysconfig/selinux/SELINUX")
+-
+       begin
++        selinux = @guestfs.aug_get("/files/etc/sysconfig/selinux/SELINUX")
+         @guestfs.sh("/usr/sbin/load_policy") if !selinux.nil? and !selinux.eql?('disabled')
+         @log.trace "SElinux policy loaded."
+       rescue
+
+--- /usr/lib/python2.7/site-packages/imgcreate/kickstart.py.orig	2013-06-12 22:10:41.302058349 -0400
++++ /usr/lib/python2.7/site-packages/imgcreate/kickstart.py	2013-06-12 22:10:51.381057187 -0400
+@@ -178,7 +178,7 @@
+ class FirewallConfig(KickstartConfig):
+     """A class to apply a kickstart firewall configuration to a system."""
+     def apply(self, ksfirewall):
+-        args = ["/usr/bin/firewall-offline-cmd"]
++        args = ["/usr/sbin/lokkit"]
+         # enabled is None if neither --enable or --disable is passed
+         # default to enabled if nothing has been set.
+         if ksfirewall.enabled == False:
+
+--- /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/helpers/guestfs-helper.rb.orig	2013-06-12 22:14:10.446058627 -0400
++++ /usr/share/gems/gems/boxgrinder-build-0.10.4/lib/boxgrinder-build/helpers/guestfs-helper.rb	2013-06-12 22:13:56.585057780 -0400
+@@ -213,11 +213,11 @@
+       @log.trace "Loading SElinux policy..."
+ 
+       @guestfs.aug_init("/", 32)
+-      @guestfs.aug_rm("/augeas/load//incl[. != '/etc/sysconfig/selinux']")
++      @guestfs.aug_rm("/augeas/load//incl[. != '/etc/selinux/config']")
+       @guestfs.aug_load
+ 
+       begin
+-        selinux = @guestfs.aug_get("/files/etc/sysconfig/selinux/SELINUX")
++        selinux = @guestfs.aug_get("/files/etc/sysconfig/config/SELINUX")
+         @guestfs.sh("/usr/sbin/load_policy") if !selinux.nil? and !selinux.eql?('disabled')
+         @log.trace "SElinux policy loaded."
+       rescue
