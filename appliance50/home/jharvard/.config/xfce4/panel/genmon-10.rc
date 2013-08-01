@@ -1,0 +1,6 @@
+Command=/usr/local/bin/ip50 vmm -xml
+UseLabel=0
+Text=IP address
+UpdatePeriod=5000
+Font=Sans 10
+

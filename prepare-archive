@@ -1,0 +1,5 @@
+rm appliance50.zip
+cd appliance50
+zip -r ../appliance50.zip *
+cd ..
+chmod 644 appliance50.zip

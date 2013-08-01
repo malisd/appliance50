@@ -1,0 +1,190 @@
+#!/bin/bash
+#
+# This is CS50 install!
+#
+# To run, sudo su and then type 
+# "curl http://path-to-50/install50 | /bin/bash"
+#
+
+UPDATER=http://mirror-local.cs50.net/appliance50/19/source/updater
+
+export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+
+eche() { echo "$@" >&2; }
+
+echo "Installing virtualization detection"
+yum -y install virt-what
+
+# get virtualization platform
+declare vmm=$(/usr/sbin/virt-what)
+
+# fix eth{0,1,2}, per http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
+rm /lib/udev/rules.d/80-net-name-slot.rules
+ln -s /dev/null /lib/udev/rules.d/80-net-name-slot.rules
+
+if [ $vmm = 'xen' ]
+then
+    echo "Detected ec2"
+
+    echo "Setting swap to /dev/xvdb"
+    mkswap /dev/xvdb
+    swapon /dev/xvdb
+    echo "/dev/xvdb  swap swap    defaults,noatime 0 0" >> /etc/fstab
+
+    echo "Installing prerequisite packages for update50"
+    yum -y install unzip
+
+fi
+
+echo "Installing xfce-desktop"
+yum --skip-broken -y groupinstall xfce-desktop
+
+echo "Running update50"
+/bin/curl $UPDATER | /bin/bash >/var/log/install50.log 2>&1
+
+echo -n "Fixing fonts.. "
+yum -y reinstall fontconfig
+
+echo "Resetting ~jharvard/.ssh"
+mkdir -m 0700 /home/jharvard/.ssh
+touch /home/jharvard/.ssh/{authorized_keys,config,known_hosts}
+chown -R jharvard:students /home/jharvard/.ssh
+chmod 0600 /home/jharvard/.ssh/{authorized_keys,config,known_hosts}
+
+if [ $vmm = 'xen' ]
+then
+    echo "Installing generic packages"
+    echo "remove fedora-logos fedora-release fedora-release-notes
+install generic-logos generic-release generic-release-notes
+run" | yum -y shell
+fi
+
+echo "Update grub"
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+if [ $vmm = 'xen' ]
+then
+    # enable password authentication
+    sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+    service sshd reload
+
+    # guacamole install
+    /bin/mv /etc/guacamole/user-mapping.xml.rpmsave /etc/guacamole/user-mapping.xml
+    /bin/rm -rf /var/lib/tomcat/webapps/ROOT/
+    /bin/ln -s /var/lib/guacamole/guacamole.war /var/lib/tomcat/webapps/ROOT.war
+    /bin/ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat/lib
+    /sbin/service tomcat restart
+    /sbin/service guacd start
+    /sbin/chkconfig tomcat on
+    /sbin/chkconfig guacd on
+    /bin/systemctl --system daemon-reload
+    /bin/systemctl enable vncserver.service
+    /bin/systemctl start vncserver.service
+
+    cat > /etc/rc.d/rc.local << "EOF"
+#!/bin/bash
+## custom password for EC2 (trim leading and trailing whitespace)
+# http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/AESDG-chapter-instancedata.html
+PASSWORD=`/usr/bin/wget --output-document=- --quiet --timeout=5 --tries=10 http://169.254.169.254/latest/user-data`
+if [ $? -eq 0 ]; then
+    # remove leading and trailing spaces and double-quotes
+    PASSWORD=`/bin/echo "$PASSWORD" | /usr/bin/perl -p -e 's/^\s*(.*)\s*$/$1/g' | sed -e 's/"//g'`
+    if [ -z "$PASSWORD" ]; then
+        seedNum=`date +%N`$$
+        randomStr=$( echo $seedNum | md5sum | md5sum )
+        PASSWORD="${randomStr:4:16}"
+    fi
+    /bin/echo "$PASSWORD" | /usr/bin/passwd --stdin jharvard
+    /bin/echo -e "$PASSWORD\n$PASSWORD" | /usr/bin/smbpasswd -a -s jharvard
+    /bin/mysqladmin -u jharvard -p"crimson" password "$PASSWORD"
+    /bin/echo "<user-mapping>
+    <!-- Per-user authentication and config information -->
+    <authorize username=\"jharvard\" password=\"$PASSWORD\">
+      <connection name=\"appliance50\">
+        <protocol>vnc</protocol>
+        <param name=\"hostname\">127.0.0.1</param>
+        <param name=\"port\">5901</param>
+        <param name=\"password\">crimson</param>
+      </connection>
+    </authorize>
+</user-mapping>" >/etc/guacamole/user-mapping.xml
+#/bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth1
+#/bin/rm -f /etc/sysconfig/network-scripts/ifcfg-eth2
+fi
+EOF
+    chmod +x /etc/rc.d/rc.local
+    /etc/rc.d/rc.local
+
+else
+
+    # machine is not EC2 (virtualized or bare metal)
+
+    # set audio to unmute by default on first boot
+    #sed -i 's/^ENV{ppercent}:=.*/ENV{ppercent}:="100%"/g' /usr/lib/alsa/init/default
+    #sed -i 's/^ENV{pvolume}:=.*/ENV{pvolume}:="0dB"/g' /usr/lib/alsa/init/default
+    #sed -i 's/^ENV{has_pmaster_vol}:=.*/ENV{has_pmaster_vol}:="true"/g' /usr/lib/alsa/init/default
+
+    URL=http://mirror.cs50.net/appliance50/19/source
+    TMP=/var/tmp
+
+    cat > /etc/rc.d/rc.local <<EOF
+#!/bin/bash
+# run update50, but only to perform final steps
+/bin/bash <(/bin/curl $UPDATER 2>/dev/null) NO_PACKAGES
+EOF
+
+    case $vmm in
+    parallels)
+        cat >>/etc/rc.d/rc.local <<EOF
+        # download and mount Parallels Tools
+        # /Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin.iso
+        /usr/bin/wget --directory-prefix=$TMP $URL/iso/prl-tools-lin.iso
+        /bin/mount -r -o loop -t iso9660 $TMP/prl-tools-lin.iso /mnt
+
+        # install Parallels Tools
+        /mnt/install --install-unattended
+        /bin/rm -f /home/jharvard/Desktop/Parallels\ Shared\ Folders
+
+        # tidy up
+        /bin/umount /mnt
+        /bin/rm -f $TMP/prl-tools-lin.iso
+EOF
+    ;;
+    vitualbox)
+        cat >>/etc/rc.d/rc.local <<EOF
+        # download and mount VirtualBox Guest Additions
+        # http://download.virtualbox.org/virtualbox/4.2.2/VBoxGuestAdditions_4.2.2.iso
+        /usr/bin/wget --directory-prefix=$TMP $URL/iso/VBoxGuestAdditions_4.2.2.iso
+        /bin/mount -r -o loop -t iso9660 $TMP/VBoxGuestAdditions_4.2.2.iso /mnt
+
+        # install VirtualBox Guest Additions
+        /mnt/VBoxLinuxAdditions.run --nox11
+
+        # tidy up
+        /bin/umount /mnt
+        /bin/rm -f $TMP/VBoxGuestAdditions_4.2.2.iso
+EOF
+    ;;
+    vmware)
+        cat >>/etc/rc.d/rc.local <<EOF
+        # download and mount VMware Tools
+        # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
+        /usr/bin/wget --directory-prefix=$TMP $URL/iso/linux.iso
+        /bin/mount -r -o loop -t iso9660 $TMP/linux.iso /mnt
+        /bin/tar xf /mnt/VMwareTools-9.2.2-893683.tar.gz -C $TMP
+
+        # install VMware Tools
+        #$TMP/vmware-tools-distrib/vmware-install.pl -d
+
+        # tidy up
+        /bin/rm -rf $TMP/vmware-tools-distrib
+        /bin/umount /mnt
+        /bin/rm -f $TMP/linux.iso
+EOF
+    ;;
+    esac
+
+    echo "/bin/rm -f /etc/rc.d/rc.local" >>/etc/rc.d/rc.local
+    chmod +x /etc/rc.d/rc.local
+
+fi

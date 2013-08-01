@@ -1,8 +1,0 @@
-[appliance50]
-name=CS50 Appliance 18
-baseurl=http://mirror-local.cs50.net/appliance50/18a/$basearch/RPMS/
-enabled=1
-metadata_expire=300
-gpgcheck=0
-priority=1
-protect=1

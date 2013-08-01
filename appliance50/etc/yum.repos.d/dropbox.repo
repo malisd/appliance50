@@ -1,0 +1,6 @@
+[dropbox]
+name=dropbox
+baseurl=http://linux.dropbox.com/fedora/18/
+enabled=1
+gpgkey=http://linux.dropbox.com/fedora/rpm-public-key.asc
+gpgcheck=1

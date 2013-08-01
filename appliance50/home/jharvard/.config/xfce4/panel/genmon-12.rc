@@ -1,0 +1,5 @@
+Command=/usr/local/bin/version50 -xml
+UseLabel=0
+Text=version
+UpdatePeriod=5000
+Font=Sans Bold 10

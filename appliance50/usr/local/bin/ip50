@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# determine IP address
+if [ $1 == "xen" ];
+then
+    # this is EC2, fetch public IP from AWS
+    declare inet=$(/usr/bin/wget --output-document=- --quiet --timeout=5 --tries=10 http://169.254.169.254/latest/meta-data/public-ipv4)
+    declare regex='([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})'
+else
+    declare inet=$(/usr/sbin/ip -f inet addr show eth1 | /usr/bin/grep inet)
+    declare regex='inet ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})'
+fi
+
+if [[ "$inet" =~ $regex ]]; then
+    declare addr=${BASH_REMATCH[1]}
+else
+    declare addr="no IP address"
+fi
+
+# display IP address
+if [ "$2" == "-xml" ]; then
+    echo "<tool>IP address</tool>"
+    echo "<txt>$addr</txt>"
+else
+    echo $addr
+fi

@@ -1,0 +1,389 @@
+#!/bin/bash
+#
+# This is CS50 update!
+#
+# To run, execute "update50" at the command line.
+#
+
+URL=http://mirror-local.cs50.net/appliance50/19/source
+ARCHIVE=appliance50.zip
+DOWNLOAD=/tmp
+
+export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+
+eche() { echo "$@" >&2; }
+
+#### Preparation ####
+
+#echo -n "Preparing.. "
+# prepare to update desktop
+# http://forum.xfce.org/viewtopic.php?id=5775
+#killall xfconfd >&2 || {
+#  echo WARNING
+#  echo Unable to prepare updating the desktop.
+#  eche killall failure!
+#}
+
+#echo Done!
+
+#### Fetch files ####
+echo "Downloading files.. "
+
+curl -s -S -o $DOWNLOAD/$ARCHIVE $URL/$ARCHIVE >&2 || {
+  echo ERROR
+  echo " Cannot execute update50. Do you have an Internet connection?"
+  eche CURL failure!
+  exit 1
+}
+
+#### Unzip files ####
+
+echo "Installing files.. "
+
+# stop xfce panel if it's running
+XPANEL=false
+/usr/sbin/pidof xfce4-panel >/dev/null 2>&1 && XPANEL=true
+if $XPANEL; then
+  eche Stopping panel
+  /usr/bin/pkill xfce4-panel >&2
+fi
+
+unzip -o $DOWNLOAD/$ARCHIVE -d / >&2 || {
+  echo ERROR
+  echo " Cannot execute update50. Decompression error."
+  eche Unzip failure!
+  exit 1
+}
+
+# tell ip50 to use a different method of fetching IP if using ec2
+if [[ $(/usr/sbin/virt-what) = 'xen' ]];
+then
+  sed -i 's/vmm/xen/g' /home/jharvard/.config/xfce4/panel/genmon-10.rc
+fi
+
+# set permissions if jharvard user exists
+JHE=false
+/usr/bin/getent passwd jharvard >/dev/null 2>&1 && JHE=true
+if $JHE; then
+  eche jharvard user exists, setting permissions
+  /usr/bin/find /home/jharvard -path /home/jharvard/logs -prune -o -exec chown jharvard:students {} \; >&2
+fi
+
+# restart xfce if it's stopped
+if $XPANEL; then
+  eche Restarting panel
+  sudo -Eu jharvard /usr/bin/xfce4-panel >&2 &
+fi
+
+# remove archive
+rm $DOWNLOAD/$ARCHIVE
+
+#### Install packages ####
+
+# if provided an argument of NO_PACKAGES, do not attempt to install
+if [ ! "$1" == "NO_PACKAGES" ]; then
+
+echo "Verifying packages to install.. "
+
+declare -a pkgs=(acpid at-spi2-atk bc binutils 
+bind-utils cgdb check50 clang coreutils cs50-2012-fall ctags dconf-editor 
+xarchiver xfce4-icon-theme xfce4-mixer dejavu-fonts-common dejavu-sans-fonts
+dejavu-sans-mono-fonts dejavu-serif-fonts diffutils dkms emacs evince
+garcon glibc-debuginfo gcc gdb gconf-editor gedit
+gedit-plugins git glib2 gnome-icon-theme-extras
+gnome-icon-theme-legacy gnome-icon-theme-symbolic gnome-menus
+gnome-packagekit google-chrome-stable httpd icedtea-web indent
+iptables kernel kernel-devel kernel-headers
+library50-c library50-php lynx make 
+man-pages mlocate mod_suphp nano nautilus-dropbox ncftp nodejs npm
+nss-softokn-debuginfo ntp openssh-clients openssh-server parole 
+patch php php-devel php-pear php-pecl-xdebug php-PHPMailer
+php-phpunit-DbUnit php-phpunit-PHPUnit php-tidy php-xml phpMyAdmin
+pulseaudio python pyxdg render50 ristretto rpm rsnapshot rsync ruby
+rubygems samba samba-client screen sed setup shadow-utils
+style50 submit50 sudo system-config-firewall-base
+system-config-firewall system-config-keyboard system-config-language
+system-config-network system-config-services teamviewer telnet tidy
+traceroute tree valgrind vim-X11 wget words xfce4-genmon-plugin
+xfce4-screenshooter xorg-x11-fonts-misc xterm yum-plugin-fastestmirror
+yum-plugin-priorities yum-plugin-protectbase yum-utils virt-what
+# below packages require gnome-keyring, which we subsequently remove
+# freenx-server orca
+# below are packages required for guacamole
+tomcat libvncserver freerdp libvorbis freerdp-plugins tomcat-webapps
+libguac4 guacd guacamole-0.8.1-1.noarch libguac-client-rdp
+libguac-client-vnc uuid tigervnc-server
+# below are packages that provide replacements for ones we want
+java-1.7.0-openjdk       # provides java
+java-1.7.0-openjdk-devel # provides java-devel
+man-db                   # provides man
+mariadb                  # provides mysql 
+mariadb-server           # provides mysql-server 
+php-mysqlnd              # provides php-mysql
+vim-enhanced             # provides vim
+)
+
+unset pkgsToInst
+declare -a pkgsToInst
+for inst in "${pkgs[@]}"
+do
+  INSTALLED=false
+  # is this package installed?
+  rpm -q $inst >/dev/null 2>&1 && INSTALLED=true
+
+  # if not, add it to an array of packes to install
+  if ! $INSTALLED; then
+    pkgsToInst+=("$inst")
+  fi
+done
+
+if [ ${#pkgsToInst[*]} -gt 0 ];
+then
+  # one or more packages to install
+  echo "Preparing to install packages.. "
+  yum clean all >&2
+
+  echo "Installing packages.. "
+  yum -y install ${pkgsToInst[*]} || {
+    echo "WARNING Not all packages may have been installed."
+    eche yum install failure!
+  }
+
+  # remove the following line when dropbox supports fedora 19
+  sed -i 's/\$releasever/18/g' /etc/yum.repos.d/dropbox.repo
+
+
+else
+  echo "No packages to install."
+fi
+#### Remove packages ####
+
+echo "Verifying packages to remove.. "
+
+declare -a pkgs=(abrt audit dnsmasq leafpad libpcap ModemManager NetworkManager
+geany NetworkManager-gnome openssh-askpass orage ppp setroubleshoot-server
+wpa_supplicant xfce4-power-manager xscreensaver-base gnome-keyring
+epdfview xfce4-dict claws-mail yumex seahorse xfburn asunder midori
+liferea pidgin remmina xfce4-clipman-plugin catfish setroubleshoot
+xfce4-notes-plugin xfce4-datetime-plugin xfce4-places-plugin
+xfce4-quicklauncher-plugin galculator alsa-plugins-pulseaudio firewalld)
+
+unset pkgsToRm
+declare -a pkgsToRm
+for inst in "${pkgs[@]}"
+do
+  INSTALLED=false
+  # is this package installed?
+  rpm -q $inst >/dev/null 2>&1 && INSTALLED=true
+
+  # if not, add it to an array of packes to install
+  if $INSTALLED; then
+    pkgsToRm+=("$inst")
+  fi
+done
+
+if [ ${#pkgsToRm[*]} -gt 0 ];
+then
+  # one or more packages to remove
+  echo "Removing unnecessary packages.. "
+  yum clean all >&2
+  yum -y remove ${pkgsToRm[*]} || {
+    echo WARNING
+    echo " Not all packages may have been removed."
+  }
+else
+  echo "No packages to remove."
+fi
+
+# end NO_PACKAGES
+fi
+
+#### Disable services ####
+
+echo "Disabling unnecessary services.. "
+
+declare -a off=(netconsole)
+for service in "${off[@]}"
+do
+    eche Disabled $service.
+    chkconfig $service off >&2
+done
+declare -a off=(avahi-daemon ip6tables mdmonitor saslauthd sendmail)
+for service in "${off[@]}"
+do
+    eche Disabled $service.
+    systemctl disable $service.service >&2
+done
+
+#### Enable services ####
+
+echo "Starting required services.. "
+
+declare -a on=(dkms_autoinstaller network)
+for service in "${on[@]}"
+do
+    eche Enabled $service.
+    chkconfig $service on >&2
+done
+declare -a on=(iptables ntpd rsyslog smb sshd)
+for service in "${on[@]}"
+do
+    eche Enabled $service.
+    systemctl enable $service.service >&2
+done
+
+#### Reset MySQL ####
+
+echo "Resetting John Harvard's password for MySQL to \"crimson\".. "
+eche "Resetting John Harvard's password for MySQL to \"crimson\"."
+/bin/systemctl stop mysqld.service >&2
+/bin/mv /etc/my.cnf /etc/.my.cnf
+/bin/cp -a /etc/.my.cnf /etc/my.cnf
+/bin/cat > /etc/my.cnf <<"EOF"
+[mysqld]
+datadir=/var/lib/mysql
+skip-grant-tables
+skip-networking
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+EOF
+/bin/systemctl start mysqld.service >&2
+/bin/mysql --force --user=root >&2 <<"EOF"
+DELETE FROM mysql.user WHERE User = '';
+DELETE FROM mysql.user WHERE User = 'root';
+DELETE FROM mysql.user WHERE User = 'jharvard';
+INSERT INTO mysql.user (Host, User, Password, Grant_priv, Super_priv) VALUES('localhost', 'jharvard', PASSWORD('crimson'), 'Y', 'Y');
+FLUSH PRIVILEGES;
+GRANT ALL ON *.* TO 'jharvard'@'localhost';
+DROP USER '';
+EOF
+/bin/systemctl stop mysqld.service >&2
+/bin/mv /etc/.my.cnf /etc/my.cnf
+/bin/systemctl start mysqld.service >&2
+
+#### Fix permissions ####
+
+echo "Fixing permissions.. "
+
+eche "Adding groups"
+groupadd -r courses >&2
+groupadd students >&2
+
+eche "Resetting John Harvard's password to \"crimson\"."
+adduser --comment "John Harvard" --gid students --groups wheel jharvard >&2
+echo crimson | passwd --stdin jharvard >&2
+
+#eche "Creating ~jharvard/Dropbox"
+#mkdir /home/jharvard/Dropbox >&2
+#chown jharvard:students /home/jharvard/Dropbox >&2
+#chmod 0700 /home/jharvard/Dropbox >&2
+
+eche "Reset John Harvard's password for Samba to \"crimson\"; /var/lib/samba/private/passdb.tdb"
+echo -e "crimson\ncrimson" | smbpasswd -a -s jharvard >&2
+
+# ensure proper ownership
+eche "Update ownership of John Harvard's home directory."
+find /home/jharvard -path /home/jharvard/logs -prune -o -exec chown jharvard:students {} \; >&2
+
+eche "Perms: /home/jharvard/logs"
+mkdir /home/jharvard/logs >&2
+chown root:root /home/jharvard/logs >&2
+chmod 0755 /home/jharvard/logs >&2
+
+eche "Perms: /home/jharvard/logs/httpd"
+mkdir /home/jharvard/logs/httpd >&2
+chown -R root:root /home/jharvard/logs/httpd >&2
+chmod 0755 /home/jharvard/logs/httpd >&2
+chmod 0644 /home/jharvard/logs/httpd/* >&2
+
+eche "Perms: /home/jharvard/logs/mysqld"
+mkdir /home/jharvard/logs/mysqld >&2
+chown mysql:mysql /home/jharvard/logs/mysqld >&2
+chmod 0755 /home/jharvard/logs/mysqld >&2
+touch /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} >&2
+chown jharvard:mysql /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} >&2
+chmod 0660 /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} >&2
+
+eche "Perms: /home/jharvard/public_html"
+mkdir /home/jharvard/public_html >&2
+chown jharvard:students /home/jharvard/public_html >&2
+chmod 0711 /home/jharvard >&2
+chmod 0711 /home/jharvard/public_html >&2
+
+eche "Perms: /home/jharvard/vhosts/localhost/html"
+mkdir -p /home/jharvard/vhosts/localhost/html >&2
+chown jharvard:students /home/jharvard/vhosts >&2
+chmod 0711 /home/jharvard/vhosts >&2
+chown jharvard:students /home/jharvard/vhosts/localhost >&2
+chmod 0711 /home/jharvard/vhosts/localhost >&2
+chown jharvard:students /home/jharvard/vhosts/localhost/html >&2
+chmod 0711 /home/jharvard/vhosts/localhost/html >&2
+
+eche "Perms: /home/jharvard/.ssh"
+chmod 0600 /home/jharvard/.ssh/{authorized_keys,config,known_hosts} >&2
+
+eche "Perms: /etc/sudoers.d/appliance50"
+chmod 0440 /etc/sudoers.d/appliance50 >&2
+
+eche "Perms: /etc/ssh"
+chmod 0600 /etc/ssh/* >&2
+chmod 0645 /etc/ssh/*.pub >&2
+
+eche "Perms: /.snapshots"
+chmod 755 /.snapshots >&2
+
+#### Restart services ####
+
+echo "Restarting services.. "
+declare -a restart=(httpd iptables network smb sshd)
+for service in "${restart[@]}"
+do
+    eche Restarting $service.
+    systemctl reload-or-try-restart $service.service >&2
+done
+
+#### Finish ####
+
+echo -n "Final steps.. "
+
+# seems the panel files will duplicate if we don't erase them first..
+rm -f /home/jharvard/.config/xfce4/panel/launcher-*/1*
+touch /home/jharvard/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+
+#eche Set audio level and unmute
+#alsaunmute >&2
+#amixer sset Master unmute >&2
+#amixer sset Master 100% >&2
+#amixer sset PCM 100% >&2
+#alsactl store >&2
+
+# remove the following rm when Chrome 29 is released
+# https://code.google.com/p/chromium/issues/detail?id=239048
+eche Fix Chrome bug that places useless files
+rm /home/jharvard/libpeerconnection.log
+
+#eche Redraw panel
+find /home/jharvard/.config/xfce4/panel -type f -exec touch {} \; >&2
+
+eche Import keys 
+# (to avoid warnings during future software updates)
+rpm --import /etc/pki/rpm-gpg/rpm-public-key.asc >&2
+rpm --import /etc/pki/rpm-gpg/linux_signing_key.pub >&2
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386 >&2
+
+eche SMB Password reset
+echo -e "crimson\ncrimson" | smbpasswd -a -s jharvard >&2
+
+eche Install FreeNX
+# rm avoids REMOTE HOST IDENTIFICATION HAS CHANGED
+rm -f /root/.ssh/known_hosts >&2
+nxsetup --install --setup-nomachine-key >&2
+
+eche Rebuild mlocate.db
+/etc/cron.daily/mlocate.cron >&2
+
+echo Done!
+eche Done! 
+
+# remove the downloaded updater
+#rm $0
