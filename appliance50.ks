@@ -47,6 +47,7 @@ generic-release
 
 # necessary packages for update50
 unzip
+sed
 
 #prevent "Unable to run ['/usr/bin/firewall-offline-cmd', '--enabled']!" error
 firewall-config
@@ -64,7 +65,7 @@ firewall-config
 /usr/bin/passwd -l root
 
 # run install50
-/bin/curl http://mirror-local.cs50.net/appliance50/19/source/install50 | /bin/bash
+/bin/curl http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash
 
 ############################################################################
 # clean up

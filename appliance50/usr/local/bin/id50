@@ -1,14 +1,6 @@
 #!/usr/bin/bash
 #
-# Create a unique ID for this appliance.
+# Read this appliance's unique ID
 #
 
-IDFILE=/etc/appliance50.id
-if [ ! -f $IDFILE ]
-then
-  sudo bash <<EOF
-  echo -n "id=" >$IDFILE
-  uuid >>$IDFILE
-  chmod 644 $IDFILE
-EOF
-fi
+cat /etc/id50

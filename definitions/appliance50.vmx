@@ -1,7 +1,7 @@
 #!/usr/bin/vmware
 
 config.version = "8"
-displayName = "CS50 Appliance 19b-3"
+displayName = "CS50 Appliance 19"
 ethernet0.addressType = "generated"
 ethernet0.connectionType = "nat"
 ethernet0.present = "TRUE"
@@ -13,7 +13,7 @@ ethernet2.connectionType = "bridged"
 ethernet2.present = "TRUE"
 floppy0.present = "FALSE"
 guestinfo.vmware.product.class = "virtual machine"
-guestinfo.vmware.product.long = "CS50 Appliance 19b-3"
+guestinfo.vmware.product.long = "CS50 Appliance 19"
 guestinfo.vmware.product.url = "https://manual.cs50.net/CS50_Appliance_19"
 guestOS = "fedora"
 hints.hideAll = "TRUE"

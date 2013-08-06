@@ -6,7 +6,7 @@
 # "curl http://path-to-50/install50 | /bin/bash"
 #
 
-UPDATER=http://mirror-local.cs50.net/appliance50/19/source/updater
+UPDATER=http://mirror.cs50.net/appliance50/19/source/updater
 
 export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
@@ -16,7 +16,7 @@ echo "Installing virtualization detection"
 yum -y install virt-what
 
 # get virtualization platform
-declare vmm=$(/usr/sbin/virt-what)
+declare vmm=$(/sbin/virt-what)
 
 # fix eth{0,1,2}, per http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
 rm /lib/udev/rules.d/80-net-name-slot.rules
@@ -61,6 +61,12 @@ fi
 
 echo "Update grub"
 grub2-mkconfig -o /boot/grub2/grub.cfg
+
+echo "Removing rpmnew files"
+find / -name '*.rpmnew' -type f -delete
+
+echo "Removing some unnecessary ~jharvard dirs"
+/bin/rmdir /home/jharvard/{Documents,Music,Pictures,Public,Templates,Videos}
 
 if [ $vmm = 'xen' ]
 then
@@ -115,76 +121,82 @@ EOF
     chmod +x /etc/rc.d/rc.local
     /etc/rc.d/rc.local
 
+    # add code that will create /etc/id50 once and then remove itself from rc.local
+    cat >>/etc/rc.d/rc.local <<EOF
+#rm{
+/usr/bin/uuid -v 4 >/etc/id50; /bin/chmod 444 /etc/id50;
+/bin/sed -i '/#rm{/,/$/d' /etc/rc.d/rc.local
+EOF
+
 else
 
     # machine is not EC2 (virtualized or bare metal)
-
-    # set audio to unmute by default on first boot
-    #sed -i 's/^ENV{ppercent}:=.*/ENV{ppercent}:="100%"/g' /usr/lib/alsa/init/default
-    #sed -i 's/^ENV{pvolume}:=.*/ENV{pvolume}:="0dB"/g' /usr/lib/alsa/init/default
-    #sed -i 's/^ENV{has_pmaster_vol}:=.*/ENV{has_pmaster_vol}:="true"/g' /usr/lib/alsa/init/default
-
-    URL=http://mirror.cs50.net/appliance50/19/source
+    URL=http://mirror.cs50.net/appliance50/19/source/iso
     TMP=/var/tmp
 
     cat > /etc/rc.d/rc.local <<EOF
 #!/bin/bash
 # run update50, but only to perform final steps
 /bin/bash <(/bin/curl $UPDATER 2>/dev/null) NO_PACKAGES
+
+# remove kickstart
+/bin/rm /root/anaconda-ks.cfg
+
+case \$(/sbin/virt-what) in
+parallels)
+    # download and mount Parallels Tools
+    # /Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin.iso
+    /usr/bin/wget --directory-prefix=$TMP $URL/prl-tools-lin.iso
+    /bin/mount -r -o loop -t iso9660 $TMP/prl-tools-lin.iso /mnt
+
+    # install Parallels Tools
+    /mnt/install --install-unattended
+    /bin/rm -f /home/jharvard/Desktop/Parallels\ Shared\ Folders
+
+    # tidy up
+    /bin/umount /mnt
+    /bin/rm -f $TMP/prl-tools-lin.iso
+;;
+virtualbox)
+    # download and mount VirtualBox Guest Additions
+    # http://download.virtualbox.org/virtualbox/4.2.16/VBoxGuestAdditions_4.2.16.iso
+    /usr/bin/wget --directory-prefix=$TMP $URL/VBoxGuestAdditions_4.2.16.iso
+    /bin/mount -r -o loop -t iso9660 $TMP/VBoxGuestAdditions_4.2.16.iso /mnt
+
+    # install VirtualBox Guest Additions
+    /mnt/VBoxLinuxAdditions.run --nox11
+
+    # tidy up
+    /bin/umount /mnt
+    /bin/rm -f $TMP/VBoxGuestAdditions_4.2.16.iso
+;;
+vmware)
+    # download and mount VMware Tools
+    # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
+    /usr/bin/wget --directory-prefix=$TMP $URL/linux.iso
+    /bin/mount -r -o loop -t iso9660 $TMP/linux.iso /mnt
+    /bin/tar xf /mnt/VMwareTools-9.2.2-893683.tar.gz -C $TMP
+
+    # install VMware Tools
+    #$TMP/vmware-tools-distrib/vmware-install.pl -d
+
+    # tidy up
+    /bin/rm -rf $TMP/vmware-tools-distrib
+    /bin/umount /mnt
+    /bin/rm -f $TMP/linux.iso
+;;
+esac
+
+/bin/rm -f /etc/rc.d/rc.local
+
+cat >/etc/rc.d/rc.local <<E
+#!/bin/bash
+/bin/rmdir /home/jharvard/{Documents,Music,Pictures,Public,Templates,Videos}
+/usr/bin/uuid -v 4 >/etc/id50; /bin/chmod 444 /etc/id50
+/bin/rm /etc/rc.d/rc.local
+E
+chmod +x /etc/rc.d/rc.local
 EOF
-
-    case $vmm in
-    parallels)
-        cat >>/etc/rc.d/rc.local <<EOF
-        # download and mount Parallels Tools
-        # /Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin.iso
-        /usr/bin/wget --directory-prefix=$TMP $URL/iso/prl-tools-lin.iso
-        /bin/mount -r -o loop -t iso9660 $TMP/prl-tools-lin.iso /mnt
-
-        # install Parallels Tools
-        /mnt/install --install-unattended
-        /bin/rm -f /home/jharvard/Desktop/Parallels\ Shared\ Folders
-
-        # tidy up
-        /bin/umount /mnt
-        /bin/rm -f $TMP/prl-tools-lin.iso
-EOF
-    ;;
-    vitualbox)
-        cat >>/etc/rc.d/rc.local <<EOF
-        # download and mount VirtualBox Guest Additions
-        # http://download.virtualbox.org/virtualbox/4.2.2/VBoxGuestAdditions_4.2.2.iso
-        /usr/bin/wget --directory-prefix=$TMP $URL/iso/VBoxGuestAdditions_4.2.2.iso
-        /bin/mount -r -o loop -t iso9660 $TMP/VBoxGuestAdditions_4.2.2.iso /mnt
-
-        # install VirtualBox Guest Additions
-        /mnt/VBoxLinuxAdditions.run --nox11
-
-        # tidy up
-        /bin/umount /mnt
-        /bin/rm -f $TMP/VBoxGuestAdditions_4.2.2.iso
-EOF
-    ;;
-    vmware)
-        cat >>/etc/rc.d/rc.local <<EOF
-        # download and mount VMware Tools
-        # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
-        /usr/bin/wget --directory-prefix=$TMP $URL/iso/linux.iso
-        /bin/mount -r -o loop -t iso9660 $TMP/linux.iso /mnt
-        /bin/tar xf /mnt/VMwareTools-9.2.2-893683.tar.gz -C $TMP
-
-        # install VMware Tools
-        #$TMP/vmware-tools-distrib/vmware-install.pl -d
-
-        # tidy up
-        /bin/rm -rf $TMP/vmware-tools-distrib
-        /bin/umount /mnt
-        /bin/rm -f $TMP/linux.iso
-EOF
-    ;;
-    esac
-
-    echo "/bin/rm -f /etc/rc.d/rc.local" >>/etc/rc.d/rc.local
     chmod +x /etc/rc.d/rc.local
 
 fi

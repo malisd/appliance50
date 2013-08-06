@@ -42,3 +42,6 @@ export EDITOR=nano
 
 # set locale
 export LANG=C
+
+# Node.js
+export NODE_ENV=dev

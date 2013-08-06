@@ -23,9 +23,9 @@
     <Info>A virtual machine</Info>
     <ProductSection>
       <Info>Meta-information about the installed software</Info>
-      <Product>CS50 Appliance 19</Product>
+      <Product>CS50 Appliance</Product>
       <Vendor>CS50</Vendor>
-      <Version>3</Version>
+      <Version>19</Version>
       <ProductUrl>https://manual.cs50.net/CS50_Appliance_19</ProductUrl>
       <VendorUrl>http://cs50.tv/</VendorUrl>
     </ProductSection>

@@ -1,4 +1,4 @@
-Command=/usr/local/bin/ip50 vmm -xml
+Command=/usr/local/bin/ip50 -xml
 UseLabel=0
 Text=IP address
 UpdatePeriod=5000

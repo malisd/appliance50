@@ -5,7 +5,7 @@
 # To run, execute "update50" at the command line.
 #
 
-URL=http://mirror-local.cs50.net/appliance50/19/source
+URL=http://mirror.cs50.net/appliance50/19/source
 ARCHIVE=appliance50.zip
 DOWNLOAD=/tmp
 
@@ -42,10 +42,13 @@ echo "Installing files.. "
 
 # stop xfce panel if it's running
 XPANEL=false
-/usr/sbin/pidof xfce4-panel >/dev/null 2>&1 && XPANEL=true
-if $XPANEL; then
-  eche Stopping panel
-  /usr/bin/pkill xfce4-panel >&2
+PANELPID=$(/usr/bin/pgrep -u jharvard xfce4-panel)
+if [ $? -eq 0 ]; then
+  XPANEL=true
+  # get xpanel args
+  PANELARGS=$(/bin/ps -o args= ww $PANELPID | /usr/bin/sed 's/^[^ ]* //')
+  eche "Stopping panel (pid $PANELPID)"
+  /bin/kill $PANELPID >&2
 fi
 
 unzip -o $DOWNLOAD/$ARCHIVE -d / >&2 || {
@@ -56,10 +59,10 @@ unzip -o $DOWNLOAD/$ARCHIVE -d / >&2 || {
 }
 
 # tell ip50 to use a different method of fetching IP if using ec2
-if [[ $(/usr/sbin/virt-what) = 'xen' ]];
-then
-  sed -i 's/vmm/xen/g' /home/jharvard/.config/xfce4/panel/genmon-10.rc
-fi
+#if [[ $(/usr/sbin/virt-what) = 'xen' ]];
+#then
+#  sed -i 's/vmm/xen/g' /home/jharvard/.config/xfce4/panel/genmon-10.rc
+#fi
 
 # set permissions if jharvard user exists
 JHE=false
@@ -72,7 +75,8 @@ fi
 # restart xfce if it's stopped
 if $XPANEL; then
   eche Restarting panel
-  sudo -Eu jharvard /usr/bin/xfce4-panel >&2 &
+  export DISPLAY=$(echo $PANELARGS | awk '/:[^ ]*/ { print $2}')
+  sudo -Eu jharvard /usr/bin/xfce4-panel $PANELARGS >&2 &
 fi
 
 # remove archive
@@ -86,29 +90,30 @@ if [ ! "$1" == "NO_PACKAGES" ]; then
 echo "Verifying packages to install.. "
 
 declare -a pkgs=(acpid at-spi2-atk bc binutils 
-bind-utils cgdb check50 clang coreutils cs50-2012-fall ctags dconf-editor 
+bind-utils cgdb clang coreutils ctags dconf-editor 
 xarchiver xfce4-icon-theme xfce4-mixer dejavu-fonts-common dejavu-sans-fonts
 dejavu-sans-mono-fonts dejavu-serif-fonts diffutils dkms emacs evince
 garcon glibc-debuginfo gcc gdb gconf-editor gedit
 gedit-plugins git glib2 gnome-icon-theme-extras
 gnome-icon-theme-legacy gnome-icon-theme-symbolic gnome-menus
 gnome-packagekit google-chrome-stable httpd icedtea-web indent
-iptables kernel kernel-devel kernel-headers
+iptables kernel-PAE kernel-PAE-devel kernel-headers
 library50-c library50-php lynx make 
 man-pages mlocate mod_suphp nano nautilus-dropbox ncftp nodejs npm
-nss-softokn-debuginfo ntp openssh-clients openssh-server parole 
+nss-softokn-debuginfo ntp openssh-clients openssh-server orca parole 
 patch php php-devel php-pear php-pecl-xdebug php-PHPMailer
 php-phpunit-DbUnit php-phpunit-PHPUnit php-tidy php-xml phpMyAdmin
-pulseaudio python pyxdg render50 ristretto rpm rsnapshot rsync ruby
-rubygems samba samba-client screen sed setup shadow-utils
-style50 submit50 sudo system-config-firewall-base
+pulseaudio python python-pip pyxdg render50 ristretto rpm rsnapshot rsync 
+ruby rubygems samba samba-client screen sed setup shadow-utils
+# removed per https://app.asana.com/0/5456136881057/7136829229334
+#cs50-2012-fall style50 submit50 
+check50
+sudo system-config-firewall-base
 system-config-firewall system-config-keyboard system-config-language
 system-config-network system-config-services teamviewer telnet tidy
 traceroute tree valgrind vim-X11 wget words xfce4-genmon-plugin
 xfce4-screenshooter xorg-x11-fonts-misc xterm yum-plugin-fastestmirror
 yum-plugin-priorities yum-plugin-protectbase yum-utils virt-what
-# below packages require gnome-keyring, which we subsequently remove
-# freenx-server orca
 # below are packages required for guacamole
 tomcat libvncserver freerdp libvorbis freerdp-plugins tomcat-webapps
 libguac4 guacd guacamole-0.8.1-1.noarch libguac-client-rdp
@@ -156,17 +161,34 @@ then
 else
   echo "No packages to install."
 fi
+
+echo "Installing libraries.. "
+
+pip install requests >&2
+
+echo "Updating packages.. "
+
+yum --disablerepo=* --enablerepo=appliance50 -y update
+
 #### Remove packages ####
 
 echo "Verifying packages to remove.. "
 
 declare -a pkgs=(abrt audit dnsmasq leafpad libpcap ModemManager NetworkManager
 geany NetworkManager-gnome openssh-askpass orage ppp setroubleshoot-server
-wpa_supplicant xfce4-power-manager xscreensaver-base gnome-keyring
+wpa_supplicant xfce4-power-manager xscreensaver-base foomatic-db-ppds
 epdfview xfce4-dict claws-mail yumex seahorse xfburn asunder midori
 liferea pidgin remmina xfce4-clipman-plugin catfish setroubleshoot
 xfce4-notes-plugin xfce4-datetime-plugin xfce4-places-plugin
-xfce4-quicklauncher-plugin galculator alsa-plugins-pulseaudio firewalld)
+xfce4-quicklauncher-plugin galculator alsa-plugins-pulseaudio firewalld
+# replaced by kernel-PAE and kernel-PAE-devel
+kernel kernel-devel
+# turn off consistent network device naming
+# http://fedoraproject.org/wiki/Features/ConsistentNetworkDeviceNaming
+biosdevname
+# required by orca
+# gnome-keyring
+)
 
 unset pkgsToRm
 declare -a pkgsToRm
@@ -304,20 +326,16 @@ touch /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log
 chown jharvard:mysql /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} >&2
 chmod 0660 /home/jharvard/logs/mysqld/{localhost.err,localhost.log,localhost-slow.log} >&2
 
-eche "Perms: /home/jharvard/public_html"
-mkdir /home/jharvard/public_html >&2
-chown jharvard:students /home/jharvard/public_html >&2
-chmod 0711 /home/jharvard >&2
-chmod 0711 /home/jharvard/public_html >&2
 
-eche "Perms: /home/jharvard/vhosts/localhost/html"
-mkdir -p /home/jharvard/vhosts/localhost/html >&2
+eche "Perms: /home/jharvard/vhosts/localhost/public"
+mkdir -p /home/jharvard/vhosts/localhost/public >&2
 chown jharvard:students /home/jharvard/vhosts >&2
+chmod 0711 /home/jharvard >&2
 chmod 0711 /home/jharvard/vhosts >&2
 chown jharvard:students /home/jharvard/vhosts/localhost >&2
 chmod 0711 /home/jharvard/vhosts/localhost >&2
-chown jharvard:students /home/jharvard/vhosts/localhost/html >&2
-chmod 0711 /home/jharvard/vhosts/localhost/html >&2
+chown jharvard:students /home/jharvard/vhosts/localhost/public >&2
+chmod 0711 /home/jharvard/vhosts/localhost/public >&2
 
 eche "Perms: /home/jharvard/.ssh"
 chmod 0600 /home/jharvard/.ssh/{authorized_keys,config,known_hosts} >&2
@@ -350,17 +368,11 @@ echo -n "Final steps.. "
 rm -f /home/jharvard/.config/xfce4/panel/launcher-*/1*
 touch /home/jharvard/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 
-#eche Set audio level and unmute
-#alsaunmute >&2
-#amixer sset Master unmute >&2
-#amixer sset Master 100% >&2
-#amixer sset PCM 100% >&2
-#alsactl store >&2
-
 # remove the following rm when Chrome 29 is released
 # https://code.google.com/p/chromium/issues/detail?id=239048
 eche Fix Chrome bug that places useless files
 rm /home/jharvard/libpeerconnection.log
+sed -i 's/^exec/cd \/tmp; exec/' /opt/google/chrome/google-chrome
 
 #eche Redraw panel
 find /home/jharvard/.config/xfce4/panel -type f -exec touch {} \; >&2
@@ -374,10 +386,10 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-i386 >&2
 eche SMB Password reset
 echo -e "crimson\ncrimson" | smbpasswd -a -s jharvard >&2
 
-eche Install FreeNX
+#eche Install FreeNX
 # rm avoids REMOTE HOST IDENTIFICATION HAS CHANGED
-rm -f /root/.ssh/known_hosts >&2
-nxsetup --install --setup-nomachine-key >&2
+#rm -f /root/.ssh/known_hosts >&2
+#nxsetup --install --setup-nomachine-key >&2
 
 eche Rebuild mlocate.db
 /etc/cron.daily/mlocate.cron >&2

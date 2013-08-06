@@ -1,4 +1,4 @@
-Command=/usr/local/bin/version50 -xml
+Command=/usr/local/bin/appliance50 -v
 UseLabel=0
 Text=version
 UpdatePeriod=5000
