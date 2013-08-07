@@ -31,7 +31,7 @@ sudo -E bash <<EOF
 #### Fetch updater ####
 echo "Downloading updater.. "
 
-curl -s -S -o $UPDATER $URL >>$LOG 2>&1 || {
+curl -L --max-redirs 10 -s -S -o $UPDATER $URL >>$LOG 2>&1 || {
   echo ERROR
   echo Cannot download the updater. Do you have an Internet connection?
   echo CURL failure! >>$LOG

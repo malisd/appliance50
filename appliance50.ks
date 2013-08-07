@@ -65,7 +65,7 @@ firewall-config
 /usr/bin/passwd -l root
 
 # run install50
-/bin/curl http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash
+/bin/curl -L --max-redirs 10 http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash
 
 ############################################################################
 # clean up

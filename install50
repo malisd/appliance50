@@ -3,7 +3,7 @@
 # This is CS50 install!
 #
 # To run, sudo su and then type 
-# "curl http://path-to-50/install50 | /bin/bash"
+# "curl -L http://path-to-50/install50 | /bin/bash"
 #
 
 UPDATER=http://mirror.cs50.net/appliance50/19/source/updater
@@ -40,7 +40,7 @@ echo "Installing xfce-desktop"
 yum --skip-broken -y groupinstall xfce-desktop
 
 echo "Running update50"
-/bin/curl $UPDATER | /bin/bash >/var/log/install50.log 2>&1
+/bin/curl -L --max-redirs 10 $UPDATER | /bin/bash >/var/log/install50.log 2>&1
 
 echo -n "Fixing fonts.. "
 yum -y reinstall fontconfig
@@ -137,7 +137,7 @@ else
     cat > /etc/rc.d/rc.local <<EOF
 #!/bin/bash
 # run update50, but only to perform final steps
-/bin/bash <(/bin/curl $UPDATER 2>/dev/null) NO_PACKAGES
+/bin/bash <(/bin/curl -L --max-redirs 10 $UPDATER 2>/dev/null) NO_PACKAGES
 
 # remove kickstart
 /bin/rm /root/anaconda-ks.cfg

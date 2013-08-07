@@ -29,7 +29,7 @@ eche() { echo "$@" >&2; }
 #### Fetch files ####
 echo "Downloading files.. "
 
-curl -s -S -o $DOWNLOAD/$ARCHIVE $URL/$ARCHIVE >&2 || {
+curl -L --max-redirs 10 -s -S -o $DOWNLOAD/$ARCHIVE $URL/$ARCHIVE >&2 || {
   echo ERROR
   echo " Cannot execute update50. Do you have an Internet connection?"
   eche CURL failure!
