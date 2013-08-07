@@ -15,16 +15,7 @@ eche() { echo "$@" >&2; }
 
 #### Preparation ####
 
-#echo -n "Preparing.. "
-# prepare to update desktop
-# http://forum.xfce.org/viewtopic.php?id=5775
-#killall xfconfd >&2 || {
-#  echo WARNING
-#  echo Unable to prepare updating the desktop.
-#  eche killall failure!
-#}
-
-#echo Done!
+vmm=$(/sbin/virt-what)
 
 #### Fetch files ####
 echo "Downloading files.. "
@@ -59,7 +50,7 @@ unzip -o $DOWNLOAD/$ARCHIVE -d / >&2 || {
 }
 
 # tell ip50 which virtualization we're using
-sed -i "s/^vmm=/vmm=$(/sbin/virt-what)/" /usr/local/bin/ip50
+sed -i "s/^vmm=/vmm=$vmm/" /usr/local/bin/ip50
 
 # set permissions if jharvard user exists
 JHE=false
@@ -72,8 +63,13 @@ fi
 # restart xfce if it's stopped
 if $XPANEL; then
   eche Restarting panel
-  export DISPLAY=$(echo $PANELARGS | awk '/:[^ ]*/ { print $2}')
-  sudo -Eu jharvard /usr/bin/xfce4-panel $PANELARGS >&2 &
+  if [ $vmm = 'xen' ]; then
+    PANELARGS="--display=:1.0"
+  else
+    export DISPLAY=$(echo $PANELARGS | awk '/:[^ ]*/ { print $2}')
+    #sudo -Eu jharvard /usr/bin/xfce4-panel $PANELARGS >&2 &
+  fi
+  su -c "/usr/bin/xfce4-panel $PANELARGS >&2 &" jharvard
 fi
 
 # remove archive
