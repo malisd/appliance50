@@ -58,11 +58,8 @@ unzip -o $DOWNLOAD/$ARCHIVE -d / >&2 || {
   exit 1
 }
 
-# tell ip50 to use a different method of fetching IP if using ec2
-#if [[ $(/usr/sbin/virt-what) = 'xen' ]];
-#then
-#  sed -i 's/vmm/xen/g' /home/jharvard/.config/xfce4/panel/genmon-10.rc
-#fi
+# tell ip50 which virtualization we're using
+sed -i "s/^vmm=/vmm=$(/sbin/virt-what)/" /usr/local/bin/ip50
 
 # set permissions if jharvard user exists
 JHE=false
