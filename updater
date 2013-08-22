@@ -284,9 +284,13 @@ eche "Adding groups"
 groupadd -r courses >&2
 groupadd students >&2
 
-eche "Resetting John Harvard's password to \"crimson\"."
-adduser --comment "John Harvard" --gid students --groups wheel jharvard >&2
-echo crimson | passwd --stdin jharvard >&2
+if [ ! $vmm = 'xen' ]; then
+    eche "Resetting John Harvard's password to \"crimson\"."
+    adduser --comment "John Harvard" --gid students --groups wheel jharvard >&2
+    echo crimson | passwd --stdin jharvard >&2
+else
+    eche "Note that update50 does not reset John Harvard's password. If needed, the password should be reset by a restart."
+fi
 
 #eche "Creating ~jharvard/Dropbox"
 #mkdir /home/jharvard/Dropbox >&2
