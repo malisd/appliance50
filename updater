@@ -8,6 +8,7 @@
 URL=http://mirror.cs50.net/appliance50/19/source
 ARCHIVE=appliance50.zip
 DOWNLOAD=/tmp
+VERSION=19-0
 
 export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
@@ -49,6 +50,9 @@ unzip -o $DOWNLOAD/$ARCHIVE -d / >&2 || {
   exit 1
 }
 
+# recompile grub menu to include custom menu options (i.e. emergency mode)
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
 # tell ip50 which virtualization we're using
 sed -i "s/^vmm=/vmm=$vmm/" /usr/local/bin/ip50
 
@@ -82,8 +86,8 @@ if [ ! "$1" == "NO_PACKAGES" ]; then
 
 echo "Verifying packages to install.. "
 
-declare -a pkgs=(acpid at-spi2-atk bc binutils 
-bind-utils cgdb clang coreutils ctags dconf-editor 
+declare -a pkgs=(acpid at-spi2-atk bc binutils
+bind-utils cgdb clang coreutils ctags dconf-editor
 xarchiver xfce4-icon-theme xfce4-mixer dejavu-fonts-common dejavu-sans-fonts
 dejavu-sans-mono-fonts dejavu-serif-fonts diffutils dkms emacs evince
 garcon glibc-debuginfo gcc gdb gconf-editor gedit
@@ -91,16 +95,14 @@ gedit-plugins git glib2 gnome-icon-theme-extras
 gnome-icon-theme-legacy gnome-icon-theme-symbolic gnome-menus
 gnome-packagekit google-chrome-stable httpd icedtea-web indent
 iptables kernel-PAE kernel-PAE-devel kernel-headers
-library50-c library50-php lynx make 
+library50-c library50-php lynx make
 man-pages mlocate mod_suphp nano nautilus-dropbox ncftp nodejs npm
-nss-softokn-debuginfo ntp openssh-clients openssh-server orca parole 
+nss-softokn-debuginfo ntp openssh-clients openssh-server orca parole
 patch php php-devel php-pear php-pecl-xdebug php-PHPMailer
 php-phpunit-DbUnit php-phpunit-PHPUnit php-tidy php-xml phpMyAdmin
-pulseaudio python python-pip pyxdg render50 ristretto rpm rsnapshot rsync 
+pulseaudio python python-pip pyxdg render50 ristretto rpm rsnapshot rsync
 ruby rubygems samba samba-client screen sed setup shadow-utils
-# removed per https://app.asana.com/0/5456136881057/7136829229334
-#cs50-2012-fall style50 submit50 
-check50
+check50 log50 style50
 sudo system-config-firewall-base
 system-config-firewall system-config-keyboard system-config-language
 system-config-network system-config-services teamviewer telnet tidy
@@ -115,8 +117,8 @@ libguac-client-vnc uuid tigervnc-server
 java-1.7.0-openjdk       # provides java
 java-1.7.0-openjdk-devel # provides java-devel
 man-db                   # provides man
-mariadb                  # provides mysql 
-mariadb-server           # provides mysql-server 
+mariadb                  # provides mysql
+mariadb-server           # provides mysql-server
 php-mysqlnd              # provides php-mysql
 vim-enhanced             # provides vim
 )
@@ -234,7 +236,7 @@ done
 
 echo "Starting required services.. "
 
-declare -a on=(dkms_autoinstaller network)
+declare -a on=(dkms_autoinstaller network httpd mysqld)
 for service in "${on[@]}"
 do
     eche Enabled $service.
@@ -374,7 +376,7 @@ sed -i 's/^exec/cd \/tmp; exec/' /opt/google/chrome/google-chrome
 #eche Redraw panel
 find /home/jharvard/.config/xfce4/panel -type f -exec touch {} \; >&2
 
-eche Import keys 
+eche Import keys
 # (to avoid warnings during future software updates)
 rpm --import /etc/pki/rpm-gpg/rpm-public-key.asc >&2
 rpm --import /etc/pki/rpm-gpg/linux_signing_key.pub >&2
@@ -391,8 +393,13 @@ echo -e "crimson\ncrimson" | smbpasswd -a -s jharvard >&2
 eche Rebuild mlocate.db
 /etc/cron.daily/mlocate.cron >&2
 
+
+# create /etc/appliance50 with the version number
+echo "version=$VERSION" > /etc/appliance50
+chmod 644 /etc/appliance50
+
 echo Done!
-eche Done! 
+eche Done!
 
 # remove the downloaded updater
 #rm $0
