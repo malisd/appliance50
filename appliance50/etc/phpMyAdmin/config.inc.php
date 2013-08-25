@@ -16,6 +16,7 @@ $cfg['Servers'][$i]['host'] = 'localhost';
 
 $cfg['AjaxEnable'] = false;
 $cfg['AllowUserDropDatabase'] = true;
+$cfg['DefaultConnectionCollation'] = 'utf8_unicode_ci';
 $cfg['DefaultLang'] = 'en';
 $cfg['DisplayDatabasesList'] = 1;
 $cfg['LeftFrameDBTree'] = false;
@@ -30,5 +31,6 @@ $cfg['ShowPhpInfo'] = true;
 $cfg['SuggestDBName'] = false;
 $cfg['UploadDir'] = '';
 $cfg['VersionCheck'] = false;
+
 
 ?>
