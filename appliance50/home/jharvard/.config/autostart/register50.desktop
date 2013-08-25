@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=register50
+Comment=Register50
+Exec=bash -c "if [ -f /home/jharvard/.register ] && [ ! -f /home/jharvard/.registered ]; then register50; else touch /home/jharvard/.register; fi"
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
