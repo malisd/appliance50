@@ -29,10 +29,6 @@
       <ProductUrl>https://manual.cs50.net/CS50_Appliance_19</ProductUrl>
       <VendorUrl>http://cs50.tv/</VendorUrl>
     </ProductSection>
-    <EulaSection>
-      <Info>License agreement for the virtual system</Info>
-      <License>http://creativecommons.org/licenses/by-nc-sa/3.0/</License>
-    </EulaSection>
     <OperatingSystemSection ovf:id="99">
       <Info>The kind of installed guest operating system</Info>
       <Description>Linux26</Description>

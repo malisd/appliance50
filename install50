@@ -131,7 +131,7 @@ EOF
 else
 
     # machine is not EC2 (virtualized or bare metal)
-    URL=http://mirror.cs50.net/appliance50/19/source/latest/iso
+    URL=http://mirror.cs50.net/appliance50/19/source/iso
     TMP=/var/tmp
 
     cat > /etc/rc.d/rc.local <<EOF
