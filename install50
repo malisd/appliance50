@@ -6,7 +6,7 @@
 # "curl -L http://path-to-50/install50 | /bin/bash"
 #
 
-UPDATER=http://mirror.cs50.net/appliance50/19/source/updater
+UPDATER=http://mirror.cs50.net/appliance50/19/source/latest/updater
 
 export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
@@ -131,7 +131,7 @@ EOF
 else
 
     # machine is not EC2 (virtualized or bare metal)
-    URL=http://mirror.cs50.net/appliance50/19/source/iso
+    URL=http://mirror.cs50.net/appliance50/19/source/latest/iso
     TMP=/var/tmp
 
     cat > /etc/rc.d/rc.local <<EOF

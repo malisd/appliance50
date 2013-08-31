@@ -5,7 +5,7 @@
 # To run, execute "update50" at the command line.
 #
 
-URL=http://mirror.cs50.net/appliance50/19/source
+URL=http://mirror.cs50.net/appliance50/19/source/latest
 ARCHIVE=appliance50.zip
 DOWNLOAD=/tmp
 VERSION=19-0

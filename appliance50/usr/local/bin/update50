@@ -5,7 +5,7 @@
 # To run, execute "update50" at the command line.
 #
 
-URL=http://mirror.cs50.net/appliance50/19/source/updater
+URL=http://mirror.cs50.net/appliance50/19/source/latest/updater
 
 # write log in user's home directory
 HOMEDIR=$(getent passwd $USER | cut -d: -f6)
