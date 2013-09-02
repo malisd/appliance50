@@ -30,10 +30,9 @@ set mouse=a
 set ruler
 set shiftwidth=4
 set showmatch
-set tabstop=4
 set textmode
 
-set tabstop=4
+set softtabstop=8
 set expandtab
 set ruler
 set sw=4
