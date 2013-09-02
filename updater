@@ -102,7 +102,7 @@ patch php php-devel php-pear php-pecl-xdebug php-PHPMailer
 php-phpunit-DbUnit php-phpunit-PHPUnit php-tidy php-xml phpMyAdmin
 pulseaudio python python-pip pyxdg render50 ristretto rpm rsnapshot rsync
 ruby rubygems samba samba-client screen sed setup shadow-utils
-# check50 log50 style50
+check50 log50 style50
 sudo system-config-firewall-base
 system-config-firewall system-config-keyboard system-config-language
 system-config-network system-config-services teamviewer telnet tidy
