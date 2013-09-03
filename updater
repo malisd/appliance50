@@ -391,7 +391,7 @@ echo -e "crimson\ncrimson" | smbpasswd -a -s jharvard >&2
 #nxsetup --install --setup-nomachine-key >&2
 
 eche Rebuild mlocate.db
-/etc/cron.daily/mlocate.cron >&2
+/etc/cron.daily/mlocate >&2
 
 
 # create /etc/appliance50 with the version number
