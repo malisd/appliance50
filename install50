@@ -172,7 +172,7 @@ virtualbox)
 ;;
 vmware)
     # download and mount VMware Tools
-    # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.1/825449/packages/com.vmware.fusion.tools.linux.zip.tar
+    # http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/5.0.3/1040386/packages/com.vmware.fusion.tools.linux.zip.tar
     /usr/bin/wget --directory-prefix=$TMP $URL/linux.iso
     /bin/mount -r -o loop -t iso9660 $TMP/linux.iso /mnt
     /bin/tar xf /mnt/VMwareTools-9.2.2-893683.tar.gz -C $TMP
