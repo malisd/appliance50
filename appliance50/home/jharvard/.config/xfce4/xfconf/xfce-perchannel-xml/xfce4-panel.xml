@@ -99,7 +99,7 @@
       <property name="appearance" type="uint" value="0"/>
       <property name="invert-orientation" type="bool" value="false"/>
       <property name="items" type="array">
-        <value type="string" value="+logout-dialog"/>
+        <value type="string" value="+logout"/>
         <value type="string" value="-switch-user"/>
       </property>
     </property>
