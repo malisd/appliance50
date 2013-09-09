@@ -1,4 +1,3 @@
-
 <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
   "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
 
@@ -230,38 +229,6 @@
                 <Filename>redhat-usermount.desktop</Filename>
                 <Filename>Terminal.desktop</Filename>
                 <Filename>xfce4-session-logout.desktop</Filename>
-            </Or>
-        </Exclude>
-    </Menu>
-
-    <Menu>
-        <Name>Other</Name>
-        <Directory>xfce-other.directory</Directory>
-        <OnlyUnallocated/>
-        <Include>
-            <And>
-                <Not><Category>Core</Category></Not>
-                <Not><Category>Settings</Category></Not>
-                <Not><Category>SystemSetup</Category></Not>
-                <Not><Category>X-Red-Hat-ServerConfig</Category></Not>
-                <Not><Category>Screensaver</Category></Not>
-            </And>
-        </Include>
-        <Exclude>
-            <Or>
-                <Filename>dropbox.desktop</Filename>
-                <Filename>emacsclient.desktop</Filename>
-                <Filename>exo-terminal-emulator.desktop</Filename>
-                <Filename>exo-file-manager.desktop</Filename>
-                <Filename>exo-mail-reader.desktop</Filename>
-                <Filename>exo-web-browser.desktop</Filename>
-                <Filename>fedora-release-notes.desktop</Filename>
-                <Filename>gnome-gucharmap.desktop</Filename>
-                <Filename>redhat-usermount.desktop</Filename>
-                <Filename>teamviewer-teamviewer6.desktop</Filename>
-                <Filename>xfce4-about.desktop</Filename>
-                <Filename>xfce4-tips.desktop</Filename>
-                <Filename>xfhelp4.desktop</Filename>
             </Or>
         </Exclude>
     </Menu>
