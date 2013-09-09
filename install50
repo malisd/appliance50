@@ -159,16 +159,16 @@ parallels)
 ;;
 virtualbox)
     # download and mount VirtualBox Guest Additions
-    # http://download.virtualbox.org/virtualbox/4.2.16/VBoxGuestAdditions_4.2.16.iso
-    /usr/bin/wget --directory-prefix=$TMP $URL/VBoxGuestAdditions_4.2.16.iso
-    /bin/mount -r -o loop -t iso9660 $TMP/VBoxGuestAdditions_4.2.16.iso /mnt
+    # http://download.virtualbox.org/virtualbox/4.2.18/VBoxGuestAdditions_4.2.18.iso
+    /usr/bin/wget --directory-prefix=$TMP $URL/VBoxGuestAdditions_4.2.18.iso
+    /bin/mount -r -o loop -t iso9660 $TMP/VBoxGuestAdditions_4.2.18.iso /mnt
 
     # install VirtualBox Guest Additions
     /mnt/VBoxLinuxAdditions.run --nox11
 
     # tidy up
     /bin/umount /mnt
-    /bin/rm -f $TMP/VBoxGuestAdditions_4.2.16.iso
+    /bin/rm -f $TMP/VBoxGuestAdditions_4.2.18.iso
 ;;
 vmware)
     # download and mount VMware Tools
