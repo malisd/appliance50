@@ -402,4 +402,4 @@ chmod 644 /etc/appliance50
 echo Done!
 
 # remove the downloaded updater
-rm $0
+#rm $0
