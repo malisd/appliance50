@@ -29,7 +29,11 @@ echo Downloading updater to $UPDATER >>$LOG
 sudo -E bash <<EOF
 
 #### Fetch updater ####
-echo "Downloading updater.. "
+echo "Updating appliance... This may take a few minutes."
+echo
+echo "DO NOT CLOSE THIS WINDOW OR PUT YOUR COMPUTER TO SLEEP <3"
+echo
+echo "Downloading updater... "
 
 curl -L --max-redirs 10 -s -S -o $UPDATER $URL >>$LOG 2>&1 || {
   echo ERROR
