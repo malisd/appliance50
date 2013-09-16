@@ -7,7 +7,6 @@ chmod 700 etc/grub.d
 chmod 440 etc/sudoers.d/appliance50
 chmod 700 home/jharvard/.vnc
 chmod 600 home/jharvard/.vnc/password
-chmod 755 usr/local/bin/*
 
 zip -r ../appliance50.zip *
 cd ..
