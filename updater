@@ -8,7 +8,7 @@
 URL=http://mirror.cs50.net/appliance50/19/source/latest
 ARCHIVE=appliance50.zip
 DOWNLOAD=/tmp
-VERSION=19-0
+VERSION=19-1
 
 export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
@@ -19,7 +19,7 @@ eche() { echo "$@" >&2; }
 vmm=$(/sbin/virt-what)
 
 #### Fetch files ####
-echo "Downloading files.. "
+echo "Downloading files... "
 
 curl -L --max-redirs 10 -s -S -o $DOWNLOAD/$ARCHIVE $URL/$ARCHIVE >&2 || {
   echo ERROR
@@ -30,7 +30,7 @@ curl -L --max-redirs 10 -s -S -o $DOWNLOAD/$ARCHIVE $URL/$ARCHIVE >&2 || {
 
 #### Unzip files ####
 
-echo "Installing files.. "
+echo "Installing files... "
 
 # stop xfce panel if it's running
 XPANEL=false
@@ -84,7 +84,7 @@ rm $DOWNLOAD/$ARCHIVE
 # if provided an argument of NO_PACKAGES, do not attempt to install
 if [ ! "$1" == "NO_PACKAGES" ]; then
 
-echo "Verifying packages to install.. "
+echo "Verifying packages to install... "
 
 declare -a pkgs=(acpid at-spi2-atk bc binutils
 bind-utils cgdb clang coreutils ctags dconf-editor
@@ -103,6 +103,7 @@ php-phpunit-DbUnit php-phpunit-PHPUnit php-tidy php-xml phpMyAdmin
 pulseaudio python python-pip pyxdg render50 ristretto rpm rsnapshot rsync
 ruby rubygems samba samba-client screen sed setup shadow-utils
 check50 log50 style50
+cs50-2013-fall
 sudo system-config-firewall-base
 system-config-firewall system-config-keyboard system-config-language
 system-config-network system-config-services teamviewer telnet tidy
@@ -140,10 +141,10 @@ done
 if [ ${#pkgsToInst[*]} -gt 0 ];
 then
   # one or more packages to install
-  echo "Preparing to install packages.. "
+  echo "Preparing to install packages... "
   yum clean all >&2
 
-  echo "Installing packages.. "
+  echo "Installing packages... "
   yum -y install ${pkgsToInst[*]} || {
     echo "WARNING Not all packages may have been installed."
     eche yum install failure!
@@ -157,17 +158,17 @@ else
   echo "No packages to install."
 fi
 
-echo "Installing libraries.. "
+echo "Installing libraries... "
 
 pip install requests >&2
 
-echo "Updating packages.. "
+echo "Updating packages... "
 
 yum --disablerepo=* --enablerepo=appliance50 -y update
 
 #### Remove packages ####
 
-echo "Verifying packages to remove.. "
+echo "Verifying packages to remove... "
 
 declare -a pkgs=(abrt audit dnsmasq leafpad libpcap ModemManager NetworkManager
 geany NetworkManager-gnome openssh-askpass orage ppp setroubleshoot-server
@@ -202,7 +203,7 @@ done
 if [ ${#pkgsToRm[*]} -gt 0 ];
 then
   # one or more packages to remove
-  echo "Removing unnecessary packages.. "
+  echo "Removing unnecessary packages... "
   yum clean all >&2
   yum -y remove ${pkgsToRm[*]} || {
     echo WARNING
@@ -217,7 +218,7 @@ fi
 
 #### Disable services ####
 
-echo "Disabling unnecessary services.. "
+echo "Disabling unnecessary services... "
 
 declare -a off=(netconsole)
 for service in "${off[@]}"
@@ -234,7 +235,7 @@ done
 
 #### Enable services ####
 
-echo "Starting required services.. "
+echo "Starting required services... "
 
 declare -a on=(dkms_autoinstaller network httpd mysqld)
 for service in "${on[@]}"
@@ -251,7 +252,7 @@ done
 
 #### Reset MySQL ####
 
-echo "Resetting John Harvard's password for MySQL to \"crimson\".. "
+echo "Resetting John Harvard's password for MySQL to \"crimson\"... "
 eche "Resetting John Harvard's password for MySQL to \"crimson\"."
 /bin/systemctl stop mysqld.service >&2
 /bin/mv /etc/my.cnf /etc/.my.cnf
@@ -280,7 +281,7 @@ EOF
 
 #### Fix permissions ####
 
-echo "Fixing permissions.. "
+echo "Fixing permissions... "
 
 eche "Adding groups"
 groupadd -r courses >&2
@@ -351,7 +352,7 @@ chmod 755 /.snapshots >&2
 
 #### Restart services ####
 
-echo "Restarting services.. "
+echo "Restarting services... "
 declare -a restart=(httpd iptables network smb sshd)
 for service in "${restart[@]}"
 do
@@ -361,9 +362,9 @@ done
 
 #### Finish ####
 
-echo -n "Final steps.. "
+echo -n "Final steps... "
 
-# seems the panel files will duplicate if we don't erase them first..
+# seems the panel files will duplicate if we don't erase them first
 rm -f /home/jharvard/.config/xfce4/panel/launcher-*/1*
 touch /home/jharvard/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 
@@ -399,7 +400,6 @@ echo "version=$VERSION" > /etc/appliance50
 chmod 644 /etc/appliance50
 
 echo Done!
-eche Done!
 
 # remove the downloaded updater
-#rm $0
+rm $0
