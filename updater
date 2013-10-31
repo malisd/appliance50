@@ -67,7 +67,7 @@ fi
 # restart xfce if it's stopped
 if $XPANEL; then
   eche Restarting panel
-  if [ $vmm = 'xen' ]; then
+  if [ "$vmm" = 'xen' ]; then
     PANELARGS="--display=:1.0"
   else
     export DISPLAY=$(echo $PANELARGS | awk '/:[^ ]*/ { print $2}')
@@ -287,7 +287,7 @@ eche "Adding groups"
 groupadd -r courses >&2
 groupadd students >&2
 
-if [ ! $vmm = 'xen' ]; then
+if [ ! "$vmm" = 'xen' ]; then
     eche "Resetting John Harvard's password to \"crimson\"."
     adduser --comment "John Harvard" --gid students --groups wheel jharvard >&2
     echo crimson | passwd --stdin jharvard >&2
