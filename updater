@@ -8,7 +8,7 @@
 URL=http://mirror.cs50.net/appliance50/19/source/latest
 ARCHIVE=appliance50.zip
 DOWNLOAD=/tmp
-VERSION=19-2
+VERSION=19-3
 
 export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
